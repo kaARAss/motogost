@@ -1,0 +1,829 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>МотоГОСТ — экстрим-клуб: туры на эндуро под Екатеринбургом</title><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="images/favicon.svg"><link rel="icon" type="image/png" sizes="256x256" href="images/favicon.png"><link rel="apple-touch-icon" href="images/apple-touch-icon.png"><meta name="description" content="Организованные off-road приключения клубного уровня. Туры на эндуро мотоциклах и питбайках, гостевые дома. 20 минут от Екатеринбурга.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="МотоГОСТ">
+<meta property="og:title" content="МотоГОСТ — экстрим-клуб: туры на эндуро под Екатеринбургом">
+<meta property="og:description" content="Тогда добро пожаловать в МОТОГОСТ — настоящий мир, где адреналин встречается с дикой свободой! МотоГОСТ — там, где заканчивается рутина и начинается легенда.">
+<meta property="og:url" content="https://motogost.netlify.app/">
+<meta property="og:image" content="https://motogost.netlify.app/images/og-logo.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="МотоГОСТ — экстрим-клуб: туры на эндуро под Екатеринбургом">
+<meta name="twitter:description" content="Тогда добро пожаловать в МОТОГОСТ — настоящий мир, где адреналин встречается с дикой свободой! МотоГОСТ — там, где заканчивается рутина и начинается легенда.">
+<meta name="twitter:image" content="https://motogost.netlify.app/images/og-logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Russo+One&family=Unbounded:wght@400;600;800;900&display=swap" media="print" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Russo+One&family=Unbounded:wght@400;600;800;900&display=swap"></noscript><style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0e0d0c;--card:#171513;--card2:#1f1c19;--ink:#1a1714;--paper:#f6f1ea;--paper2:#efe7db;--acc:#ff5a1f;--acc2:#ff8a3d;--muted:#a7a097;--line:rgba(255,255,255,.08)}
+html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%;overflow-y:scroll;scrollbar-gutter:stable}
+body{font-family:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(120% 100% at 50% 0%,#16130f 0%,#0c0b0a 62%) no-repeat fixed #0c0b0a;color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.disp{font-family:'Oswald',Impact,system-ui,sans-serif;font-weight:700;line-height:1.05;letter-spacing:.5px;text-transform:uppercase}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+section{padding:clamp(48px,7vw,96px) 0;position:relative}
+.sec-head{margin-bottom:clamp(26px,4vw,48px)}
+.sec-head .kicker{color:var(--acc);font-weight:800;letter-spacing:3px;font-size:13px;text-transform:uppercase;margin-bottom:10px}
+.sec-head h2{font-size:clamp(30px,5.2vw,58px)}
+.sec-head p{max-width:680px;color:#5b534a;margin-top:12px;font-size:clamp(15px,1.6vw,18px)}
+.dark .sec-head p{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;font-weight:800;padding:14px 26px;border-radius:40px;letter-spacing:.4px;border:none;cursor:pointer;transition:transform .25s,box-shadow .25s;box-shadow:0 10px 26px rgba(255,90,31,.32);font-size:15px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(255,90,31,.45)}
+.btn-sm{padding:11px 20px;font-size:14px}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.45);box-shadow:none;color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:90;transition:.3s}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0;transition:.3s}
+header.scrolled{background:rgba(14,13,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.scrolled .bar{padding:11px 0}
+.brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:24px;color:#fff;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
+.brand .acc{color:var(--acc);margin-left:7px}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{color:#f2eee9;font-weight:600;font-size:15px;opacity:.9;transition:.2s;position:relative}
+.nav a:hover{opacity:1;color:var(--acc2)}
+.nav .btn{color:#fff}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{width:26px;height:3px;background:#fff;border-radius:3px;transition:.3s}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;color:#fff;position:relative;background-size:cover;background-position:center;background-attachment:fixed}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,.55),rgba(10,9,8,.82))}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 80px}
+.hero .tag{display:inline-block;border:1px solid rgba(255,255,255,.4);border-radius:40px;padding:8px 18px;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;backdrop-filter:blur(4px)}
+.hero h1{font-size:clamp(40px,9vw,104px);line-height:.95;text-shadow:0 6px 30px rgba(0,0,0,.4)}
+.hero h1 .o{color:var(--acc)}
+.hero p.lead{max-width:620px;font-size:clamp(16px,2vw,21px);margin:22px 0 34px;color:#ece7e0}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:#fff;opacity:.7;font-size:13px;letter-spacing:2px;text-transform:uppercase;animation:bob 2s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+/* cards grid */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
+.tour{background:var(--card);border-radius:18px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.tour:hover{transform:translateY(-8px);box-shadow:0 26px 50px rgba(0,0,0,.4)}
+.t-img{height:190px;background-size:cover;background-position:center;position:relative}
+.t-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(23,21,19,.65))}
+.t-price{position:absolute;left:14px;bottom:12px;z-index:2;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;padding:6px 14px;border-radius:30px;letter-spacing:.5px}
+.t-img-wrap{position:relative}
+.t-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1;color:#eee}
+.t-body h3{color:#fff;font-size:23px}
+.t-specs{color:var(--acc2);font-weight:700;font-size:13.5px;letter-spacing:.3px}
+.t-body p{color:#bdb6ad;font-size:14.5px;flex:1}
+.t-body .btn{align-self:flex-start;margin-top:6px}
+.subhead{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(20px,2.6vw,28px);color:var(--acc);margin:48px 0 22px;letter-spacing:.5px}
+.dark .subhead{color:var(--acc2)}
+/* dark section */
+.dark{background:transparent;color:#eee}
+.dark .sec-head h2{color:#fff}
+/* features */
+.feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.feat .f{background:#fff;border:1px solid #eadfce;border-radius:16px;padding:26px 22px;transition:.3s}
+.dark .feat .f{background:var(--card);border-color:var(--line)}
+.feat .f:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.12)}
+.feat .ic{font-size:34px;margin-bottom:12px}
+.feat h3{font-size:19px;color:inherit}
+.dark .feat h3{color:#fff}
+.feat p{color:#6b6258;font-size:14px;margin-top:6px}
+.dark .feat p{color:var(--muted)}
+/* catalog */
+.cat{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.cat .c{position:relative;border-radius:18px;overflow:hidden;min-height:300px;display:flex;align-items:flex-end;background-size:cover;background-position:center;color:#fff}
+.cat .c::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.8))}
+.cat .c .in{position:relative;z-index:2;padding:24px;width:100%}
+.cat .c h3{font-size:26px}
+.cat .c .p{color:var(--acc2);font-weight:800;font-family:'Oswald',sans-serif;font-size:22px;margin-top:6px}
+.cat .c:hover{transform:translateY(-6px)}
+.cat .c{transition:.3s}
+/* relax band */
+.band{position:relative;border-radius:22px;overflow:hidden;margin-top:34px;min-height:340px;display:flex;align-items:center;background-size:cover;background-position:center}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.82),rgba(10,9,8,.35))}
+.band .in{position:relative;z-index:2;padding:clamp(28px,5vw,56px);max-width:560px;color:#fff}
+.band h3{font-size:clamp(26px,4vw,42px)}
+.band p{margin-top:12px;color:#ece7e0}
+/* gallery */
+.gal-vp{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.gal-track{display:flex;gap:16px;width:max-content;will-change:transform}
+.gph{flex:0 0 auto;width:clamp(300px,40vw,460px);height:clamp(240px,30vw,360px);border-radius:14px;background-size:cover;background-position:center;cursor:pointer;transition:transform .35s,box-shadow .35s;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.gph:hover{transform:scale(1.05);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.gal-ctrl{display:flex;gap:12px;justify-content:center;margin-top:24px}
+.gal-ctrl button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:#fff;font-size:20px;cursor:pointer;transition:.25s}
+.gal-ctrl button:hover{background:var(--acc);border-color:var(--acc);transform:translateY(-3px)}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(8,7,6,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.open{display:flex}
+.lb .img{width:min(1100px,94vw);height:min(80vh,760px);background-size:contain;background-position:center;background-repeat:no-repeat}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:none;color:#fff;width:54px;height:54px;border-radius:50%;font-size:24px;cursor:pointer;transition:.2s}
+.lb button:hover{background:var(--acc)}
+.lb .x{top:20px;right:20px}
+.lb .pv{left:18px;top:50%;transform:translateY(-50%)}
+.lb .nx{right:18px;top:50%;transform:translateY(-50%)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 24px;position:relative;overflow:hidden}
+.step .n{font-family:'Oswald',sans-serif;font-size:54px;color:var(--acc);opacity:.35;line-height:1}
+.step p{color:#cfc8bf;margin-top:10px}
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.about-grid .ph-box{border-radius:20px;min-height:380px;background-size:cover;background-position:center;box-shadow:0 24px 50px rgba(0,0,0,.3)}
+.about-grid p{color:#5b534a;margin-bottom:14px;font-size:16px}
+.dark .about-grid p{color:#cfc8bf}
+/* contacts */
+.con{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.con .c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.con .c .lab{color:var(--acc2);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:12px;margin-bottom:8px}
+.con .c .val{color:#fff;font-size:18px;font-weight:600}
+.con .c a.val:hover{color:var(--acc2)}.con-layout{display:grid;grid-template-columns:1.05fr 1fr;gap:26px;align-items:stretch;margin-top:8px}.con-layout .con{margin-top:0;grid-template-columns:1fr;align-content:start}.con-layout .map-wrap{margin-top:0;height:auto}@media(max-width:860px){.con-layout{grid-template-columns:1fr}}
+.msgs{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.msgs a{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:30px;font-weight:700;background:#fff;color:var(--ink);transition:.25s}
+.msgs a:hover{transform:translateY(-3px)}
+.msgs a.tg{background:#29a9eb;color:#fff}
+.msgs a.max{background:linear-gradient(135deg,#7b5cff,#b06bff);color:#fff}.msgs a.vk{background:#0077ff;color:#fff}.msgs a.tg-dm{background:#17588f;color:#fff}
+/* footer */
+footer{background:#0a0908;color:#9a938a;padding:54px 0 30px;border-top:1px solid var(--line)}
+.foot-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:26px}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+.foot-links a{font-size:13px;opacity:.8}
+.foot-links a:hover{color:var(--acc2);opacity:1}
+.foot-legal{font-size:12.5px;line-height:1.8;opacity:.7;border-top:1px solid var(--line);padding-top:20px}
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+/* to top */
+.top{position:fixed;right:20px;bottom:20px;width:50px;height:50px;border-radius:50%;background:var(--acc);color:#fff;border:none;font-size:22px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:80;box-shadow:0 10px 24px rgba(255,90,31,.4)}
+.top.show{opacity:1;pointer-events:auto}
+.top:hover{transform:translateY(-4px)}
+/* responsive */
+@media(max-width:860px){
+ .nav{position:fixed;top:0;right:0;height:100dvh;width:min(300px,82vw);background:rgba(14,13,12,.98);backdrop-filter:blur(14px);flex-direction:column;justify-content:center;align-items:flex-start;padding:40px;gap:22px;transform:translateX(100%);transition:transform .35s;border-left:1px solid var(--line)}
+ .nav.open{transform:none}
+ .nav a{font-size:20px}
+ .burger{display:flex;z-index:95}
+ .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+ .burger.open span:nth-child(2){opacity:0}
+ .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+ .hero{background-attachment:scroll}
+ .about-grid{grid-template-columns:1fr}
+ .about-grid .ph-box{min-height:260px;order:-1}
+}
+@media(max-width:520px){.t-img{height:170px}.hero{min-height:92svh}}
+:root{--hero:url(images/hero.webp)}
+
+.ph2{background-image:url(images/photo.webp)}
+.ph3{background-image:url(images/photo_1.webp)}
+.ph4{background-image:url(images/photo_2.webp)}
+.ph5{background-image:url(images/photo_3.webp)}
+
+.ph7{background-image:url(images/photo_4.webp)}
+.ph8{background-image:url(images/photo_5.webp)}
+
+.ph10{background-image:url(images/photo_6.webp)}
+
+
+
+
+
+.ph16{background-image:url(images/photo_7.webp)}
+
+
+
+
+
+.ph22{background-image:url(images/photo_8.webp)}.cards,.cat,.feat{perspective:1000px}.tour,.cat>*,.feat>*{transition:transform .14s ease,box-shadow .25s ease;transform-style:preserve-3d}.tilt3d{box-shadow:0 22px 48px rgba(0,0,0,.5);border-color:rgba(255,90,31,.55)!important}.tour *,.cat>* *,.feat>* *{pointer-events:none}.tour a,.tour .t-more-btn,.cat>* a,.feat>* a{pointer-events:auto}
+.hero{min-height:100svh;aspect-ratio:auto;position:relative;overflow:hidden;display:flex;align-items:flex-end;background:#0c0b0a}
+.hero::before{content:'';position:absolute;inset:-60px;z-index:0;background-image:var(--hero);background-size:cover;background-position:center;background-repeat:no-repeat;filter:blur(30px) brightness(.6) saturate(1.18);transform:scale(1.12)}
+.hero-photo{position:absolute;inset:0;z-index:1;background-image:var(--hero);background-size:contain;background-position:center;background-repeat:no-repeat}
+.hero::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(8,7,6,.12) 0%,rgba(8,7,6,0) 38%,rgba(8,7,6,.5) 76%,rgba(8,7,6,.92) 100%)}
+.hero .wrap{position:relative;z-index:3;padding:120px 0 8vh}
+@media(max-width:520px){.hero{min-height:88svh}}
+
+.hero::before{display:none!important}
+.hero-photo{display:none!important}
+.hero{height:100svh!important;min-height:540px!important;aspect-ratio:auto!important;background-image:var(--hero)!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;background-attachment:scroll!important;background-color:#0c0b0a;overflow:hidden}
+.hero::after{content:''!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(180deg,rgba(8,7,6,.28) 0%,rgba(8,7,6,.05) 42%,rgba(8,7,6,.5) 78%,rgba(8,7,6,.9) 100%)!important;filter:none!important;transform:none!important}
+.hero .wrap{position:relative!important;z-index:3!important;padding:120px 0 9vh!important}
+.model-box{background:#171513;border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:8px;box-shadow:0 22px 48px rgba(0,0,0,.45)}.model-box model-viewer{display:block;width:100%;height:560px;background:transparent}.model-box model-viewer::part(default-progress-bar){display:none}@media(max-width:860px){.model-box model-viewer{height:380px}}#reviews .rev-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:0 0 28px}#reviews .rev-score{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 22px}#reviews .rev-num{font-size:42px;font-weight:800;line-height:1;color:#fff}#reviews .rev-score-st{color:#ffb400;font-size:18px;letter-spacing:3px}#reviews .rev-score-meta{color:#a7a097;font-size:13px;margin-top:4px}#reviews .rev-badge{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:12px 20px;color:#e9e3d8;font-size:14px;font-weight:600}#reviews .rev-grid{display:flex;gap:22px;align-items:flex-start}#reviews .rev-col{flex:1;min-width:0;display:flex;flex-direction:column;gap:22px}@media(max-width:900px){#reviews .rev-grid{flex-direction:column}}#reviews .rev{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}#reviews .rev-h{display:flex;align-items:center;gap:12px;margin-bottom:10px}#reviews .rev-av{width:46px;height:46px;flex:0 0 46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;color:#fff;background:#f2734d;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18);text-shadow:0 1px 2px rgba(0,0,0,.25);overflow:hidden}#reviews .rev-av.c0{background:#f2734d}#reviews .rev-av.c1{background:#5b8def}#reviews .rev-av.c2{background:#2fb27a}#reviews .rev-av.c3{background:#9b59b6}#reviews .rev-av.c4{background:#e67e22}#reviews .rev-av.c5{background:#1aa1b8}#reviews .rev-av.c6{background:#e84393}#reviews .rev-av.c7{background:#d4a017}#reviews .rev-av.c8{background:#6c5ce7}#reviews .rev-av.c9{background:#00a884}#reviews .rev-av.c10{background:#c0563b}#reviews .rev-av.c11{background:#3d7ee0}#reviews .rev-av.has-photo{text-shadow:none;box-shadow:none}#reviews .rev-av img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}#reviews .rev-nm{font-weight:700;color:#fff;font-size:15px;line-height:1.2}#reviews .rev-dt{color:#8f877d;font-size:12px;margin-top:3px}#reviews .rev-st{color:#ffb400;font-size:13px;letter-spacing:2px;margin-bottom:8px}#reviews .rev p{color:#cfc8bf;font-size:14px;line-height:1.55;margin:0;white-space:pre-line}#reviews .rev-src{margin-top:26px;text-align:center}.fab{position:fixed;right:24px;bottom:24px;z-index:1200;display:flex;flex-direction:column;align-items:center;gap:14px}.fab-actions{display:flex;flex-direction:column;align-items:center;gap:14px}.fab-actions a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.35);position:relative;transform:scale(0);opacity:0;transition:transform .25s cubic-bezier(.34,1.56,.64,1),opacity .2s;pointer-events:none}.fab.open .fab-actions a{transform:scale(1);opacity:1;pointer-events:auto}.fab.open .fab-actions a:nth-child(3){transition-delay:.04s}.fab.open .fab-actions a:nth-child(2){transition-delay:.10s}.fab.open .fab-actions a:nth-child(1){transition-delay:.16s}.fab-actions a svg{width:26px;height:26px}.fab-actions a:hover{filter:brightness(1.08)}.fab-call{background:#1c1c1c}.fab-tg{background:#29a9eb}.fab-vk{background:#0077ff}.fab-actions a .lbl{position:absolute;right:64px;white-space:nowrap;background:#1a1a1a;color:#fff;font-size:13px;font-weight:600;padding:7px 12px;border-radius:9px;opacity:0;transform:translateX(8px);transition:.2s;pointer-events:none;box-shadow:0 6px 16px rgba(0,0,0,.32)}.fab-actions a .lbl:after{content:"";position:absolute;right:-5px;top:50%;margin-top:-5px;border:5px solid transparent;border-left-color:#1a1a1a}.fab-actions a:hover .lbl{opacity:1;transform:translateX(0)}.fab-toggle{width:64px;height:64px;border-radius:50%;border:none;cursor:pointer;background:var(--acc);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(255,90,31,.45);position:relative;transition:transform .3s,background .25s}.fab-toggle svg{width:30px;height:30px}.fab-toggle .ic-x{display:none}.fab.open .fab-toggle .ic-chat{display:none}.fab.open .fab-toggle .ic-x{display:block}.fab.open .fab-toggle{background:#fff;color:#1a1a1a;transform:rotate(90deg);box-shadow:0 10px 26px rgba(0,0,0,.4)}.fab-toggle:before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--acc);z-index:-1;animation:fabpulse 2.1s ease-out infinite}.fab.open .fab-toggle:before{display:none}@keyframes fabpulse{0%{transform:scale(1);opacity:.55}70%{transform:scale(1.85);opacity:0}100%{transform:scale(1.85);opacity:0}}@media(max-width:600px){.fab{right:16px;bottom:16px;gap:12px}.fab-toggle{width:58px;height:58px}.fab-actions a{width:50px;height:50px}}/* rev-tilt-mark */#reviews .rev{position:relative;transform-style:preserve-3d;will-change:transform;transition:transform .18s cubic-bezier(.22,.61,.36,1),box-shadow .18s ease,border-color .18s ease,opacity .6s ease}#reviews .rev:hover{box-shadow:0 22px 48px rgba(0,0,0,.5);border-color:rgba(255,138,61,.4)}#reviews .rev::after{content:"";position:absolute;inset:0;border-radius:16px;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.14),rgba(255,255,255,0) 42%);opacity:0;transition:opacity .18s ease;pointer-events:none;z-index:2}#reviews .rev:hover::after{opacity:1}#reviews .rev .rev-h,#reviews .rev .rev-st,#reviews .rev p{transform:translateZ(28px)}@media(prefers-reduced-motion:reduce){#reviews .rev{transition:none}}/* gsap-fx-mark */#pageTransition{position:fixed;inset:0;z-index:3000;background:#0e0d0c var(--hero) center/cover no-repeat;transform:scaleY(0);transform-origin:bottom;pointer-events:none}#gallery,#reviews{position:relative;overflow:hidden}#gallery .wrap,#gallery .gal-vp,#reviews .wrap{position:relative;z-index:1}.sec-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}.float-blob{position:absolute;border-radius:50%;filter:blur(45px);will-change:transform}.fb1{width:300px;height:300px;background:radial-gradient(circle,rgba(255,90,31,.5),rgba(255,90,31,0) 70%);top:-70px;left:-50px}.fb2{width:360px;height:360px;background:radial-gradient(circle,rgba(91,141,239,.38),rgba(91,141,239,0) 70%);bottom:-90px;right:-70px}.fb3{width:220px;height:220px;background:radial-gradient(circle,rgba(47,178,122,.4),rgba(47,178,122,0) 70%);top:38%;right:16%}/* btn-revsrc-mark */#reviews .rev-src .btn{background:linear-gradient(135deg,#ff5a1f,#ff8a3d);color:#fff;border:none;font-weight:800;padding:15px 34px;border-radius:999px;box-shadow:0 12px 28px rgba(255,90,31,.38);transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}#reviews .rev-src .btn:hover{transform:translateY(-2px);color:#fff;filter:brightness(1.05);box-shadow:0 18px 38px rgba(255,90,31,.5)}/* vanilla-fx-mark */#pageTransition{transition:transform .45s cubic-bezier(.7,0,.3,1)}#pageTransition.cover{transform:scaleY(1)}@keyframes blobf{0%{transform:translate(0,0) scale(1)}50%{transform:translate(34px,-44px) scale(1.14)}100%{transform:translate(0,0) scale(1)}}.float-blob.fb1{animation:blobf 9s ease-in-out infinite}.float-blob.fb2{animation:blobf 13s ease-in-out infinite reverse}.float-blob.fb3{animation:blobf 11s ease-in-out infinite}.rv{opacity:0;transform:translateY(45px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1)}.rv.rv-l{transform:translateX(-80px)}.rv.rv-r{transform:translateX(80px)}.rv.rv-s{transform:scale(.55)}.rv.rv-rot{transform:perspective(700px) rotateY(40deg)}@keyframes secopen{0%{opacity:.4;transform:translateY(26px)}100%{opacity:1;transform:none}}.sec-open{animation:secopen .7s ease}.rv.in{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}#pageTransition{display:none}}/* rev-float-mark */#reviews{overflow:hidden}#reviews .rev-fl{will-change:transform,opacity;transform-origin:50% 50%;backface-visibility:hidden}@media(prefers-reduced-motion:reduce){#reviews .rev-fl{transform:none!important;opacity:1!important}}/* hero-redesign-mark */ .hero{align-items:flex-end} .hero .wrap.hero-wrap{padding:120px 0 9vh} .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.74) 0%,rgba(0,0,0,.4) 26%,rgba(0,0,0,0) 58%);pointer-events:none} .hero-kicker{display:inline-block;color:var(--acc);font-weight:800;font-size:14px;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;transform-origin:left center;animation:kickpulse 2.2s ease-in-out infinite;text-shadow:0 2px 14px rgba(0,0,0,.5)} @keyframes kickpulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}} .hero-h1{font-size:clamp(30px,6vw,66px);line-height:1.06;font-weight:900;margin:0 0 4px;min-height:2.05em;text-shadow:0 3px 22px rgba(0,0,0,.55)} .hero-h1 .tw{color:#fff} .tw-caret{display:inline-block;width:3px;height:.92em;background:var(--acc);margin-left:7px;vertical-align:-0.1em;animation:caretblink 1.05s steps(1) infinite} @keyframes caretblink{0%,50%{opacity:1}50.01%,100%{opacity:0}} .hero .lead{color:#f1ece5;text-shadow:0 2px 14px rgba(0,0,0,.5);max-width:680px} @media(prefers-reduced-motion:reduce){.hero-kicker{animation:none;opacity:1}.tw-caret{display:none}}/* nav-views-css */ body.view-active{overflow-x:hidden} body.view-active .view-on{min-height:100vh;padding-top:max(98px,8vw);box-sizing:border-box} @keyframes flipInY{0%{opacity:.12;transform:perspective(1500px) rotateY(-88deg) scale(.96)}55%{opacity:1}100%{opacity:1;transform:perspective(1500px) rotateY(0deg) scale(1)}} .flip-in{animation:flipInY .6s cubic-bezier(.2,.7,.25,1) both;transform-origin:50% 50%;backface-visibility:hidden} #viewBack{position:fixed;left:18px;bottom:18px;z-index:95;display:none;align-items:center;gap:8px;background:var(--card);color:#fff;border:1px solid var(--line);border-radius:40px;padding:11px 18px;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.4)} #viewBack:hover{background:var(--acc);border-color:var(--acc)} body.view-active #viewBack{display:inline-flex} @media(prefers-reduced-motion:reduce){.flip-in{animation:none}}/* hero-ref-css */ .hero-scrim2{position:absolute;inset:0;pointer-events:none;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.34) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0) 50%,rgba(0,0,0,.55) 100%)} .hero-content2{position:absolute;left:0;right:0;bottom:clamp(64px,9vh,104px);text-align:center;padding:0 22px;display:flex;flex-direction:column;align-items:center;gap:16px;z-index:2;opacity:0;transform:translateY(22px);animation:heroFadeUp .9s cubic-bezier(.2,.7,.2,1) .15s forwards} .hero-eyebrow{color:var(--acc);font:800 14px/1 'Oswald',Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.6)} .hero-tagline{color:#fff;font:900 clamp(26px,5vw,52px)/1.05 'Oswald','Arial Black',Arial,sans-serif;letter-spacing:.01em;text-shadow:0 3px 18px rgba(0,0,0,.65);margin:0} .hero-subtitle{color:#f1f1f1;font:600 clamp(15px,2vw,20px)/1.4 Arial,sans-serif;max-width:720px;text-shadow:0 2px 12px rgba(0,0,0,.7);margin:0} .hero-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px} .hero-btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;border-radius:999px;font:800 16px/1 Arial,sans-serif;cursor:pointer;text-decoration:none;border:2px solid transparent;transition:transform .2s ease,box-shadow .2s ease} .hero-btn:hover{transform:translateY(-2px)} .hero-btn-primary{background:var(--acc);color:#1a1205;box-shadow:0 10px 30px rgba(255,90,31,.4)} .hero-btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.55);backdrop-filter:blur(6px)} @keyframes heroFadeUp{to{opacity:1;transform:translateY(0)}} @media(prefers-reduced-motion:reduce){.hero-content2{animation:none;opacity:1;transform:none}}/* nav-views-hdr-css */ body.view-active header{background:rgba(14,13,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)} body.view-active .nav a{opacity:1}/* hero-left-css */ .hero-content2.hero-left{left:clamp(20px,6vw,76px);right:auto;text-align:left;align-items:flex-start;max-width:min(680px,84vw)} .hero-content2.hero-left .hero-actions{justify-content:flex-start} .hero-tagline{font-size:clamp(20px,3.2vw,36px);min-height:1.3em} .hero-subtitle{font-size:clamp(13px,1.5vw,16px)} .hero-eyebrow{font-size:12px} .hero-eyebrow-pulse{display:inline-block;transform-origin:left center;animation:heroEyebrowPulse 2.2s ease-in-out infinite} @keyframes heroEyebrowPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}} @media(prefers-reduced-motion:reduce){.hero-eyebrow-pulse{animation:none;opacity:1}}/* extras-css */ body.view-active #reviews.view-on::after{content:"";display:block;height:clamp(32px,7vh,80px);pointer-events:none} .model-extra{margin-top:30px}/* hero-line-css */ .hero-tagline{white-space:nowrap;font-family:'Russo One','Oswald',sans-serif;font-weight:400;font-size:clamp(15px,2.4vw,28px);letter-spacing:.01em;min-height:1.25em}/* model-onsite-css */ .model-box{background:transparent!important;border:none!important;box-shadow:none!important} .model-extra{display:none} body.view-active .view-on .model-extra{display:block}/* model-wide-css */ html,body{overflow-x:hidden} .model-box{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)} .model-box model-viewer{width:100%;max-width:100%}/* model-bigger-css */ #bike3d .model-box model-viewer{height:680px} @media(max-width:860px){#bike3d .model-box model-viewer{height:460px}}/* mv-scroll-css */ .model-box{position:relative} .mv-hint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font:600 12px/1 'Manrope',sans-serif;letter-spacing:.03em;color:#cfc8bf;background:rgba(14,13,12,.55);border:1px solid var(--line);padding:7px 13px;border-radius:999px;pointer-events:none;opacity:0;transition:opacity .25s;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);white-space:nowrap;z-index:5} .model-box:hover .mv-hint{opacity:.9}
+/*mobile-fix-css*/
+/*reveal-anim-on-mobile*/
+/*hero-shine-css*/
+#top .hero-tagline{white-space:normal;font-family:'Russo One','Oswald',sans-serif;font-weight:400;font-size:clamp(18px,3.6vw,40px);letter-spacing:.02em;line-height:1.18;min-height:1.25em;text-shadow:none;max-width:100%}
+#top .hero-tagline .tw{background:linear-gradient(90deg,#ff5a1f,#ffd24d,#ffffff,#ff8a3d,#ff5a1f);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:heroShine 3s linear infinite}
+@keyframes heroShine{to{background-position:200% center}}
+@media(max-width:860px){#top .hero-tagline{font-size:clamp(16px,5.6vw,28px)}}
+/*brand-style-css*/
+.brand{font-family:'Russo One','Oswald',sans-serif;font-weight:400;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:baseline;gap:8px}
+.brand .acc{margin-left:0;color:#fff;background:linear-gradient(135deg,var(--acc),var(--acc2));padding:2px 10px;border-radius:7px;letter-spacing:2px;font-weight:700;box-shadow:0 6px 16px rgba(255,90,31,.38);transform:skewX(-7deg);display:inline-block}
+
+/*step2-css*/
+.feat .ic{width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:linear-gradient(135deg,rgba(255,90,31,.16),rgba(255,138,61,.10));margin-bottom:14px}
+.feat .ic svg{width:30px;height:30px;display:block}
+/*mobile-hero-fix*/
+@media(max-width:860px){.hero{background-image:none!important}.hero::before{display:block!important}.hero-photo{display:block!important;background-size:contain!important;background-position:center 46%!important}@media(min-width:781px){.hero-photo{background-position:right center!important}.hero{background-position:88% center!important}}}
+/*rev-mobile-css*/
+@media(max-width:860px){#reviews .rev-fl.rev-hide-m{display:none!important}.rev-more-wrap{display:flex;justify-content:center;margin:12px 0 2px}}
+@media(min-width:861px){.rev-more-wrap{display:none!important}}
+
+/*hero-caret-hide*/
+#top .hero-tagline .tw-caret{display:none!important}
+
+/*step3-photos*/
+.feat .f{padding:0!important;overflow:hidden}
+.feat .f-ph{height:172px;background-size:cover;background-position:center;background-color:#e9e0d2;border-bottom:1px solid #eadfce}
+.dark .feat .f-ph{background-color:#1a1714;border-bottom-color:#2a2520}
+.feat .f-bd{padding:20px 22px 24px}
+.feat .f-bd h3{margin-top:0}
+@media(max-width:560px){.feat .f-ph{height:152px}}
+
+:root{--hero-m:url("images/hero_m.jpg")}
+/*hero-mobile-cover*/
+@media(max-width:860px){.hero{background-image:var(--hero-m)!important;background-size:contain!important;background-position:center top!important;background-repeat:no-repeat!important;background-color:#0c0b0a!important}.hero::before{display:none!important}.hero-photo{display:none!important}}
+
+/*mobile-fix3*/
+@media(max-width:860px){
+ .reveal{opacity:1!important;transform:none!important}
+ .rv{opacity:1!important;transform:none!important}
+ #top .hero-tagline .tw{-webkit-text-fill-color:#fff!important;color:#fff!important;background:none!important;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+ header{z-index:1400!important}
+ header.scrolled{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+ .nav{z-index:1500!important}
+ .rev-fl{transform:none!important;opacity:1!important}
+ #reviews .rev.rev-hide-m{display:none!important}
+ .rev-more-wrap{display:flex;justify-content:center;margin:16px 0 2px}
+ #reviews .rev.rev-anim{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+ #reviews .rev.rev-anim.rev-in{opacity:1;transform:none}
+}
+@media(min-width:861px){.rev-more-wrap{display:none!important}}</style><style>.svc-cards .t-body{gap:9px}.t-teaser{color:#bdb6ad;font-size:14.5px;flex:1}.t-more{margin-top:4px}.t-more>summary{display:inline-flex;align-items:center;gap:8px;list-style:none;cursor:pointer;background:rgba(255,255,255,.05);color:var(--acc2);font-weight:700;padding:10px 18px;border-radius:40px;font-size:14px;letter-spacing:.4px;border:1px solid rgba(255,138,61,.45);width:max-content;transition:transform .12s ease,background .25s ease,border-color .25s ease,color .2s ease}.t-more>summary::-webkit-details-marker{display:none}.t-more>summary::marker{content:""}.t-more>summary:hover{background:rgba(255,138,61,.12);border-color:var(--acc2);color:#fff}.t-more>summary:active{transform:scale(.93)}.t-more[open]>summary{background:rgba(255,138,61,.14);border-color:var(--acc2);color:#fff}.t-more .chev{font-size:.9em;line-height:1;transition:transform .35s ease}.t-more[open]>summary .chev{transform:rotate(180deg)}.t-detail{margin-top:14px;animation:tdrop .5s cubic-bezier(.22,1,.36,1) both}@keyframes tdrop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}.t-detail-img{height:200px;border-radius:14px;overflow:hidden;margin-bottom:14px}.t-detail-photo{width:100%;height:100%;background-size:cover;background-position:center;transform-origin:center;animation:tkenburns 16s ease-in-out infinite alternate}@keyframes tkenburns{from{transform:scale(1.03)}to{transform:scale(1.16)}}.t-detail-body p{color:#cfc8bf;font-size:14px;margin:0 0 8px}.t-detail-body ul{margin:0;padding-left:18px}.t-detail-body li{color:#cfc8bf;font-size:13.7px;margin:5px 0;line-height:1.5}.t-detail-body b{color:#fff}.t-book{margin-top:14px}.cat .c .c-spec{color:#ece6da;font-size:13.5px;margin-top:8px;line-height:1.45;font-weight:600}@media (prefers-reduced-motion:reduce){.t-detail-photo,.t-detail{animation:none}}</style><style id="cert-style">
+#cert .sec-head h2{color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;-webkit-text-stroke:0!important;text-shadow:0 0 1px rgba(0,0,0,.45),0 8px 34px rgba(255,138,0,.22)}
+#cert .sec-head .kicker{color:var(--acc2)}
+.cert-sec{background:transparent;position:relative;overflow:hidden}
+.cert-sec::before{content:"";position:absolute;width:560px;height:560px;right:-170px;top:-140px;background:radial-gradient(circle,rgba(255,138,0,.20),transparent 70%);pointer-events:none}
+.cert-sec::after{content:"";position:absolute;width:460px;height:460px;left:-160px;bottom:-160px;background:radial-gradient(circle,rgba(255,90,0,.12),transparent 70%);pointer-events:none}
+.cert-sec .wrap{position:relative;z-index:1}
+.cert-layout{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center}
+@media(max-width:860px){.cert-layout{grid-template-columns:1fr;gap:30px}}
+.cert-card{perspective:1100px;filter:drop-shadow(0 26px 52px rgba(0,0,0,.55));animation:certFloat 6s ease-in-out infinite}
+@keyframes certFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.cert-plate{--plate:polygon(0 13%,13% 0,87% 0,100% 13%,100% 87%,87% 100%,13% 100%,0 87%);padding:2px;background:linear-gradient(135deg,rgba(255,170,60,.80),rgba(255,90,0,.32) 55%,rgba(255,170,60,.16));-webkit-clip-path:var(--plate);clip-path:var(--plate);transition:transform .25s cubic-bezier(.2,.8,.3,1);transform-style:preserve-3d;will-change:transform}
+.cert-card-inner{position:relative;padding:34px 32px;min-height:400px;background:linear-gradient(90deg,rgba(12,9,6,.90) 0%,rgba(12,9,6,.55) 52%,rgba(12,9,6,.32) 100%),linear-gradient(0deg,rgba(12,9,6,.62),rgba(12,9,6,.20)),url(images/photo.webp) center 30%/cover;overflow:hidden;-webkit-clip-path:var(--plate);clip-path:var(--plate)}
+.cert-shine{position:absolute;top:0;left:-60%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.16),transparent);transform:skewX(-18deg);animation:certShine 5.5s ease-in-out infinite;z-index:1;pointer-events:none}
+@keyframes certShine{0%{left:-60%}55%{left:140%}100%{left:140%}}
+.cert-main{position:relative;z-index:2}
+.cert-top{display:flex;justify-content:space-between;align-items:center}
+.cert-brand{font-family:'Oswald',sans-serif;letter-spacing:2px;font-weight:700;color:#fff;font-size:18px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.cert-badge{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:3px;color:#1a130d;background:linear-gradient(90deg,var(--acc),var(--acc2));padding:4px 10px;border-radius:6px;font-weight:700}
+.cert-title{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(23px,3vw,32px);color:#fff;margin-top:22px;line-height:1.05;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.cert-sub{color:var(--acc2);font-weight:700;font-size:13px;letter-spacing:.5px;margin-top:6px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.cert-amount{font-family:'Oswald',sans-serif;font-size:clamp(36px,5.4vw,58px);font-weight:700;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin:14px 0 12px;transition:transform .18s ease;display:inline-block;filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
+.cert-row{display:flex;justify-content:space-between;gap:12px;border-top:1px dashed rgba(255,255,255,.18);padding:9px 0;color:#cfc7bd;font-size:14px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.cert-row b{color:#fff;font-weight:600;text-align:right;max-width:60%;overflow-wrap:anywhere}
+.cert-foot{margin-top:16px;color:#b3aaa0;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.cert-form{display:flex;flex-direction:column;gap:16px}
+.fld{position:relative}
+.fld input,.fld textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:18px 16px 7px;color:#fff;font-size:15.5px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s,background .2s,height .12s ease;resize:none;overflow:hidden;box-sizing:border-box}
+.fld textarea{min-height:58px}
+.fld input:focus,.fld textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(255,138,0,.15);background:rgba(255,255,255,.06)}
+.fld label{position:absolute;left:16px;top:15px;color:#8d857b;font-size:15px;pointer-events:none;transition:all .18s ease}
+.fld input:focus+label,.fld input:not(:placeholder-shown)+label,.fld textarea:focus+label,.fld textarea:not(:placeholder-shown)+label{top:6px;font-size:11px;color:var(--acc2);letter-spacing:.5px;text-transform:uppercase}
+.cert-chips{display:flex;flex-wrap:wrap;gap:9px;margin:-4px 0 2px}
+.chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);color:#e7e0d7;border-radius:30px;padding:8px 15px;font-size:13.5px;font-family:'Oswald',sans-serif;letter-spacing:.5px;cursor:pointer;transition:all .18s}
+.chip:hover{border-color:var(--acc);color:#fff;transform:translateY(-2px)}
+.chip:active{transform:scale(.94)}
+.cert-btn{margin-top:6px}
+.cert-btn:active{transform:scale(.97)}
+.cert-note{color:#8d857b;font-size:12.5px;line-height:1.5;margin-top:2px}
+.cert-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+@media(max-width:760px){.cert-feats{grid-template-columns:1fr}}
+.cf{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px;transition:transform .2s,border-color .2s}
+.cf:hover{transform:translateY(-4px);border-color:rgba(255,170,60,.4)}
+.cf-i{font-size:24px;display:block;margin-bottom:8px}
+.cf b{display:block;color:#fff;font-family:'Oswald',sans-serif;font-size:16px;margin-bottom:4px;letter-spacing:.3px}
+.cf span{color:#9a928a;font-size:13px;line-height:1.45}
+.shake{animation:certShake .4s}
+@keyframes certShake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.cert-toast{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.6);opacity:0;visibility:hidden;transition:opacity .25s;backdrop-filter:blur(3px);padding:20px}
+.cert-toast.show{opacity:1;visibility:visible}
+.cert-toast-card{position:relative;max-width:420px;width:100%;background:#1a140e;border:1px solid rgba(255,170,60,.3);border-radius:18px;padding:28px 24px;box-shadow:0 30px 70px rgba(0,0,0,.6);transform:translateY(20px) scale(.96);transition:transform .3s;text-align:center}
+.cert-toast.show .cert-toast-card{transform:none}
+.ct-ico{width:58px;height:58px;border-radius:50%;background:linear-gradient(90deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;margin:0 auto 16px}
+.cert-toast-card b{color:#fff;font-family:'Oswald',sans-serif;font-size:21px;display:block;margin-bottom:10px}
+.cert-toast-card p{color:#bdb6ad;font-size:14px;line-height:1.55;margin-bottom:18px}
+.ct-close{position:absolute;top:12px;right:14px;background:none;border:none;color:#8d857b;font-size:26px;cursor:pointer;line-height:1}
+.ct-close:hover{color:#fff}
+@media(prefers-reduced-motion:reduce){.cert-card,.cert-shine{animation:none}}
+</style><style id="fmt-style">
+.fmt-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:780px){.fmt-cards{grid-template-columns:1fr}}
+@property --neon{syntax:'<angle>';inherits:false;initial-value:0deg}
+.fmt-card{position:relative;border-radius:22px;overflow:hidden;background:#15110c;border:1px solid rgba(255,255,255,.06);box-shadow:0 10px 30px rgba(0,0,0,.25);transition:opacity .7s ease,transform .55s cubic-bezier(.2,.8,.3,1),box-shadow .45s}
+.fmt-js .fmt-card{opacity:0;transform:translateY(42px)}
+.fmt-card.is-in{opacity:1;transform:none}
+.fmt-card.is-in:hover{transform:translateY(-7px) scale(1.012);box-shadow:0 30px 66px rgba(0,0,0,.5),0 0 26px rgba(255,120,30,.28)}
+.fmt-media{height:256px;background-size:cover;background-position:center;transition:transform .7s cubic-bezier(.2,.8,.3,1);position:relative}
+.fmt-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.12) 0%,rgba(10,8,6,.55) 64%,#15110c 100%)}
+.fmt-card:hover .fmt-media{transform:scale(1.08)}
+.fmt-num{position:absolute;top:14px;right:22px;font-family:'Oswald',sans-serif;font-size:60px;font-weight:700;color:rgba(255,255,255,.10);-webkit-text-stroke:1.5px rgba(255,255,255,.5);z-index:3;line-height:1}
+.fmt-tag{position:absolute;top:18px;left:18px;z-index:3;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#1a130d;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:30px;font-weight:700}
+.fmt-body{position:relative;z-index:2;padding:8px 28px 32px;margin-top:-32px}
+.fmt-body h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(23px,2.7vw,32px);color:#fff;margin:0 0 8px;transition:color .4s,text-shadow .4s}
+.fmt-card:hover .fmt-body h3{color:var(--acc2);text-shadow:0 0 18px rgba(255,140,40,.55)}
+.fmt-intro{color:#b8b0a6;font-size:14.5px;line-height:1.5;margin:0 0 18px}
+.fmt-steps{list-style:none;margin:0;padding:0;position:relative}
+.fmt-steps::before{content:"";position:absolute;left:7px;top:7px;bottom:9px;width:2px;background:linear-gradient(180deg,var(--acc),rgba(255,138,0,.12))}
+.fmt-steps li{position:relative;padding:0 0 15px 30px}
+.fmt-steps li:last-child{padding-bottom:0}
+.fmt-steps li::before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:#15110c;border:2px solid var(--acc);box-shadow:0 0 0 3px rgba(255,138,0,.12)}
+.fmt-steps li span{display:block;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc2);margin-bottom:1px}
+.fmt-steps li b{display:block;color:#e7e0d7;font-weight:500;font-size:14px;line-height:1.4;min-height:1.4em}
+.fmt-js .fmt-steps li{opacity:0;transform:translateX(-14px)}
+.fmt-steps li.typed{opacity:1;transform:none;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.8,.3,1)}
+.fmt-card::before{content:"";position:absolute;inset:0;border-radius:22px;padding:1.7px;background:conic-gradient(from -90deg,var(--acc) 0deg,var(--acc2) calc(var(--neon) * .5),var(--acc) var(--neon),transparent var(--neon),transparent 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:4;opacity:0;--neon:0deg}
+.fmt-card.is-in::before{opacity:1;--neon:360deg;filter:drop-shadow(0 0 8px rgba(255,140,35,.75));animation:neonDraw 1.1s ease-out .1s both}
+.fmt-card.is-in:hover::before{animation:neonPulse 1.7s ease-in-out infinite}
+@keyframes neonDraw{0%{--neon:0deg;filter:drop-shadow(0 0 10px rgba(255,155,35,1))}80%{--neon:360deg;filter:drop-shadow(0 0 10px rgba(255,155,35,1))}100%{--neon:360deg;filter:drop-shadow(0 0 8px rgba(255,140,35,.75))}}
+@keyframes neonPulse{0%,100%{filter:drop-shadow(0 0 7px rgba(255,140,35,.6))}50%{filter:drop-shadow(0 0 16px rgba(255,170,50,1))}}
+@media(prefers-reduced-motion:reduce){.fmt-js .fmt-card{opacity:1;transform:none}.fmt-js .fmt-steps li{opacity:1;transform:none}.fmt-card.is-in::before{animation:none;opacity:1;--neon:360deg;filter:drop-shadow(0 0 8px rgba(255,140,35,.7))}}
+</style><script>document.documentElement.classList.add("fmt-js")</script><style id="fmt-hover">
+#how{overflow:hidden}
+.fmt-cards{perspective:1300px;perspective-origin:50% 42%}
+.fmt-card{position:relative;will-change:transform,opacity;backface-visibility:hidden;transform-style:preserve-3d}
+.fmt-sparks{position:absolute;inset:0;z-index:8;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.fmt-sparks{display:none}}
+@media(hover:none){.fmt-sparks{display:none}}
+</style><style id="hero-stable">#top.hero{background-image:none!important;background-attachment:scroll!important}#top::before{display:none!important}#top .hero-photo{display:none!important}#top .hero-bg{position:absolute;top:0;left:0;width:100vw;height:100%;background-image:var(--hero);background-size:cover;background-position:right center;background-repeat:no-repeat;background-attachment:scroll;z-index:0;pointer-events:none;transform:translateZ(0);backface-visibility:hidden}@media(max-width:860px){#top .hero-bg{background-image:var(--hero-m);background-size:contain;background-position:center top;background-color:#0c0b0a}}</style><style id="steps-redesign">#process .proc2{position:relative;margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+#process .proc-line{position:absolute;top:32px;left:9%;right:9%;height:3px;border-radius:3px;background:linear-gradient(90deg,rgba(255,90,31,0),rgba(255,90,31,.6),rgba(255,138,61,.6),rgba(255,90,31,0));z-index:0}
+#process .proc-line::before{content:"";position:absolute;inset:-1px 0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 7px,transparent 7px 20px);opacity:.5;animation:procdash 1.3s linear infinite}
+@keyframes procdash{to{background-position:20px 0}}
+#process .proc-spark{position:absolute;top:50%;left:0;width:13px;height:13px;margin-top:-6.5px;border-radius:50%;background:radial-gradient(circle,#fff,var(--acc) 58%,transparent 72%);box-shadow:0 0 16px 5px rgba(255,90,31,.85);animation:procspark 5.5s cubic-bezier(.55,0,.45,1) infinite}
+@keyframes procspark{0%{left:0;opacity:0}8%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+#process .pstep{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center}
+#process .pmark{position:relative;width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 32%,#241d17,#110e0c);border:2px solid rgba(255,90,31,.7);box-shadow:0 0 0 7px #0c0b0a,0 10px 24px -6px rgba(255,90,31,.6);transition:transform .35s,box-shadow .35s}
+#process .pmark::before{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid rgba(255,90,31,.55);animation:procpulse 2.6s ease-out infinite}
+@keyframes procpulse{0%{transform:scale(1);opacity:.7}70%{transform:scale(1.5);opacity:0}100%{opacity:0}}
+#process .pnum{font-family:'Oswald',sans-serif;font-weight:700;font-size:25px;color:var(--acc);line-height:1}
+#process .pcard{position:relative;margin-top:24px;width:100%;overflow:hidden;background:linear-gradient(165deg,rgba(31,26,21,.92),rgba(17,15,13,.94));border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:24px 22px 22px;transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .4s,box-shadow .4s}
+#process .pcard .pwm{position:absolute;right:-12px;bottom:-12px;width:92px;height:92px;fill:none;stroke:rgba(255,90,31,.13);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;pointer-events:none;transition:stroke .4s,transform .5s}
+#process .pcard h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:18px;letter-spacing:.4px;text-transform:uppercase;color:#fff;margin:0 0 8px;position:relative}
+#process .pcard p{position:relative;color:#b3aca3;font-size:14px;line-height:1.55;margin:0}
+#process .pstep:hover .pmark{transform:translateY(-4px) scale(1.08);box-shadow:0 0 0 7px #0c0b0a,0 0 30px 2px rgba(255,90,31,.9)}
+#process .pstep:hover .pcard{transform:translateY(-8px);border-color:rgba(255,90,31,.4);box-shadow:0 26px 50px -24px rgba(255,90,31,.6)}
+#process .pstep:hover .pwm{stroke:rgba(255,90,31,.32);transform:scale(1.08) rotate(-4deg)}
+@media(prefers-reduced-motion:reduce){#process .proc-line::before,#process .proc-spark,#process .pmark::before{animation:none}}
+@media(max-width:860px){#process .proc2{grid-template-columns:1fr;gap:24px;margin-top:30px}
+#process .proc-line{top:30px;bottom:30px;left:32px;right:auto;width:3px;height:auto;background:linear-gradient(180deg,rgba(255,90,31,0),rgba(255,90,31,.55),rgba(255,90,31,0))}
+#process .proc-line::before{display:none}#process .proc-spark{display:none}
+#process .pstep{flex-direction:row;align-items:flex-start;text-align:left;gap:18px}
+#process .pmark{flex:none}#process .pcard{margin-top:0;flex:1}}
+</style><style id="lead-style">@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+.lead{position:relative;overflow:hidden;background:transparent}
+.lead .wrap{position:relative;z-index:2}
+.lead-aurora{display:none}
+.lead-aurora span{position:absolute;border-radius:50%;mix-blend-mode:screen;will-change:transform}
+.lead-aurora span:nth-child(1){width:46vw;height:46vw;left:-6%;top:-12%;background:radial-gradient(circle,#ff5a1f,transparent 65%);animation:auroraA 18s ease-in-out infinite}
+.lead-aurora span:nth-child(2){width:40vw;height:40vw;right:-8%;top:8%;background:radial-gradient(circle,#ff8a3d,transparent 65%);animation:auroraB 22s ease-in-out infinite}
+.lead-aurora span:nth-child(3){width:38vw;height:38vw;left:32%;bottom:-22%;background:radial-gradient(circle,#b5371a,transparent 65%);animation:auroraC 26s ease-in-out infinite}
+@keyframes auroraA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,12%) scale(1.15)}}
+@keyframes auroraB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-10%,8%) scale(1.2)}}
+@keyframes auroraC{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6%,-10%) scale(1.1)}}
+.lead-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:38px;align-items:center}
+.lead-photo{position:relative}
+.lp-frame{position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px -20px rgba(0,0,0,.7);animation:lpfloat 7s ease-in-out infinite}
+.lp-frame img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.lp-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(12,11,10,.5));pointer-events:none}
+@keyframes lpfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.lp-badge{position:absolute;left:16px;bottom:16px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#1a0f08;border-radius:16px;padding:12px 18px;box-shadow:0 16px 32px -10px rgba(255,90,31,.7);display:flex;flex-direction:column;line-height:1.05}
+.lp-badge b{font-family:'Oswald',sans-serif;font-size:24px}
+.lp-badge span{font-size:12px;font-weight:600}
+.lead-card{position:relative;border-radius:24px;padding:34px 32px;background:rgba(20,18,16,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08);overflow:hidden;--mx:50%;--my:0%}
+.lead-card::before{content:"";position:absolute;inset:-1px;border-radius:25px;padding:1.5px;background:conic-gradient(from var(--ang),transparent 0 55%,var(--acc) 70%,var(--acc2) 82%,transparent 93%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:leadspin 6s linear infinite;pointer-events:none}
+@keyframes leadspin{to{--ang:360deg}}
+.lead-card::after{content:"";position:absolute;inset:0;border-radius:24px;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(255,90,31,.16),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.lead-card:hover::after{opacity:1}
+.lead-card>*{position:relative;z-index:1}
+.lead-card h2{font-size:clamp(23px,2.7vw,33px);margin:6px 0 8px;line-height:1.1;color:#fff}
+.lead-sub{color:#b8b1a8;margin-bottom:20px}
+.lead-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#leadForm .fld{margin-bottom:14px}
+.fld-sel select{width:100%;appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px 16px 8px;color:#fff;font-size:15.5px;font-family:inherit;outline:none;cursor:pointer}
+.fld-sel select option{background:#1a1714;color:#fff}
+.fld-sel .sel-caret{position:absolute;right:16px;top:18px;color:#8d857b;pointer-events:none}
+.fld.raised label{top:8px;font-size:11.5px;color:#ff8a3d;letter-spacing:.4px;text-transform:uppercase}
+#lDate{color-scheme:dark}
+.lead-check{display:flex;gap:10px;align-items:flex-start;color:#a7a097;font-size:13px;line-height:1.45;margin:11px 0;cursor:pointer}
+.lead-check input{width:18px;height:18px;accent-color:var(--acc);margin-top:1px;flex:none}
+.lead-check.err{color:#ff7a5c}
+.lead-check.err input{outline:2px solid #ff5a1f;outline-offset:1px;border-radius:4px}
+.lead-btn{width:100%;justify-content:center}
+.lead-msgs{margin-top:18px;border-top:1px solid rgba(255,255,255,.08);padding-top:16px}
+.lm-or{display:block;color:#8d857b;font-size:13px;margin-bottom:10px}
+.lead-msgs .msgs{margin-top:0}
+@media(prefers-reduced-motion:reduce){.lead-aurora span,.lp-frame,.lead-card::before{animation:none}}
+@media(max-width:860px){.lead-grid{grid-template-columns:1fr;gap:26px}.lead-photo{max-width:430px;margin:0 auto}.lead-row{grid-template-columns:1fr}.lead-card{padding:28px 22px}}
+.lead-card .kicker{display:inline-block;color:#ffb488;background:rgba(255,90,31,.14);border:1px solid rgba(255,90,31,.4);padding:5px 12px;border-radius:999px;letter-spacing:2px;margin-bottom:12px}
+.lp-frame img{transform:scale(var(--sc,1)) translate(var(--px,0px),var(--py,0px));transition:transform .18s ease-out;will-change:transform}
+.lp-glow{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .25s ease;mix-blend-mode:screen;background:radial-gradient(220px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.30),rgba(255,138,61,.14) 42%,transparent 62%)}
+.lp-frame:hover .lp-glow{opacity:1}
+.lead-photo .lp-badge{pointer-events:none;transition:transform .2s cubic-bezier(.2,.7,.2,1);will-change:transform;z-index:3}
+@media(prefers-reduced-motion:reduce){.lp-frame img{transition:none}}
+</style><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-R3M0LYNGW8"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R3M0LYNGW8');</script><style id="cms-season">.season-banner{position:relative;z-index:3;max-width:1100px;margin:0 auto;padding:0 20px}.season-inner{display:flex;gap:16px;align-items:center;background:linear-gradient(135deg,#16314e,#0d1d2e);border:1px solid rgba(120,180,255,.28);border-radius:18px;padding:18px 22px;margin-top:22px;box-shadow:0 18px 46px rgba(0,0,0,.42);color:#eaf2ff}.season-ic{font-size:34px;line-height:1;flex:0 0 auto}.season-tx b{font-family:Oswald,"Oswald",sans-serif;font-size:20px;display:block;margin-bottom:4px;letter-spacing:.3px}.season-tx p{margin:0;color:#cfe0f5;font-size:15px;line-height:1.45}@media(max-width:600px){.season-inner{flex-direction:column;text-align:center}}</style></head><body><div class="ride-bg" id="rideBg" aria-hidden="true"><div class="ride-img"></div><video id="bgVid" class="bg-vid" autoplay muted loop playsinline preload="auto" poster="images/hero.webp" aria-hidden="true"></video><script>(function(){var v=document.getElementById('bgVid');if(!v)return;var m=Math.max(window.innerWidth,screen.width)<=860;v.src=m?'images/bg-m.mp4':'images/bg.mp4';v.muted=true;var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){});})();</script><div class="ride-shade"></div></div><header id="hdr"><div class="wrap bar"><a href="#top" class="brand">Мото<span class="acc">ГОСТ</span></a><button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button><nav class="nav" id="nav"><a href="#how">Как проходит</a><a href="#tours">Туры</a><a href="#vkl">Что входит</a><a href="#gallery">Галерея</a><a href="#about">О нас</a><a href="#reviews">Отзывы</a><a href="#cert">Сертификат</a><a href="#contacts">Контакты</a><a href="#lead" class="btn btn-sm">Записаться</a></nav></div></header><div id="top" class="hero ph0"><div class="hero-bg"></div><div class="hero-photo"></div><div class="hero-scrim2"></div><div class="hero-content2 hero-left"><div class="hero-eyebrow hero-eyebrow-pulse" data-cms="hero.eyebrow">Экстрим-клуб в горах Урала</div><h1 class="hero-tagline"><span class="tw" id="heroType"></span><span class="tw-caret" aria-hidden="true"></span></h1><p class="hero-subtitle" data-cms="hero.subtitle">Прокат эндуро и туры по горам Урала · 30 минут от Екатеринбурга</p><div class="hero-actions"><a href="#lead" class="hero-btn hero-btn-primary" data-cms="hero.btnPrimary">Записаться на заезд</a><a href="#tours" class="hero-btn hero-btn-ghost" data-cms="hero.btnGhost">Смотреть туры</a></div></div></div><div id="seasonBanner" class="season-banner" hidden></div><section id="how" class="dark"><div class="wrap"><div class="sec-head"><div class="kicker">Форматы</div><h2>Как проходит заезд</h2><p>Выберите формат под себя — от полной свободы до клубного маршрута с сопровождением гида.</p></div><div class="fmt-cards"><article class="fmt-card"><div class="fmt-media ph4"></div><span class="fmt-num">01</span><span class="fmt-tag">Для опытных</span><div class="fmt-body"><h3>Свободный заезд</h3><p class="fmt-intro">Для опытных райдеров, которые ценят самостоятельность и хотят сами задавать темп.</p><ul class="fmt-steps"><li><span>Старт</span><b>Приезд к назначенному времени</b></li><li><span>Экипировка</span><b>Подбор экипировки</b></li><li><span>Инструктаж</span><b>Инструктаж</b></li><li><span>Заезд</span><b>Самостоятельное катание по подготовленному треку</b></li><li><span>Финиш</span><b>Возвращение на базу</b></li><li><span>Отдых</span><b>Душ и зона отдыха после маршрута</b></li></ul></div></article><article class="fmt-card"><div class="fmt-media ph5"></div><span class="fmt-num">02</span><span class="fmt-tag">С гидом</span><div class="fmt-body"><h3>Клубный маршрут</h3><p class="fmt-intro">С сопровождением гида. Идеален для компаний и тех, кто хочет максимум эмоций при полной безопасности.</p><ul class="fmt-steps"><li><span>Старт</span><b>Приезд к назначенному времени</b></li><li><span>Экипировка</span><b>Подбор экипировки</b></li><li><span>Инструктаж</span><b>Инструктаж и подбор маршрута под ваш уровень</b></li><li><span>Заезд</span><b>Катание с гидом-инструктором и подстраховкой на сложных участках (для больших групп — второй сопровождающий)</b></li><li><span>Финиш</span><b>Возвращение на базу</b></li><li><span>Отдых</span><b>Душ и зона отдыха после маршрута</b></li></ul></div></article></div></div><div class="wrap model-extra"><div class="model-box reveal"><model-viewer class="pitbike-clone" src="images/model.glb" reveal="auto" camera-controls auto-rotate auto-rotate-delay="3000" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.05" camera-orbit="-30deg 80deg auto" style="background-color:transparent" alt="3D модель питбайка"></model-viewer></div></div></section><section id="vkl" class="dark"><div class="wrap"><div class="sec-head"><div class="kicker">Всё включено</div><h2>Что входит в прокат</h2><p>Всё необходимое уже включено в стоимость проката — от мотоцикла до полного комплекта защиты. Вам остаётся толь��о приехать.</p></div><div class="feat"><div class="f reveal d0"><div class="f-ph" style="background-image:url('images/photo_1.webp');background-position:center 68%"></div><div class="f-bd"><h3>Мотоцикл эндуро / питбайк</h3><p>Подготовленная техника под ваш уровень и маршрут.</p></div></div><div class="f reveal d1"><div class="f-ph" style="background-image:url('images/photo_2.webp');background-position:center top"></div><div class="f-bd"><h3>Мотоботы и носки</h3><p>Защитные мотоботы + одноразовые носки.</p></div></div><div class="f reveal d2"><div class="f-ph" style="background-image:url('images/photo_3.webp');background-position:center 20%"></div><div class="f-bd"><h3>Защита спины и груди</h3><p>«Черепаха» или панцирь — выдаём на месте.</p></div></div><div class="f reveal d0"><div class="f-ph" style="background-image:url('images/photo_4.webp')"></div><div class="f-bd"><h3>Джерси, штаны и дождевик</h3><p>Комплект экипировки + дождевик на любую погоду.</p></div></div><div class="f reveal d1"><div class="f-ph" style="background-image:url('images/photo_5.webp');background-position:center 5%"></div><div class="f-bd"><h3>Защита колен и локтей</h3><p>Наколенники и налокотники для безопасной езды.</p></div></div><div class="f reveal d2"><div class="f-ph" style="background-image:url('images/photo_6.webp')"></div><div class="f-bd"><h3>Шлем и подшлемник</h3><p>Шлем + балаклава-подшлемник в комплекте.</p></div></div><div class="f reveal d0"><div class="f-ph" style="background-image:url('images/photo_7.webp')"></div><div class="f-bd"><h3>Очки</h3><p>Мотоочки для защиты глаз на трассе.</p></div></div><div class="f reveal d1"><div class="f-ph" style="background-image:url('images/photo_8.webp');background-position:center 5%"></div><div class="f-bd"><h3>Перчатки</h3><p>Мотоперчатки с защитой — в комплекте.</p></div></div><div class="f reveal d2"><div class="f-ph" style="background-image:url('images/photo_9.webp')"></div><div class="f-bd"><h3>Фото/Видео отчёт</h3><p>Съёмка вашего заезда на GoPro 11.</p></div></div></div><div class="wrap model-extra"><div class="model-box reveal"><model-viewer class="pitbike-clone" src="images/model.glb" reveal="auto" camera-controls auto-rotate auto-rotate-delay="3000" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.05" camera-orbit="-30deg 80deg auto" style="background-color:transparent" alt="3D модель питбайка"></model-viewer></div></div></section><section id="tours" class="dark"><div class="wrap"><div class="sec-head"><div class="kicker">Прокат · обучение · гид</div><h2>Наши услуги</h2><p>Прокат питбайков и эндуро, обучение с инструктором и hard enduro гид — всё с экипировкой, фото и видео.</p></div><div class="cards svc-cards"><article class="tour reveal"><div class="t-img-wrap"><div class="t-img svc-pit"></div><div class="t-price" data-cms="services.items.0.price">от 1 250 ₽/час</div></div><div class="t-body"><h3 data-cms="services.items.0.title">Прокат питбайков</h3><div class="t-specs" data-cms="services.items.0.specs">Kayo Evo · 140/125 куб · колёса 17/14</div><p class="t-teaser" data-cms="services.items.0.teaser">Внедорожные питбайки для лёгкого старта — права не нужны.</p><div class="t-more"><button type="button" class="t-more-btn">Подробнее<span class="chev">▾</span></button><div class="t-detail"><div class="t-detail-img"><div class="t-detail-photo svc-pit"></div></div><div class="t-detail-body"><ul><li>Питбайки Kayo Evo на колёсах 17/14 (2024 г.в.), объём двигателя 140/125 куб — на механической и полуавтоматической коробке передач соответственно.</li><li>Минимальное время проката — 2 часа. Первые два часа — 3 500 ₽, каждый последующий час — 1 250 ₽. Действует гибкая система скидок.</li><li>Подходит для людей ростом от 150 см и весом до 100 кг.</li><li>В стоимость входит мотоцикл и полный комплект экипировки: мотоботы и одноразовые носки, защита спины/груди (черепаха или панцирь), джерси и штаны (комплект), дождевик, защита колен и локтей, шлем и подшлемник (балаклава), очки, перчатки, а также фото/видео отчёт (GoPro 11).</li><li>Для оформления договора нужен паспорт, технику выдаём с 18 лет (подросткам — в присутствии родителей или законных представителей).</li><li>Прокат только с инструктором: он знает местность и все маршруты и подберёт трек под ваши навыки.</li></ul></div><a class="btn btn-sm t-book" href="#contacts">Забронировать</a></div></div></div></article><article class="tour reveal"><div class="t-img-wrap"><div class="t-img svc-end"></div><div class="t-price" data-cms="services.items.1.price">от 1 500 ₽/час</div></div><div class="t-body"><h3 data-cms="services.items.1.title">Прокат эндуро мотоциклов</h3><div class="t-specs" data-cms="services.items.1.specs">ZM Hopper S 250 · Kayo T4 300 · колёса 21/18</div><p class="t-teaser" data-cms="services.items.1.teaser">Полноразмерные эндуро для настоящего off-road.</p><div class="t-more"><button type="button" class="t-more-btn">Подробнее<span class="chev">▾</span></button><div class="t-detail"><div class="t-detail-img"><div class="t-detail-photo svc-end"></div></div><div class="t-detail-body"><p>Эндуро-мотоциклы, осень 2023 г.в.</p><ul><li><b>ZM Hopper S</b> — колёса 21/18, двигатель 250 куб.см ZS 172FMM-6, 4-клапанная голова, 25 л.с., МКПП. Минимум 2 часа: первые два часа — 5 000 ₽, далее 1 500 ₽/час. Рост от 165 см, вес до 100 кг.</li><li><b>Kayo T4</b> — колёса 21/18, двигатель 300 куб.см ZS 172FMM-3A (175FMN), 26 л.с., МКПП. Минимум 2 часа: первые два часа — 5 500 ₽, далее 1 750 ₽/час. Рост от 175 см, вес до 110 кг.</li><li>Действует гибкая система скидок.</li><li>В стоимость входит мотоцикл и полный комплект экипировки: мотоботы и одноразовые носки, защита спины/груди (черепаха или панцирь), джерси и штаны (комплект), дождевик, защита колен и локтей, шлем и подшлемник (балаклава), очки, перчатки, а также фото/видео отчёт (GoPro 11).</li><li>Для оформления договора нужен паспорт, технику выдаём с 18 лет. Прокат только с инструктором.</li></ul></div><a class="btn btn-sm t-book" href="#contacts">Забронировать</a></div></div></div></article><article class="tour reveal"><div class="t-img-wrap"><div class="t-img svc-instr"></div><div class="t-price" data-cms="services.items.2.price">от 4 000 ₽</div></div><div class="t-body"><h3 data-cms="services.items.2.title">Занятие с инструктором</h3><div class="t-specs" data-cms="services.items.2.specs">2 часа · индивидуально или группа 2–4 чел.</div><p class="t-teaser" data-cms="services.items.2.teaser">Полное обучение управлению мототехникой для новичков.</p><div class="t-more"><button type="button" class="t-more-btn">Подробнее<span class="chev">▾</span></button><div class="t-detail"><div class="t-detail-img"><div class="t-detail-photo svc-instr"></div></div><div class="t-detail-body"><p>Полноценное руководство по управлению мототехникой и катанию по лесу с инструктором — идеально для новичков и начинающих райдеров.</p><ul><li>С опытным инструктором вы быстрее освоите основы и снизите риск травм — не нужно самостоятельно ориентироваться на незнакомой местности.</li><li>Длительность занятия — 2 часа, включая аренду техники и полный комплект экипировки.</li><li>Индивидуальное обучение — 5 000 / 6 000 ₽ (питбайк/эндуро). Групповое (2–4 человека) — 4 000 / 5 000 ₽ (питбайк/эндуро) с человека.</li><li>В стоимость входит аренда техники и полный комплект экипировки: шлем, маска, защита груди и спины, локти, наколенники, перчатки и мотоботы.</li><li>Программа: разминка → знакомство с устройством техники → отработка механики на поле (запуск, старт, повороты, передачи, стойка, перенос веса, баланс) → прохождение естественных препятствий (колеи, брёвна, подъёмы и спуски).</li><li>Завершение первой части — выезд с инструктором на лесной маршрут протяжённостью до 20 км.</li></ul></div><a class="btn btn-sm t-book" href="#contacts">Забронировать</a></div></div></div></article><article class="tour reveal"><div class="t-img-wrap"><div class="t-img svc-gid"></div><div class="t-price" data-cms="services.items.3.price">от 500 ₽/час</div></div><div class="t-body"><h3 data-cms="services.items.3.title">HARD ENDURO гид</h3><div class="t-specs" data-cms="services.items.3.specs">Сопровождение опытным гидом</div><p class="t-teaser" data-cms="services.items.3.teaser">Гид по сложным hard enduro маршрутам.</p><div class="t-more"><button type="button" class="t-more-btn">Подробнее<span class="chev">▾</span></button><div class="t-detail"><div class="t-detail-img"><div class="t-detail-photo svc-gid"></div></div><div class="t-detail-body"><p>Персональное сопровождение опытным гидом по самым интересным и сложным hard enduro маршрутам в окрестностях Екатеринбурга.</p><ul><li>Гид — действующий райдер с многолетним стажем: знает местность, броды, подъёмы и каменистые участки наизусть.</li><li>Маршрут, темп и сложность подбираем под вашу подготовку — от уверенного новичка до опытного эндуриста.</li><li>На треке подскажет технику прохождения препятствий, поможет и подстрахует в трудных местах.</li><li>Фото- и видеосъёмка заезда на GoPro — заберёте яркие кадры с маршрута.</li><li>Стоимость — от 500 ₽/час. Точный план и длительность согласуем перед выездом.</li></ul></div><a class="btn btn-sm t-book" href="#contacts">Забронировать</a></div></div></div></article></div></div></section><section id="catalog" class="dark"><div class="wrap"><div class="sec-head"><div class="kicker">Прокат</div><h2>Наша техника</h2></div><div class="cat"><div class="c ph22 reveal d0"><div class="in"><h3>Питбайки</h3><p class="c-spec">Kayo Evo · колёса 17/14 · 140/125 куб · МКПП и полуавтомат · рост от 150 см, до 100 кг</p><div class="p">от 1 250 ₽/час</div></div></div><div class="c ph2 reveal d1"><div class="in"><h3>Эндуро</h3><p class="c-spec">ZM Hopper S 250 (25 л.с.) и Kayo T4 300 (26 л.с.) · колёса 21/18 · МКПП · рост от 165 см</p><div class="p">от 1 500 ₽/час</div></div></div></div></div></section><style id="gal31">.gp1{background-image:var(--gp1,url(images/photo_10.webp))}.gp2{background-image:var(--gp2,url(images/photo_11.webp))}.gp3{background-image:var(--gp3,url(images/photo_12.webp))}.gp4{background-image:var(--gp4,url(images/photo_13.webp))}.gp5{background-image:var(--gp5,url(images/photo_14.webp))}.gp6{background-image:var(--gp6,url(images/photo_15.webp))}.gp7{background-image:var(--gp7,url(images/photo_16.webp))}.gp8{background-image:var(--gp8,url(images/photo_17.webp))}.gp9{background-image:var(--gp9,url(images/photo_18.webp))}.gp10{background-image:var(--gp10,url(images/photo_19.webp))}.gp11{background-image:var(--gp11,url(images/photo_20.webp))}.gp12{background-image:var(--gp12,url(images/photo_21.webp))}.gp13{background-image:var(--gp13,url(images/photo_22.webp))}.gp14{background-image:var(--gp14,url(images/photo_23.webp))}.gp15{background-image:var(--gp15,url(images/photo_24.webp))}.gp16{background-image:var(--gp16,url(images/photo_25.webp))}.gp17{background-image:var(--gp17,url(images/photo_26.webp))}.gp18{background-image:var(--gp18,url(images/photo_27.webp))}.gp19{background-image:var(--gp19,url(images/photo_28.webp))}.gp20{background-image:var(--gp20,url(images/photo_29.webp))}.gp21{background-image:var(--gp21,url(images/photo_30.webp))}.gp22{background-image:var(--gp22,url(images/photo_31.webp))}.gp23{background-image:var(--gp23,url(images/photo_32.webp))}.gp24{background-image:var(--gp24,url(images/photo_33.webp))}.gp25{background-image:var(--gp25,url(images/photo_34.webp))}.gp26{background-image:var(--gp26,url(images/photo_16.webp))}.gp27{background-image:var(--gp27,url(images/photo_35.webp))}.gp28{background-image:var(--gp28,url(images/photo_36.webp))}.gp29{background-image:var(--gp29,url(images/photo_37.webp))}.gp30{background-image:var(--gp30,url(images/photo_38.webp))}.gp31{background-image:var(--gp31,url(images/photo_39.webp))}</style><section id="gallery" class="dark"><div class="sec-bg"><div class="float-blob fb1"></div><div class="float-blob fb2"></div><div class="float-blob fb3"></div></div><div class="wrap"><div class="sec-head"><div class="kicker">Фотогалерея</div><h2>Галерея</h2><p>Реальные кадры с наших заездов и маршрутов.</p></div></div><div class="gal-vp"><div class="gal-track" id="galTrack"><div class="gph gp1" data-i="0"></div><div class="gph gp2" data-i="1"></div><div class="gph gp3" data-i="2"></div><div class="gph gp4" data-i="3"></div><div class="gph gp5" data-i="4"></div><div class="gph gp6" data-i="5"></div><div class="gph gp7" data-i="6"></div><div class="gph gp8" data-i="7"></div><div class="gph gp9" data-i="8"></div><div class="gph gp10" data-i="9"></div><div class="gph gp11" data-i="10"></div><div class="gph gp12" data-i="11"></div><div class="gph gp13" data-i="12"></div><div class="gph gp14" data-i="13"></div><div class="gph gp15" data-i="14"></div><div class="gph gp16" data-i="15"></div><div class="gph gp17" data-i="16"></div><div class="gph gp18" data-i="17"></div><div class="gph gp19" data-i="18"></div><div class="gph gp20" data-i="19"></div><div class="gph gp21" data-i="20"></div><div class="gph gp22" data-i="21"></div><div class="gph gp23" data-i="22"></div><div class="gph gp24" data-i="23"></div><div class="gph gp25" data-i="24"></div><div class="gph gp26" data-i="25"></div><div class="gph gp27" data-i="26"></div><div class="gph gp28" data-i="27"></div><div class="gph gp29" data-i="28"></div><div class="gph gp30" data-i="29"></div><div class="gph gp31" data-i="30"></div><div class="gph gp1" data-i="0"></div><div class="gph gp2" data-i="1"></div><div class="gph gp3" data-i="2"></div><div class="gph gp4" data-i="3"></div><div class="gph gp5" data-i="4"></div><div class="gph gp6" data-i="5"></div><div class="gph gp7" data-i="6"></div><div class="gph gp8" data-i="7"></div><div class="gph gp9" data-i="8"></div><div class="gph gp10" data-i="9"></div><div class="gph gp11" data-i="10"></div><div class="gph gp12" data-i="11"></div><div class="gph gp13" data-i="12"></div><div class="gph gp14" data-i="13"></div><div class="gph gp15" data-i="14"></div><div class="gph gp16" data-i="15"></div><div class="gph gp17" data-i="16"></div><div class="gph gp18" data-i="17"></div><div class="gph gp19" data-i="18"></div><div class="gph gp20" data-i="19"></div><div class="gph gp21" data-i="20"></div><div class="gph gp22" data-i="21"></div><div class="gph gp23" data-i="22"></div><div class="gph gp24" data-i="23"></div><div class="gph gp25" data-i="24"></div><div class="gph gp26" data-i="25"></div><div class="gph gp27" data-i="26"></div><div class="gph gp28" data-i="27"></div><div class="gph gp29" data-i="28"></div><div class="gph gp30" data-i="29"></div><div class="gph gp31" data-i="30"></div></div></div><div class="wrap"><div class="gal-ctrl"><button id="gprev" aria-label="Назад">‹</button><button id="gnext" aria-label="Вперёд">›</button></div></div></section><section id="process" class="dark"><div class="wrap"><div class="sec-head"><div class="kicker">Как происходит</div><h2>4 простых шага</h2><p>Мы сделали организацию вашего отдыха максимально простой и удобной.</p></div><div class="proc2"><div class="proc-line" aria-hidden="true"><span class="proc-spark"></span></div><div class="pstep reveal d0"><div class="pmark"><span class="pnum">01</span></div><div class="pcard"><svg class="pwm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><h3>Выбор тура и даты</h3><p>Подберём маршрут под ваш уровень — напишите или позвоните нам, и поможем выбрать удобную дату заезда.</p></div></div><div class="pstep reveal d1"><div class="pmark"><span class="pnum">02</span></div><div class="pcard"><svg class="pwm" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13a9 9 0 0 1 18 0v4a1.5 1.5 0 0 1-1.5 1.5H11l-6-2.2A2.6 2.6 0 0 1 3 14z"/><path d="M11 18.5V14a1.5 1.5 0 0 1 1.5-1.5H21"/></svg><h3>Снаряжение на месте</h3><p>Эндуро-мотоцикл и вся экипировка уже ждут вас на базе — приезжайте налегке.</p></div></div><div class="pstep reveal d2"><div class="pmark"><span class="pnum">03</span></div><div class="pcard"><svg class="pwm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v5.5c0 5-3.4 8-8 9.2-4.6-1.2-8-4.2-8-9.2V6z"/><path d="M8.7 12.2l2.4 2.4 4.4-4.6"/></svg><h3>Инструктаж</h3><p>Профессиональный брифинг и разминка — для уверенного и безопасного старта.</p></div></div><div class="pstep reveal d2 pstep-last"><div class="pmark"><span class="pnum">04</span></div><div class="pcard"><svg class="pwm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3"/><path d="M5 4h13l-2.6 3.5L18 11H5"/></svg><h3>Отдых после заезда</h3><p>Спокойно перевести дух после поездки, обсудить впечатления и забрать фото с заезда.</p></div></div></div></div></section><section id="about" class="dark"><div class="wrap"><div class="about-grid"><div><div class="sec-head" style="margin-bottom:18px"><div class="kicker" data-cms="about.kicker">О нас</div><h2 data-cms="about.title">Адреналин и релакс</h2></div><p data-cms="about.p1">Заскучали в городе? Не хватает эмоций и адреналина или вы просто хотите отдохнуть и разгрузиться на природе? Тогда добро пожаловать в МОТОГОСТ — настоящий мир, где адреналин встречается с дикой свободой!</p><p data-cms="about.p2">Откройте для себя идеальное сочетание адреналина и релакса. Покоряй непроходимые лесные тропы на мощных эндуро и питбайках. Почувствуй, как рычит мотор под тобой, как ветер хлещет в лицо, а природа вокруг раскрывается во всей своей первозданной красоте. Наши туры подарят вам незабываемые эмоции от покорения лесных трасс и живописных маршрутов. Это не просто тур.<br>Это взрыв эмоций, глоток настоящей свободы и мощный перезапуск для души и тела. Прочувствуйте мощь техники, насладитесь свежим воздухом и красотой природы. А после захватывающего приключения вас ждёт настоящий кайф!</p><p data-cms="about.p3">Забудьте о городской суете, восстановите силы и насладитесь гармонией с природой. Это ваш идеальный отдых, где каждая деталь продумана для вашего удовольствия.</p><p class="about-legend" data-cms="about.legend">МотоГОСТ — там, где заканчивается рутина и начинается легенда.</p><a href="#contacts" class="btn" style="margin-top:8px" data-cms="about.cta">Получить консультацию</a></div><div class="ph-box ph-about"></div></div></div><div class="wrap model-extra"><div class="model-box reveal"><model-viewer class="pitbike-clone" src="images/model.glb" reveal="auto" camera-controls auto-rotate auto-rotate-delay="3000" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.05" camera-orbit="-30deg 80deg auto" style="background-color:transparent" alt="3D модель питбайка"></model-viewer></div></div></section><style id="rev-more2">#reviews .rev-hidden{display:none}#reviews.rev-show-all .rev-hidden{display:block}#reviews .rmore-wrap{display:flex!important;justify-content:center;margin:34px 0 4px}#reviews .rmore-btn{cursor:pointer;align-self:center;display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border:none;font-weight:800;letter-spacing:.4px;padding:15px 34px;border-radius:999px;box-shadow:0 12px 28px rgba(255,90,31,.38);transition:transform .15s}#reviews .rmore-btn:hover{transform:translateY(-2px)}#reviews .rev.rmore-anim{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}#reviews .rev.rmore-anim.rmore-in{opacity:1;transform:none}</style><section id="reviews" class="dark"><div class="sec-bg"><div class="float-blob fb1"></div><div class="float-blob fb2"></div><div class="float-blob fb3"></div></div><div class="wrap"><div class="sec-head"><div class="kicker">Отзывы</div><h2>Что говорят наши гости</h2><p>Реальные отзывы с Яндекс Карт — рейтинг 5,0 на основе 43 оценок.</p></div><div class="rev-top"><div class="rev-score"><div class="rev-num">5,0</div><div><div class="rev-score-st">★★★★★</div><div class="rev-score-meta">43 оценки · 36 отзывов</div></div></div><div class="rev-badge">��� «Хорошее место 2026» — Яндекс Карты</div></div><div class="rev-grid"><div class="rev-col"><article class="rev"><div class="rev-h"><div class="rev-av c1 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/65952/enc-ae0ab6e44ab087454295a2a3366fdf4f61d59cf90fd1d97abbe3b4b7506cd2eb/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Анастасия Бабкина</div><div class="rev-dt">10 мая 2025</div></div></div><div class="rev-st">★★★★★</div><p>Недавно состоялся мой первый опыт катания по лесу на мотоциклах. И все получилось, благодаря Виктору, очень доходчиво объяснил, как управлять мотоциклом, за 20 минут постигла азы теории и практики трогания с места. Два круга во дворе и погнали в лес. Лесные тропы, грязь, ветки - все это очень помогает прокачать работу со сцеплением. Очень переживала, что наступит момент критинизма, но все прошло просто на высшем уровне, благодаря поддержке, профессиональному и позитивному отношению нашего замечательного инструктора. Я получила массу положительных впечатлений, крутые незабываемые эмоции! Большое спасибо! Хочется еще ☺️ Вместе с тем хочется отметить, что нам выдали всю необходимую экипировку от и до, которая придает уверенности, также техника отличная, легкая в управлении даже для новичков.</p></article><article class="rev"><div class="rev-h"><div class="rev-av c6 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/60687/HFkzXmGsyM0A9jWcGdeKBIzaic-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Павел Марнов</div><div class="rev-dt">6 мая 2025</div></div></div><div class="rev-st">★★★★★</div><p>Очень круто покатались! Вся экипировка чистая. Эндуро все обслужены. Викторы огромное спасибо. Обязательно приедем еще!!!</p></article><article class="rev"><div class="rev-h"><div class="rev-av c0 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/58107/wWJyIJoSsQ5y9PXiHJ9PRgkrr6g-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Alex Navy</div><div class="rev-dt">28 апреля 2024</div></div></div><div class="rev-st">★★★★★</div><p>Решил с компанией экстремально провести выходные. Выбор пал на эндуро лэнд. Виктор оказался настоящим профессионалом. Экипировка вся новая, мотики тоже. Опыта не было зимних по катушек. Впечатлений было море. Сейчас готовлюсь снова туда поехать, устроить весенний заезд. Племянника возьму.</p></article><article class="rev"><div class="rev-h"><div class="rev-av c3 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/61207/0s-7/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Андрей</div><div class="rev-dt">7 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Катались компанией 6 мая. Всё было супер! Мотоциклы новые, в шикарном состоянии. Виктор отзывчивый и добрый парень, помогал и подсказывал в любой ситуации. Рекомендую попробовать. Обязательно вернёмся ещё!</p></article><article class="rev"><div class="rev-h"><div class="rev-av c0 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/41409/l4wqAM1LP6CEXmDTbCqDVqYvrxo-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Стас</div><div class="rev-dt">2 июля 2025</div></div></div><div class="rev-st">★★★★★</div><p>Супер. Лучшие цены. Мото все новые. Тур 4 часа был великолепен. Рекомендую</p></article><article class="rev"><div class="rev-h"><div class="rev-av c1 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/69015/enc-1b07373875566caa6a512eb48fddb3bf01e5e3ef15dfca3b9fabcdb5df6c9ba6/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">ANDREY YAMSHANOV</div><div class="rev-dt">12 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Новые мотоциклы, полная экипировка, и приемлемые цены. Инструктор все объясняет. Понравилось безумно, всем рекомендую. Отлично отдохнул, погонял по бездорожью и горным массивам. Организаторам респект.</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c0">И</div><div class="rev-id"><div class="rev-nm">Инкогнито 7978</div><div class="rev-dt">25 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Доброго времени суток друзья!!! Сразу же хочу порекомендовать данную услугу,которую на профессиональном уровне представляет компания ЭНДУРО ЛЭНД!!! Очень понравилось отношение и подход инструктора,так как Я человек который вообще не садился на подобный транспорт и в итоге справился с управлением за счет правильного и граммотного инструктажа!!! В итоге масса позитивных эмоций и желание вернуться ,что Я и сделаю!!! Выражаю огромную благодарность ЕВГЕНИЮ И ВИКТОРУ 🙏🏻</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c11 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/26311/0u-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Соня</div><div class="rev-dt">28 апреля 2024</div></div></div><div class="rev-st">★★★★★</div><p>Новые байки,грамотный,а главное,любящий свое дело гид,и маршруты разного уровня сложности.Подойдет как новичкам так и для тех,кто давно в этой теме!все на высоте!</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c1 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/65952/0s-2/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Иван Беляков</div><div class="rev-dt">9 июня 2024</div></div></div><div class="rev-st">★★★★★</div><p>Это били незабываемые 3 часа, классный мот отзывчивый инструктор Виктор, невысокая цена, красивые и места, трасса подбирается по навыкам вождения, рекомендую</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c2 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/36777/L6Npuk6gk0llYFnMWunN1CeMXCY-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Вадим</div><div class="rev-dt">15 ма�� 2024</div></div></div><div class="rev-st">★★★★★</div><p>Получили бурю эмоций от проведенного времени! Все на высшем уровне, состояние мотоциклов, инструктов Виктор показал красивые места на местности, весело провели время!) рекомендую 💪</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c10">Н</div><div class="rev-id"><div class="rev-nm">Наталья Тоякова</div><div class="rev-dt">3 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>С Виктором научилась кататься, съездили на Соколиный камень, красиво, интересно и ооочень воодушевляюще!</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c10 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/40841/enc-95de388eb77edd9f66e6a9d920417bb6e6b644922d5eab8b2fd7c34a10a33e51/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Евгений П.</div><div class="rev-dt">11 мая 2025</div></div></div><div class="rev-st">★★★★★</div><p>Четко</p></article></div><div class="rev-col"><article class="rev"><div class="rev-h"><div class="rev-av c6 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/30955/776EfKT2j05kdiuqBoDOwCXYnU4-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Станислав Чернышов</div><div class="rev-dt">26 июня 2025</div></div></div><div class="rev-st">★★★★★</div><p>Все супер!приезжали с Москвы в командировку, было время, пригласил парней к Виктору на эндуро. Все довольны. Удобная локация, красивые пейзажи. Маршруты не по полю паровозиком, была и грязь и прыжки и камни и спуски и подьемы! Подобрал маршрут удобный для всех(в составе были без опыта парни). Было весело и круто. Из рекомендаций Виктору, по завершению маршрута для всех делать уху. Пусть будет дороже, но будет вообще улет.</p></article><article class="rev"><div class="rev-h"><div class="rev-av c2 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/56823/0g-7/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Алексей Воротило</div><div class="rev-dt">18 сентября 2024</div></div></div><div class="rev-st">★★★★★</div><p>Посещал самые популярные прокаты Эндуро в Екатеринбурге, поэтому меня было достаточно сложно удивить, но я вам скажу, что удовольствие полученное от катания не сравнимо с тем, что я получал ранее. У ребят качественная экипа (все четко в размер, все застегивается, ничего не отваливается, все делают как для себя) мото обслужены, едет мягко. Отдельно про маршрут, сказка-пушка, научился переезжать большие бревна (минимальный уровень), подъемы по большим камням, лужи, грязь. Отдельное спасибо Виктору и Дмитрию за классную компанию и переданный опыт, мы явно приедем сюда еще не раз, всем советую</p></article><article class="rev"><div class="rev-h"><div class="rev-av c3 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/43978/0y-9/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Александр Светлаков</div><div class="rev-dt">13 мая 2025</div></div></div><div class="rev-st">★★★★★</div><p>Брал индивидуальные занятия с инструктором Виктором, очень понятно все обьяснял. Круто покатались, хорошая техника, экипиррвка в хорошем состоянии. Море эмоций! Буду продолжать заниматься!</p></article><article class="rev"><div class="rev-h"><div class="rev-av c5 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/26311/0c-4/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Исаков Вадим</div><div class="rev-dt">23 апреля 2025</div></div></div><div class="rev-st">★★★★★</div><p>Катались с женой оба остались довольные крутая техника, безопасная экипировка понял я улетев в кусты))) было круто Инструктор Красавчик!!!</p></article><article class="rev"><div class="rev-h"><div class="rev-av c2 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/26311/0t-3/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Руслан Галимов</div><div class="rev-dt">14 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Адекватные цены,новые мото и экипировка, любая поддержка на протяжении всего проката от инструктора ,как итог -обалденные незабываемые эмоции! Крутая локация красивейшие пейзажи. Рекомендую всем как професионалам так и нет! Спасибо вам))))))</p></article><article class="rev"><div class="rev-h"><div class="rev-av c0 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/50595/0h-3/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Роман Гуцол</div><div class="rev-dt">24 июня 2025</div></div></div><div class="rev-st">★★★★★</div><p>Все очень понравилось, рекомендую. Техника свежая, инструктор с душой. Маршруты интересные</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c3 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/31804/NO5iemoPSigdRi4WkFv6ROn578-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Артем К.</div><div class="rev-dt">1 июля 2024</div></div></div><div class="rev-st">★★★★★</div><p>Я в восторге!Понравилось всё от слова совсем.Виктор отличный инструктор который любит своё дело и подберает трассу судя навыкам клинтов .Мотоциклы в отличном состоянии,бодрые.Трасса на которой катались мы была разнообразной,не заскучаешь.Инструктор снимает на go pro и фотографирует так что остались не только воспоминания.Уже планируем новую покатушку трасс много будем осваивать.Теперь только в Эндуро лэнд.</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c5 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/47747/0f-6/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Юлия Токарева</div><div class="rev-dt">23 апреля 2025</div></div></div><div class="rev-st">★★★★★</div><p>Вчера удалось побывать в этом прекрасном месте , все понравилось даже более чем , организация на высшем уровне. Однозначно рекомендую.</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c0 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/63256/enc-469a401b10775f2b1a9f051a682789f5963b440a2a9ab19289e76461fe48b063/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Виктор</div><div class="rev-dt">3 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Душевный подход! Рад, что получилось покататься именно так, по кайфу, а не организация с кучей мотоциклистов едущих паровозиком. Это лучшее что случалось со мной этим летом. Спасибо, Виктор!</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c0 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/48449/ANCPUbcc4b5U1Roq3x32QBqU-1/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Sakato Gintoki</div><div class="rev-dt">7 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Брали в аренду на 2 часа,получили кучу адреналина и позитивные эмоции,будем ждать выходных чтобы покататься еще) советую всем.</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c3 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/38663/enc-8337d3a4223b97e26eb24770fe7e6eafd83878d1a8d4b88f9cc79f48c291656b/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Сергей О.</div><div class="rev-dt">9 ноября 2025</div></div></div><div class="rev-st">★★★★★</div><p>Отлично прокатились, потренировались👍💪</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c7 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/31804/0s-3/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Glimmer 377711</div><div class="rev-dt">10 сентября 2025</div></div></div><div class="rev-st">★★★★★</div><p>Отличный прокат и сервис Эндуро 👍</p></article></div><div class="rev-col"><article class="rev"><div class="rev-h"><div class="rev-av c2 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/57243/0b-2/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Эльвина Фаляхова</div><div class="rev-dt">24 мая 2025</div></div></div><div class="rev-st">★★★★★</div><p>Место дарящее эмоции! Инструктор на высоте, все объяснит! Научит, проинструктирует, сопроводит от и до. Экипировка, мотоциклетный ряд подберут под твой вкус и запрос! Супер вариант как для новичка и профи. Укрась свой выходной!</p></article><article class="rev"><div class="rev-h"><div class="rev-av c6 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/68143/0g-8/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">андрей андрей</div><div class="rev-dt">4 мая 2025</div></div></div><div class="rev-st">★★★★★</div><p>Рекомендую, отдохнули душой и телом, катались по красивым местам, время пролетело не заметно, все прошло просто классно, большое спасибо</p></article><article class="rev"><div class="rev-h"><div class="rev-av c0 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/15430/0b-7/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">182758 Рахимов</div><div class="rev-dt">9 июня 2025</div></div></div><div class="rev-st">★★★★★</div><p>До этого не разу не ездил на мотоциклах, поэтому решил сперва попробовать на индуро и по лесу ( мотоцикл готов к небольшим падениям, и в лесу безопаснее). Сначала дико боялся, но поездка оказалась отличной. Инструктор все супер понятно объяснили. Инструктаж короткий, но по делу. Подобрать шлем и экипировку. Мотоцикл обслуженный, все отлично работает. Трасса классная — есть повороты и длинная прямая, где разогнался аж до дух захватывало! В общем, уехал с улыбкой до ушей. Рекомендую всем, кто боится пробовать в первый раз — идите, не пожалеете!</p></article><article class="rev"><div class="rev-h"><div class="rev-av c5 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/69015/0t-5/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Владимир Панов</div><div class="rev-dt">25 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Всем добрый день, вечер, утро, кто читает этот отзыв!я хотел бы начать с момента как прибыл на место,встретили очень душевно! Виктор это человек открытый,добрый и самое главное профессионал своего дела!все обьяснил,показал и на протяжении всей поездки был рядом и давал профессионые советы !техника которая имеется в ассортименте на любой уровень от новичка до профи ,все в идиальном состоянии от мотоциклов до экипировки! Красноречиво писать не умею но однозначно могу сказать, приеду еще не однократно в это место!!!! Спасибо за незабываемые эмоции Виктор и Евгений!!!!</p></article><article class="rev"><div class="rev-h"><div class="rev-av c3 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/50595/0t-8/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Андрей К.</div><div class="rev-dt">3 июня 2024</div></div></div><div class="rev-st">★★★★★</div><p>Катался с детьми 2 июня. Всем очень понравилось, дети в восторге! Виктор классный специалист своего дела, все спокойно объяснял, терпел наши косяки в дороге. Мы все впервые сели за руль пит-байка. Спасибо ему большое! Думаю обязательно еще приедем покататься. Младший теперь одолевает меня купить ему пит-байк. Видимо хватило эмоций.</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c5 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/25358/0c-8/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">вячеслав запальнов</div><div class="rev-dt">3 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Вообщем кто хочет провести время с пользой для здоровья и хорошего настроения,рекомендую эндуро-ленд, грамотный подход инструктора ,прекрасные маршруты, к стати так как имею опыт вождения мотоцикла ,хочу сказать вся техника которая есть в наличии у ребят подготовлена на 5+, поверте на слово это лучьше чем пиво😁</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c0 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/62162/0b-4/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Анна А.</div><div class="rev-dt">7 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Кайфогенное место,где можно провести свои выходные,что мы и сделали с друзьями, все остались в полном восторге,надо будет повторить,что и вам советую,не пожалеете…мотоциклы и экипировка новые…я в восторге 😝,эмоций куча👍👍👍🔥спасибо вам ребята и за сервис тоже 😊</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c10 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/57243/0b-2/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Елена</div><div class="rev-dt">1 ноября 2025</div></div></div><div class="rev-st">★★★★★</div><p>Виктор просто супер, рекомендую! Мы с сыном в восторге!</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c11 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/25358/0d-8/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Кирилл Трубчанинов</div><div class="rev-dt">14 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Нашел для себя новое экстремальное развлечение, получил драйв и много впечатлений. Новые мотоциклы,грамотные инструктора. Рекомендую.</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c11 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/68143/0k-4/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">Галина Т.</div><div class="rev-dt">16 апреля 2024</div></div></div><div class="rev-st">★★★★★</div><p>Красивый маршрут, хороший инструктор, качественные мотоциклы и экипировка👍</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c7 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/37154/0m-5/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">andreyka</div><div class="rev-dt">16 июля 2025</div></div></div><div class="rev-st">★★★★★</div><p>ВИКТОРУ ОГРОМНОЕ СПАСИБО, ПРОКАТ ОГОНЬ !!! ВСЕ СУПЕР 10 ИЗ 10 РЕКОМЕНДУЮ 100%</p></article><article class="rev rev-hidden"><div class="rev-h"><div class="rev-av c11 has-photo"><img src="https://avatars.mds.yandex.net/get-yapic/31804/0r-9/islands-68" alt="" loading="lazy" referrerpolicy="no-referrer"></div><div class="rev-id"><div class="rev-nm">oleg pilshchikov</div><div class="rev-dt">6 мая 2024</div></div></div><div class="rev-st">★★★★★</div><p>Отличные ребята ! Грамотный инструкор , свежая техника !</p></article></div></div><div class="rmore-wrap"><button type="button" class="btn rmore-btn" onclick="revToggle(this)">Показать ещё</button></div><div class="rev-src"><a class="btn btn-ghost" href="https://yandex.ru/profile/84901512972?lang=ru&no-distribution=1&view-state=mini&source=wizbiz_new_map_single" target="_blank" rel="noopener">Смотреть все отзывы на Яндексе</a></div></div></section><script>function revToggle(b){var s=document.getElementById("reviews");var hid=s.querySelectorAll(".rev.rev-hidden");var reset=function(el){el.style.transition="";el.style.opacity="";el.style.transform="";el.style.transitionDelay="";el.classList.remove("rev-anim","rev-in","rmore-anim","rmore-in");};if(!s.classList.contains("rev-show-all")){s.classList.add("rev-show-all");if(window.__rmIO)window.__rmIO.disconnect();Array.prototype.forEach.call(hid,function(el){el.classList.remove("rev-anim","rev-in","rmore-anim","rmore-in","rv","in");el.style.transition="none";el.style.opacity="0";el.style.transform="translateY(36px)";});void s.offsetWidth;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;io.unobserve(el);el.style.transition="opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)";requestAnimationFrame(function(){requestAnimationFrame(function(){el.style.opacity="1";el.style.transform="translateY(0)";});});var done=function(ev){if(ev&&ev.propertyName&&ev.propertyName!=="transform")return;reset(el);el.removeEventListener("transitionend",done);};el.addEventListener("transitionend",done);setTimeout(function(){reset(el);},1200);}});},{threshold:.08,rootMargin:"0px 0px -6% 0px"});window.__rmIO=io;Array.prototype.forEach.call(hid,function(el){io.observe(el);});b.textContent="Скрыть отзывы";}else{var before=b.getBoundingClientRect().top;s.classList.remove("rev-show-all");if(window.__rmIO){window.__rmIO.disconnect();window.__rmIO=null;}Array.prototype.forEach.call(hid,function(el){reset(el);});b.textContent="Показать ещё";var after=b.getBoundingClientRect().top;var de=document.documentElement;var pb=de.style.scrollBehavior;de.style.scrollBehavior="auto";window.scrollBy(0,after-before);de.style.scrollBehavior=pb;}}</script>
+<section id="lead" class="lead"><div class="lead-aurora" aria-hidden="true"><span></span><span></span><span></span></div><div class="wrap"><div class="lead-grid"><div class="lead-photo reveal"><div class="lp-frame"><img src="images/photo_21.webp" alt="Эндуро-заезд с МотоГОСТ" loading="lazy"><span class="lp-glow" aria-hidden="true"></span></div><div class="lp-badge"><b>5+ лет</b><span>организуем заезды</span></div></div><div class="lead-card reveal d1" id="leadCard"><div class="kicker">Заявка</div><h2>Заинтересовались прокатом на эндуро-мотоциклах?</h2><p class="lead-sub">Оставьте контактные данные — подберём маршрут под ваш уровень и ответим на все вопросы.</p><form id="leadForm" novalidate><div class="fld fld-sel raised"><select id="lRoute"><option value="" disabled selected hidden></option><option>Прокат на 1 час</option><option>Прокат на 2–3 часа</option><option>Тур на полдня</option><option>Тур на целый день</option><option>Тур выходного дня</option><option>Корпоратив / группа</option><option>Не знаю — помогите выбрать</option></select><label for="lRoute">Выберите маршрут</label><span class="sel-caret">▾</span></div><div class="lead-row"><div class="fld"><input id="lPeople" type="number" min="1" max="30" placeholder=" "><label for="lPeople">Кол-во человек</label></div><div class="fld raised"><input id="lDate" type="date" placeholder=" "><label for="lDate">Желаемая дата</label></div></div><div class="fld"><input id="lPhone" type="tel" placeholder=" " autocomplete="tel"><label for="lPhone">Ваш телефон (+7 …)</label></div><label class="lead-check"><input type="checkbox" id="lAgree"><span>Согласен на обработку персональных данных</span></label><label class="lead-check"><input type="checkbox" id="lPromo"><span>Согласен на получение информационных сообщений</span></label><button type="submit" class="btn cert-btn lead-btn">Оставить заявку →</button><p class="cert-note">После нажатия откроется Telegram с уже готовым сообщением — останется нажать «Отправить».</p></form><div class="lead-msgs"><span class="lm-or">Или напишите нам в мессенджере:</span><div class="msgs"><a class="tg" href="https://t.me/MstrV1ctory" target="_blank" rel="noopener">Telegram</a><a class="max" href="https://max.ru/" target="_blank" rel="noopener">MAX</a><a class="vk" href="https://vk.com/motogost96" target="_blank" rel="noopener">ВКонтакте</a></div></div></div></div></div></section><section id="cert" class="cert-sec"><div class="wrap"><div class="sec-head"><div class="kicker">Подарок с характером</div><h2>Подарочный сертификат</h2><p>Подарите эмоции, а не вещи — заезд на эндуро или питбайке, занятие с инструктором или hard enduro гид. Оформите сертификат на любую сумму за пару минут.</p></div><div class="cert-layout"><div class="cert-card reveal"><div class="cert-plate"><div class="cert-card-inner"><div class="cert-shine"></div><div class="cert-main"><div class="cert-top"><span class="cert-brand">🏍 МОТОГОСТ</span><span class="cert-badge">GIFT</span></div><div class="cert-title">Подарочный сертификат</div><div class="cert-sub">Эндуро · питбайки · обучение</div><div class="cert-amount"><span id="cpAmount">10 000</span> ₽</div><div class="cert-row"><span>Кому</span><b id="cpName">—</b></div><div class="cert-row"><span>Телефон</span><b id="cpPhone">—</b></div><div class="cert-foot">VOUCHER · АДРЕНАЛИН НА УРАЛЕ</div></div></div></div></div><form id="certForm" class="cert-form reveal d1" novalidate><div class="fld"><input id="cAmount" type="text" inputmode="numeric" placeholder=" " autocomplete="off"><label for="cAmount">Сумма сертификата, ₽</label></div><div class="cert-chips"><button type="button" class="chip" data-v="5000">5 000 ₽</button><button type="button" class="chip" data-v="10000">10 000 ₽</button><button type="button" class="chip" data-v="15000">15 000 ₽</button><button type="button" class="chip" data-v="20000">20 000 ₽</button></div><div class="fld"><input id="cName" type="text" placeholder=" " autocomplete="name"><label for="cName">ФИО получателя</label></div><div class="fld"><input id="cPhone" type="tel" placeholder=" " autocomplete="tel"><label for="cPhone">Ваш телефон (формат: +7 …)</label></div><div class="fld"><textarea id="cWish" placeholder=" "></textarea><label for="cWish">Пожелание (необязательно)</label></div><button type="submit" class="btn cert-btn">Заказать сертификат →</button><p class="cert-note">После нажатия откроется Telegram с уже готовым сообщением — останется только нажать «Отправить».</p></form></div><div class="cert-feats"><div class="cf reveal"><span class="cf-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8 8a2 2 0 0 0 2.828 0l7.172-7.172a2 2 0 0 0 0-2.828z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><b>Любая сумма</b><span>Вы сами выбираете номинал сертификата</span></div><div class="cf reveal d1"><span class="cf-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><b>Оформление за 5 минут</b><span>Заявка прямо в Telegram, без визита</span></div><div class="cf reveal d2"><span class="cf-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 3v4M16 3v4"/></svg></span><b>Действует 12 месяцев</b><span>Получатель выберет удобную дату заезда</span></div></div></div></section><section id="contacts" class="dark"><div class="wrap"><div class="sec-head"><div class="kicker">Контакты</div><h2>Записаться на заезд</h2><p>Оставьте заявку или напишите в мессенджер — обсудим детали и ответим на все вопросы.</p></div><div class="con-layout"><div class="con"><div class="c reveal"><div class="lab">Адрес</div><div class="val" style="font-size:16px;line-height:1.5" data-cms="contacts.address">Посёлок Северка, ул. Победы, 8</div><p style="color:#a7a097;margin-top:8px;font-size:14px" data-cms="contacts.addressNote">Посёлок Северка — западное направление от Екатеринбурга</p></div><div class="c reveal d1"><div class="lab">Телефон</div><a class="val" href="tel:+79585786786" data-cms="contacts.phoneText" data-cms-href="contacts.phoneHref">+7 (958) 578-67-86</a></div><div class="c reveal d2"><div class="lab">Мессенджеры</div><div class="msgs"><a class="tg" href="https://t.me/MotoGost96" target="_blank" rel="noopener" data-cms="contacts.tgGroupText" data-cms-href="contacts.tgGroup">Telegram · Группа</a><a class="tg tg-dm" href="https://t.me/MstrV1ctory" target="_blank" rel="noopener" data-cms="contacts.tgDmText" data-cms-href="contacts.tgDm">Telegram · Личные сообщения</a><a class="vk" href="https://vk.com/motogost96" target="_blank" rel="noopener" data-cms="contacts.vkText" data-cms-href="contacts.vk">ВКонтакте</a></div></div></div><div class="map-wrap reveal" style="border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 22px 48px rgba(0,0,0,.45);min-height:420px"><iframe src="https://yandex.ru/map-widget/v1/?ll=60.289810%2C56.867788&z=15&l=sat%2Cskl&pt=60.289810%2C56.867788%2Cpm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen="true" loading="lazy" style="display:block;width:100%;height:100%;min-height:420px;border:0" title="Как нас найти — посёлок Северка, ул. Победы, 8"></iframe></div></div></div><div class="wrap model-extra"><div class="model-box reveal"><model-viewer class="pitbike-clone" src="images/model.glb" reveal="auto" camera-controls auto-rotate auto-rotate-delay="3000" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.05" camera-orbit="-30deg 80deg auto" style="background-color:transparent" alt="3D модель питбайка"></model-viewer></div></div></section><section id="bike3d" class="dark"><div class="wrap"><div class="sec-head"><div class="kicker">3D-модель</div><h2>Эндуро</h2><p>Профессиональные эндуро-мотоциклы для заездов любого уровня. Крути модель мышкой — рассмотри её со всех сторон.</p></div><div class="model-box reveal"><model-viewer class="pitbike-clone" src="images/model.glb" reveal="auto" camera-controls auto-rotate auto-rotate-delay="3000" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.05" camera-orbit="-30deg 80deg auto" style="background-color:transparent" alt="3D модель питбайка"></model-viewer></div></div></section><footer><div class="wrap"><div class="foot-top"><a href="#top" class="brand">Мото<span class="acc">ГОСТ</span></a><div class="foot-links"><a href="#tours">Туры</a><a href="#vkl">Что входит</a><a href="#gallery">Галерея</a><a href="#about">О нас</a><a href="#reviews">Отзывы</a><a href="#cert">Сертификат</a><a href="#contacts">Контакты</a></div></div><div class="foot-legal">© Copyright 2026 «МотоГОСТ»<br>Политика конфиденциальности · Пользовательское соглашение · Согласие на обработку персональных данных</div></div></footer><button class="top" id="toTop" aria-label="Наверх">↑</button><div class="lb" id="lb"><button class="x" id="lbx">✕</button><button class="pv" id="lbp">‹</button><div class="img" id="lbimg"></div><button class="nx" id="lbn">›</button></div><script>
+(function(){
+var GAL=["gp1","gp2","gp3","gp4","gp5","gp6","gp7","gp8","gp9","gp10","gp11","gp12","gp13","gp14","gp15","gp16","gp17","gp18","gp19","gp20","gp21","gp22","gp23","gp24","gp25","gp26","gp27","gp28","gp29","gp30","gp31"];
+var hdr=document.getElementById('hdr'),nav=document.getElementById('nav'),bg=document.getElementById('burger');
+bg.addEventListener('click',function(){nav.classList.toggle('open');bg.classList.toggle('open');});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bg.classList.remove('open');});});
+var toTop=document.getElementById('toTop');
+function onScroll(){var y=window.scrollY||0;hdr.classList.toggle('scrolled',y>40);toTop.classList.toggle('show',y>600);}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+// gallery marquee
+var track=document.getElementById('galTrack');
+if(track){var off=0,one=0,paused=false,last=0,resume=null,sp=0.045,sliding=false;
+function meas(){one=track.scrollWidth/2;}
+function wrap(){if(one>0){while(off<=-one)off+=one;while(off>0)off-=one;}}
+function loop(ts){if(!last)last=ts;var dt=ts-last;last=ts;if(dt>120)dt=16;if(!one)meas();if(sliding){requestAnimationFrame(loop);return;}if(!paused){off-=sp*dt;}wrap();track.style.transform='translateX('+off+'px)';requestAnimationFrame(loop);}
+meas();window.addEventListener('resize',meas);requestAnimationFrame(loop);
+track.addEventListener('mouseenter',function(){paused=true;});
+track.addEventListener('mouseleave',function(){paused=false;last=0;});
+function nudge(d){if(!one)meas();var it=track.querySelector('.gph');var w=it?it.getBoundingClientRect().width:280;paused=true;sliding=true;off+=d*(w+16);track.style.transition='transform .8s cubic-bezier(.4,0,.2,1)';track.style.transform='translateX('+off+'px)';if(resume)clearTimeout(resume);resume=setTimeout(function(){track.style.transition='none';sliding=false;wrap();track.style.transform='translateX('+off+'px)';paused=false;last=0;},820);}
+document.getElementById('gprev').addEventListener('click',function(){nudge(1);});
+document.getElementById('gnext').addEventListener('click',function(){nudge(-1);});
+// lightbox
+var lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg'),cur=0;
+function openLB(i){cur=(i+GAL.length)%GAL.length;lbimg.className='img '+GAL[cur];lb.classList.add('open');document.body.style.overflow='hidden';}
+function closeLB(){lb.classList.remove('open');document.body.style.overflow='';}
+track.querySelectorAll('.gph').forEach(function(el){el.addEventListener('click',function(){openLB(parseInt(el.getAttribute('data-i'),10)||0);});});
+document.getElementById('lbx').addEventListener('click',closeLB);
+document.getElementById('lbp').addEventListener('click',function(e){e.stopPropagation();openLB(cur-1);});
+document.getElementById('lbn').addEventListener('click',function(e){e.stopPropagation();openLB(cur+1);});
+lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')openLB(cur-1);if(e.key==='ArrowRight')openLB(cur+1);});
+}
+})();
+</script><script>(function(){if(window.matchMedia&&window.matchMedia("(hover:none)").matches)return;var sel=document.querySelectorAll(".tour, .cat>*, .feat>*");sel.forEach(function(c){c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();var px=(e.clientX-r.left)/r.width-0.5;var py=(e.clientY-r.top)/r.height-0.5;c.style.transform="perspective(1000px) rotateX("+(-py*9).toFixed(2)+"deg) rotateY("+(px*9).toFixed(2)+"deg) translateY(-6px) scale(1.02)";c.classList.add("tilt3d");});c.addEventListener("mouseleave",function(){c.style.transform="";c.classList.remove("tilt3d");});});})();</script><style id="kill-bg-glow">.float-blob{display:none!important}.cert-sec::before,.cert-sec::after{display:none!important}.lead-aurora{display:none!important}</style><style id="gal-frame">.gph{position:relative;overflow:hidden;border:4px solid rgba(255,255,255,.95);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.35);transition:box-shadow .12s ease,border-color .12s ease}.gph::before{content:"";position:absolute;inset:0;background-image:inherit;background-size:cover;background-position:center;transition:transform .5s ease;z-index:0}.gph:hover::before{transform:scale(1.12)}.gph:hover{transform:none;border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.95),0 0 20px 5px rgba(255,255,255,.85),0 0 42px 12px rgba(255,255,255,.45)}.gal-vp{padding:16px 0}</style><script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script><div class="fab" id="fab"><div class="fab-actions"><a class="fab-call" href="tel:+79995656430"><span class="lbl">+7 (999) 565-64-30</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a><a class="fab-tg" href="https://t.me/MstrV1ctory" target="_blank" rel="noopener"><span class="lbl">Написать в Telegram</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a><a class="fab-vk" href="https://vk.com/motogost96" target="_blank" rel="noopener"><span class="lbl">Мы ВКонтакте</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.16 16.27c-5.18 0-8.13-3.55-8.25-9.46h2.6c.08 4.34 2 6.18 3.51 6.56V6.81h2.45v3.75c1.5-.16 3.07-1.87 3.6-3.75h2.45c-.41 2.32-2.12 4.03-3.33 4.73 1.21.57 3.16 2.06 3.9 4.73h-2.7c-.57-1.79-2.02-3.18-3.92-3.36v3.36h-.31z"/></svg></a></div><button class="fab-toggle" id="fabToggle" type="button" aria-label="Связаться с нами"><span class="ic-chat"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.65L3 21l1.85-5.3A8.5 8.5 0 1 1 21 11.5z"/><line x1="9" y1="10.5" x2="15" y2="10.5"/><line x1="9" y1="13.5" x2="13" y2="13.5"/></svg></span><span class="ic-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span></button></div><script>(function(){var f=document.getElementById("fab"),t=document.getElementById("fabToggle");if(!f||!t)return;t.addEventListener("click",function(e){e.stopPropagation();f.classList.toggle("open");});document.addEventListener("click",function(e){if(!f.contains(e.target))f.classList.remove("open");});document.addEventListener("keydown",function(e){if(e.key==="Escape")f.classList.remove("open");});})();</script><script>/* rev-tilt-js */(function(){var cards=document.querySelectorAll("#reviews .rev");var MAX=9;cards.forEach(function(c){c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();var px=(e.clientX-r.left)/r.width;var py=(e.clientY-r.top)/r.height;var ry=(px-0.5)*2*MAX;var rx=-(py-0.5)*2*MAX;c.style.transform="perspective(820px) rotateX("+rx.toFixed(2)+"deg) rotateY("+ry.toFixed(2)+"deg) translateZ(14px)";c.style.setProperty("--mx",(px*100).toFixed(1)+"%");c.style.setProperty("--my",(py*100).toFixed(1)+"%");});c.addEventListener("mouseleave",function(){c.style.transform="";});});})();</script><div id="pageTransition"></div><script>(function(){
+  function init(){
+    var pt=document.getElementById("pageTransition");
+    var NAVH=68;var animating=false;
+    function navTo(href){
+      var el=document.querySelector(href);if(!el)return;if(window.matchMedia&&window.matchMedia("(max-width:860px)").matches){var _y=el.getBoundingClientRect().top+window.pageYOffset-NAVH;try{window.scrollTo({top:_y,behavior:"smooth"});}catch(_e){window.scrollTo(0,_y);}return;}
+      if(animating){return;}animating=true;
+      pt.style.transformOrigin="bottom";pt.getBoundingClientRect();
+      pt.classList.add("cover");
+      setTimeout(function(){
+        var de=document.documentElement;var sb=de.style.scrollBehavior;
+        de.style.scrollBehavior="auto";
+        var y=el.getBoundingClientRect().top+window.pageYOffset-NAVH;
+        window.scrollTo(0,y);
+        de.style.scrollBehavior=sb;
+        pt.style.transformOrigin="top";pt.classList.remove("cover");
+        el.classList.add("sec-open");
+        setTimeout(function(){el.classList.remove("sec-open");animating=false;},700);
+      },470);
+    }
+    var links=document.querySelectorAll("a");
+    Array.prototype.forEach.call(links,function(a){
+      var href=a.getAttribute("href");
+      if(!href||href.charAt(0)!=="#"||href==="#")return;
+      if(!document.querySelector(href))return;
+      a.addEventListener("click",function(e){
+        e.preventDefault();
+        var nav=document.getElementById("nav");if(nav)nav.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        document.documentElement.classList.remove("menu-open");
+        navTo(href);
+        if(window.history&&history.replaceState){history.replaceState(null,"",href);}
+      });
+    });
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});
+    },{threshold:0.12,rootMargin:"0px 0px -8% 0px"});
+    ["#gallery","#reviews"].forEach(function(sel){
+      var h=document.querySelector(sel+" .sec-head");
+      if(h){Array.prototype.forEach.call(h.children,function(c,i){c.classList.add("rv");c.style.transitionDelay=(i*100)+"ms";io.observe(c);});}
+    });
+    var gph=document.querySelectorAll("#gallery .gph");
+    Array.prototype.forEach.call(gph,function(c,i){c.classList.add("rv","rv-s");c.style.transitionDelay=((i%10)*60)+"ms";});
+    var galvp=document.querySelector("#gallery .gal-vp")||document.querySelector("#gallery");
+    if(galvp&&gph.length){
+      var gio=new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.isIntersecting){Array.prototype.forEach.call(gph,function(c){c.classList.add("in");});gio.disconnect();}});},{threshold:0.05});
+      gio.observe(galvp);
+    }
+    var top=document.querySelector("#reviews .rev-top");
+    if(top){Array.prototype.forEach.call(top.children,function(c,i){c.classList.add("rv");c.style.transitionDelay=(i*100)+"ms";io.observe(c);});}
+    var revs=document.querySelectorAll("#reviews .rev");
+    Array.prototype.forEach.call(revs,function(c,i){
+      var m=i%4;c.classList.add("rv");
+      if(m===1)c.classList.add("rv-l");
+      else if(m===2)c.classList.add("rv-r");
+      else if(m===3)c.classList.add("rv-rot");
+      io.observe(c);
+    });
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
+</script><script>(function(){
+  function ready(fn){if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",fn);else fn();}
+  ready(function(){
+    var section=document.getElementById("reviews");if(!section)return;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;if(window.matchMedia&&window.matchMedia("(max-width:860px)").matches)return;
+    var revs=section.querySelectorAll(".rev");var cards=[];
+    function rnd(a,b){return a+Math.random()*(b-a);}
+    function sgn(){return Math.random()<0.5?-1:1;}
+    Array.prototype.forEach.call(revs,function(c){
+      c.classList.remove("rv","rv-l","rv-r","rv-rot","in");
+      c.style.transitionDelay="";c.style.opacity="";
+      var w=document.createElement("div");w.className="rev-fl";
+      c.parentNode.insertBefore(w,c);w.appendChild(c);
+      cards.push({w:w,c:c,
+        dx:sgn()*rnd(60,135),dy:sgn()*rnd(40,95),rot:sgn()*rnd(6,14),
+        ax:rnd(10,22),ay:rnd(8,18),sx:rnd(0.5,1.1),sy:rnd(0.5,1.1),sr:rnd(0.4,0.9),
+        px:rnd(0,6.28),py:rnd(0,6.28),pr:rnd(0,6.28),docY:0,h:0});
+    });
+    if(reduce){cards.forEach(function(o){o.w.style.transform="none";o.w.style.opacity="1";});return;}
+    function measure(){var sy=window.pageYOffset;cards.forEach(function(o){var prev=o.w.style.transform;o.w.style.transform="none";var r=o.w.getBoundingClientRect();o.docY=r.top+sy;o.h=r.height;o.w.style.transform=prev;});}
+    measure();var vh=window.innerHeight;
+    window.addEventListener("resize",function(){vh=window.innerHeight;measure();});
+    function frame(now){
+      var sy=window.pageYOffset;var srect=section.getBoundingClientRect();var _ms=(document.documentElement.scrollHeight||document.body.scrollHeight)-vh;var _bp=_ms>0?(sy-(_ms-vh*0.6))/(vh*0.6):0;if(_bp<0)_bp=0;else if(_bp>1)_bp=1;
+      if(srect.bottom>-200&&srect.top<vh+200){
+        var t=now*0.001;
+        for(var i=0;i<cards.length;i++){
+          var o=cards[i];var center=o.docY+o.h/2-sy;
+          var p=(vh-center)/(vh*0.55);if(p<0)p=0;else if(p>1)p=1;if(_bp>p)p=_bp;var inv=1-p;
+          var fx=Math.sin(t*o.sx+o.px)*o.ax*inv;var fy=Math.cos(t*o.sy+o.py)*o.ay*inv;
+          var tx=o.dx*inv+fx;var ty=o.dy*inv+fy;
+          var rot=o.rot*inv+Math.sin(t*o.sr+o.pr)*5*inv;var sc=1-0.16*inv;
+          o.w.style.transform="translate("+tx.toFixed(2)+"px,"+ty.toFixed(2)+"px) rotate("+rot.toFixed(2)+"deg) scale("+sc.toFixed(3)+")";
+          o.w.style.opacity=(0.2+0.8*p).toFixed(3);
+          o.w.style.zIndex=inv>0.04?"3":"1";
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  });
+})();
+</script><script>/* nav-views-mark */(function(){
+  function panels(){
+    var arr=[];
+    var top=document.getElementById("top");if(top)arr.push(top);
+    Array.prototype.forEach.call(document.querySelectorAll("body > section"),function(x){arr.push(x);});
+    var f=document.querySelector("body > footer");if(f)arr.push(f);
+    return arr;
+  }
+  function kick(){
+    try{window.dispatchEvent(new Event("resize"));}catch(e){}
+    setTimeout(function(){try{window.dispatchEvent(new Event("resize"));}catch(e){}},70);
+    setTimeout(function(){try{window.dispatchEvent(new Event("resize"));}catch(e){}},220);
+  }
+  var animating=false;
+  function backBtn(){
+    var b=document.getElementById("viewBack");
+    if(!b){b=document.createElement("button");b.id="viewBack";b.type="button";b.innerHTML="\u2190 \u041d\u0430 \u0433\u043b\u0430\u0432\u043d\u0443\u044e";b.addEventListener("click",function(){exitIso(true);});document.body.appendChild(b);}
+    return b;
+  }
+  function exitIso(scroll){
+    document.body.classList.remove("view-active");
+    panels().forEach(function(p){p.style.display="";p.classList.remove("view-on","flip-in");});
+    if(scroll!==false){var de=document.documentElement;var sb=de.style.scrollBehavior;de.style.scrollBehavior="auto";window.scrollTo(0,0);de.style.scrollBehavior=sb;}
+    kick();
+  }
+  function showOnly(id){
+    if(animating)return;
+    var target=document.getElementById(id);if(!target)return;
+    animating=true;backBtn();
+    document.body.classList.add("view-active");
+    panels().forEach(function(p){
+      if(p===target){p.style.display="";p.classList.add("view-on");}
+      else{p.style.display="none";p.classList.remove("view-on","flip-in");}
+    });
+    var de=document.documentElement;var sb=de.style.scrollBehavior;de.style.scrollBehavior="auto";window.scrollTo(0,0);de.style.scrollBehavior=sb;
+    target.classList.remove("flip-in");void target.offsetWidth;target.classList.add("flip-in");
+    kick();
+    setTimeout(function(){target.classList.remove("flip-in");animating=false;},680);
+  }
+  document.addEventListener("click",function(e){
+    var a=e.target&&e.target.closest?e.target.closest("a"):null;if(window.matchMedia&&window.matchMedia("(max-width:860px)").matches)return;
+    if(!a)return;
+    var href=a.getAttribute("href");
+    if(!href||href.charAt(0)!=="#"||href==="#")return;
+    var id=href.slice(1);
+    if(!document.getElementById(id))return;
+    e.preventDefault();e.stopPropagation();
+    var nav=document.getElementById("nav");if(nav)nav.classList.remove("open");
+    var bg=document.getElementById("burger");if(bg)bg.classList.remove("open");
+    if(id==="top"||(a.className&&String(a.className).indexOf("brand")>=0)){exitIso(true);}
+    else{showOnly(id);}
+  },true);
+})();
+</script><script>/* hero-type2-mark */(function(){
+  function ready(fn){if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",fn);else fn();}
+  ready(function(){
+    var el=document.getElementById("heroType");if(!el)return;
+    var phrases=["\u042d\u043d\u0434\u0443\u0440\u043e \u00b7 \u0422\u0443\u0440\u044b \u00b7 \u041f\u0440\u043e\u043a\u0430\u0442","\u0410\u0434\u0440\u0435\u043d\u0430\u043b\u0438\u043d \u0432 \u0433\u043e\u0440\u0430\u0445 \u0423\u0440\u0430\u043b\u0430","\u0417\u0430\u0435\u0437\u0434\u044b \u0434\u043b\u044f \u043b\u044e\u0431\u043e\u0433\u043e \u0443\u0440\u043e\u0432\u043d\u044f","\u0422\u0443\u0440\u044b \u0432\u044b\u0445\u043e\u0434\u043d\u043e\u0433\u043e \u0434\u043d\u044f","\u0421\u0432\u043e\u0431\u043e\u0434\u0430 \u043d\u0430 \u0434\u0432\u0443\u0445 \u043a\u043e\u043b\u0451\u0441\u0430\u0445"];
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+    if(reduce){el.textContent=phrases[0];return;}
+    var pi=0,ci=0,del=false;
+    function tick(){
+      var p=phrases[pi];
+      if(!del){ci++;el.textContent=p.slice(0,ci);if(ci>=p.length){del=true;return setTimeout(tick,1500);}return setTimeout(tick,72);}
+      ci--;el.textContent=p.slice(0,ci);
+      if(ci<=0){del=false;pi=(pi+1)%phrases.length;return setTimeout(tick,360);}
+      return setTimeout(tick,36);
+    }
+    tick();
+  });
+})();
+</script><script>/* pitbike-mark */(function(){
+  function ready(fn){if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",fn);else fn();}
+  ready(function(){
+    var source=document.querySelector("#bike3d model-viewer");
+    if(!source)return;
+    var clones=document.querySelectorAll("model-viewer.pitbike-clone");
+    if(!clones.length)return;
+    function load(m){var src="images/model.glb";if(m&&src&&!m.getAttribute("src")){m.setAttribute("src",src);return true;}return false;}
+    if(!("IntersectionObserver" in window)){Array.prototype.forEach.call(clones,load);return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){if(load(e.target))io.unobserve(e.target);}});
+    },{rootMargin:"300px 0px"});
+    Array.prototype.forEach.call(clones,function(m){io.observe(m);});
+  });
+})();
+</script><script>/* mv-scroll-fix */(function(){function attach(mv){if(mv.__sf)return;mv.__sf=1;mv.addEventListener('wheel',function(e){if(e.ctrlKey||e.metaKey){e.preventDefault();}else{e.stopImmediatePropagation();}},{capture:true,passive:false});var box=mv.closest('.model-box');if(box&&!box.querySelector('.mv-hint')){var h=document.createElement('div');h.className='mv-hint';h.textContent='Зум — Ctrl + колёсико · вращай мышкой';box.appendChild(h);}}function init(){document.querySelectorAll('model-viewer').forEach(attach);}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}setTimeout(init,1500);setTimeout(init,4000);})();</script><script>/* mobile reviews v1 removed */</script><script>/* m-reviews2 v3: single button + mobile entrance anim */(function(){
+function ready(fn){if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",fn);else fn();}
+function isM(){return window.matchMedia&&window.matchMedia("(max-width:860px)").matches;}
+function run(){
+ if(!isM())return;
+ var section=document.getElementById("reviews");if(!section)return;
+ if(!document.getElementById("revMobileAnim")){
+  var st=document.createElement("style");st.id="revMobileAnim";
+  st.textContent="@media(max-width:860px){#reviews .rev-more-wrap{display:none!important}#reviews .rev.m-rise{animation:mRise .6s cubic-bezier(.2,.7,.2,1) both}}@keyframes mRise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}";
+  document.head.appendChild(st);
+ }
+ Array.prototype.forEach.call(section.querySelectorAll(".rev"),function(c){c.classList.remove("rev-hide-m","rev-anim","rev-in");});
+ Array.prototype.forEach.call(section.querySelectorAll(".rev-more-wrap"),function(b){if(b.parentNode)b.parentNode.removeChild(b);});
+ if(!("IntersectionObserver" in window))return;
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("m-rise");io.unobserve(e.target);}});},{threshold:0.12,rootMargin:"0px 0px -6% 0px"});
+ Array.prototype.forEach.call(section.querySelectorAll(".rev:not(.rev-hidden)"),function(c){io.observe(c);});
+}
+ready(function(){setTimeout(run,60);});
+})();</script><div id="certToast" class="cert-toast"><div class="cert-toast-card"><button class="ct-close" id="ctClose" aria-label="Закрыть">×</button><div class="ct-ico">✈</div><b>Открываем Telegram</b><p>Сообщение со всеми данными уже подставлено в чат — просто нажмите «Отправить». Чат не открылся? Нажмите кнопку ниже.</p><a id="tgLink" class="btn" target="_blank" rel="noopener" href="#">Открыть Telegram</a></div></div><script>(function(){
+var f=document.getElementById('certForm');if(!f)return;
+var TG='https://t.me/MstrV1ctory';
+var amt=document.getElementById('cAmount'),nm=document.getElementById('cName'),ph=document.getElementById('cPhone'),wsh=document.getElementById('cWish');
+var pA=document.getElementById('cpAmount'),pN=document.getElementById('cpName'),pP=document.getElementById('cpPhone');
+function fmt(v){v=(''+(v||'')).replace(/[^0-9]/g,'');if(!v)return '';var o='',c=0;for(var i=v.length-1;i>=0;i--){o=v.charAt(i)+o;c++;if(c%3===0&&i>0){o=' '+o;}}return o;}
+function bump(el){el.style.transform='scale(1.07)';setTimeout(function(){el.style.transform='';},180);}
+function sync(){var a=fmt(amt.value)||'10 000';if(pA.textContent!==a){pA.textContent=a;bump(pA);}pN.textContent=nm.value.trim()||'—';pP.textContent=ph.value.trim()||'—';}
+amt.addEventListener('input',function(){var c=amt.value.replace(/[^0-9]/g,'');amt.value=c?fmt(c):'';sync();});
+nm.addEventListener('input',sync);ph.addEventListener('input',sync);
+ph.addEventListener('focus',function(){if(!ph.value){ph.value='+7 ';sync();}});
+Array.prototype.forEach.call(document.querySelectorAll('.cert-chips .chip'),function(b){b.addEventListener('click',function(){amt.value=fmt(b.getAttribute('data-v'));sync();});});
+var toast=document.getElementById('certToast'),tgLink=document.getElementById('tgLink');
+function buildMsg(){var L=['🏍 МотоГОСТ — заявка на подарочный сертификат','','Здравствуйте! Хочу оформить подарочный сертификат на активный отдых.','','🎁 Номинал: '+(fmt(amt.value)||'—')+' ₽','👤 Получатель: '+(nm.value.trim()||'—'),'📞 Телефон для связи: '+(ph.value.trim()||'—')];if(wsh.value.trim()){L.push('✍️ Пожелание: '+wsh.value.trim());}L.push('','Подскажите, пожалуйста:','• как удобнее оплатить','• в каком виде я получу сертификат','• срок действия и как им воспользоваться','','Спасибо! 🤝');return L.join(String.fromCharCode(10));}
+function tgUrl(){return TG+'?text='+encodeURIComponent(buildMsg());}
+function openToast(u){tgLink.href=u;toast.classList.add('show');}
+document.getElementById('ctClose').addEventListener('click',function(){toast.classList.remove('show');});
+toast.addEventListener('click',function(e){if(e.target===toast){toast.classList.remove('show');}});
+f.addEventListener('submit',function(ev){ev.preventDefault();if(!amt.value.trim()||!nm.value.trim()||!ph.value.trim()){f.classList.remove('shake');void f.offsetWidth;f.classList.add('shake');return;}var u=tgUrl();window.open(u,'_blank');openToast(u);});
+sync();
+})();</script><script id="cert3d">(function(){var card=document.querySelector('#cert .cert-card');var plate=document.querySelector('#cert .cert-plate');if(!card||!plate)return;if(window.matchMedia&&!window.matchMedia('(hover:hover)').matches)return;var max=11;function mv(e){var r=card.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-0.5;var y=(e.clientY-r.top)/r.height-0.5;plate.style.transition='transform .08s linear';plate.style.transform='rotateY('+(x*max)+'deg) rotateX('+(-y*max)+'deg) scale(1.03)';}function rs(){plate.style.transition='transform .4s cubic-bezier(.2,.8,.3,1)';plate.style.transform='';}card.addEventListener('pointermove',mv);card.addEventListener('pointerleave',rs);})();</script><script id="fmt-anim">(function(){
+var cards=document.querySelectorAll('.fmt-card');if(!cards.length)return;
+var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+cards.forEach(function(c){var l=c.querySelectorAll('.fmt-steps li');for(var m=0;m<l.length;m++){l[m].classList.add('typed');}});
+if(RM){cards.forEach(function(c){c.classList.add('is-in');c.style.transform='none';c.style.opacity='1';});return;}
+var sides=[];cards.forEach(function(c,i){sides.push(i%2===0?-1:1);});
+var ticking=false;
+function upd(){ticking=false;var vh=window.innerHeight||document.documentElement.clientHeight;for(var i=0;i<cards.length;i++){var card=cards[i],side=sides[i];var r=card.getBoundingClientRect();var center=r.top+r.height/2;var t=(center-vh/2)/(vh/2+r.height/2);if(t>1)t=1;if(t<-1)t=-1;var at=Math.abs(t);var ease=at*at*(3-2*at);var tx=side*ease*260;var ry=side*t*-42;var tz=-ease*220;var op=1-at*0.92;if(op<0)op=0;card.style.transform='translate3d('+tx.toFixed(1)+'px,0,'+tz.toFixed(0)+'px) rotateY('+ry.toFixed(1)+'deg)';card.style.opacity=op.toFixed(3);if(at<0.6){card.classList.add('is-in');}}}
+function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(upd);}}
+window.addEventListener('scroll',onScroll,{passive:true});
+window.addEventListener('resize',onScroll);
+if(window.addEventListener){window.addEventListener('load',upd);}
+upd();
+})();</script><script id="fmt-sparks">(function(){
+var cards=document.querySelectorAll('.fmt-card');if(!cards.length)return;
+var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+var HOVER=window.matchMedia&&window.matchMedia('(hover:hover)').matches;
+if(RM||!HOVER)return;
+var TAU=6.2832;
+cards.forEach(function(card){
+var cv,ctx,parts=[],raf=null,inside=false,mx=0,my=0,lmx=0,lmy=0,lt=0,tick=0,dpr=Math.min(window.devicePixelRatio||1,2);
+function now(){return (window.performance&&performance.now)?performance.now():Date.now();}
+function ensure(){if(cv)return;cv=document.createElement('canvas');cv.className='fmt-sparks';card.appendChild(cv);ctx=cv.getContext('2d');resize();}
+function resize(){if(!cv)return;var r=card.getBoundingClientRect();cv.width=Math.max(1,Math.round(r.width*dpr));cv.height=Math.max(1,Math.round(r.height*dpr));cv.style.width=r.width+'px';cv.style.height=r.height+'px';}
+function R(){return Math.random();}
+function spawn(){var z=R();var p;if(z<0.55){p={t:0,x:mx,y:my,vx:(R()-0.5)*0.5,vy:-(0.4+R()*1.2),g:0.004+R()*0.005,ph:R()*TAU,amp:0.3+R()*0.7,life:1,dec:0.008+R()*0.014,sz:1+R()*2.2,hue:20+R()*30};}else if(z<0.82){var a=-1.5708+(R()-0.5)*1.5,s=2+R()*3.2;p={t:1,x:mx,y:my,px:mx,py:my,vx:Math.cos(a)*s,vy:Math.sin(a)*s,g:0.06+R()*0.05,life:1,dec:0.02+R()*0.03,sz:0.7+R()*1.1};}else{p={t:2,x:mx+(R()-0.5)*8,y:my+(R()-0.5)*8,vx:(R()-0.5)*0.4,vy:-(0.05+R()*0.4),g:0.008,life:1,dec:0.005+R()*0.01,sz:2+R()*3.5};}parts.push(p);}
+function frame(){raf=requestAnimationFrame(frame);if(!ctx)return;tick++;ctx.clearRect(0,0,cv.width,cv.height);ctx.globalCompositeOperation='lighter';for(var i=parts.length-1;i>=0;i--){var p=parts[i];if(p.t===0){p.vy+=p.g;p.x+=p.vx+Math.sin(tick*0.06+p.ph)*p.amp*0.25;p.y+=p.vy;}else if(p.t===1){p.px=p.x;p.py=p.y;p.vy+=p.g;p.vx*=0.98;p.x+=p.vx;p.y+=p.vy;}else{p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;}p.life-=p.dec;if(p.life<=0){parts.splice(i,1);continue;}var a=p.life<0?0:p.life;var px=p.x*dpr,py=p.y*dpr;if(p.t===0){var fl=0.65+0.35*Math.sin(tick*0.5+p.ph);var aa=a*fl;var r=p.sz*dpr*3;var g=ctx.createRadialGradient(px,py,0,px,py,r);g.addColorStop(0,'rgba(255,240,205,'+aa+')');g.addColorStop(0.35,'hsla('+p.hue+',100%,55%,'+(aa*0.75)+')');g.addColorStop(1,'hsla('+p.hue+',100%,45%,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(px,py,r,0,TAU);ctx.fill();}else if(p.t===1){ctx.strokeStyle='rgba(255,'+(200+((a*55)|0))+','+(120+((a*100)|0))+','+a+')';ctx.lineWidth=Math.max(0.5,p.sz*dpr);ctx.lineCap='round';ctx.beginPath();ctx.moveTo(p.px*dpr,p.py*dpr);ctx.lineTo(px,py);ctx.stroke();var cr=p.sz*dpr*1.7;var cg=ctx.createRadialGradient(px,py,0,px,py,cr);cg.addColorStop(0,'rgba(255,255,235,'+a+')');cg.addColorStop(1,'rgba(255,180,80,0)');ctx.fillStyle=cg;ctx.beginPath();ctx.arc(px,py,cr,0,TAU);ctx.fill();}else{var dr=p.sz*dpr*3;var dg=ctx.createRadialGradient(px,py,0,px,py,dr);dg.addColorStop(0,'rgba(205,185,165,'+(a*0.35)+')');dg.addColorStop(1,'rgba(150,135,120,0)');ctx.fillStyle=dg;ctx.beginPath();ctx.arc(px,py,dr,0,TAU);ctx.fill();}}ctx.globalCompositeOperation='source-over';if(!inside&&parts.length===0){cancelAnimationFrame(raf);raf=null;}}
+function move(ev){ensure();var r=card.getBoundingClientRect();mx=ev.clientX-r.left;my=ev.clientY-r.top;inside=true;var t=now();var dt=Math.max(16,t-lt);var dx=mx-lmx,dy=my-lmy;var sp=Math.sqrt(dx*dx+dy*dy)/dt;lmx=mx;lmy=my;lt=t;var n=1+Math.min(7,Math.round(sp*9));for(var k=0;k<n;k++){spawn();}if(!raf)raf=requestAnimationFrame(frame);}
+card.addEventListener('pointerenter',function(){ensure();resize();inside=true;lmx=mx;lmy=my;lt=now();if(!raf)raf=requestAnimationFrame(frame);});
+card.addEventListener('pointermove',move);
+card.addEventListener('pointerleave',function(){inside=false;});
+window.addEventListener('resize',resize);
+});
+})();</script><script id="cert-grow">(function(){var t=document.getElementById("cWish");if(!t)return;function g(){t.style.height="auto";var hh=t.scrollHeight;if(hh>420){t.style.height="420px";t.style.overflowY="auto";}else{t.style.height=hh+"px";t.style.overflowY="hidden";}}t.addEventListener("input",g);window.addEventListener("load",g);setTimeout(g,60);})();</script><style id="model-fix">
+.model-box{overflow:hidden!important;height:560px!important;display:flex!important;align-items:center!important;justify-content:center!important;background:transparent!important;border:none!important;box-shadow:none!important}
+.model-box model-viewer{width:142%!important;max-width:142%!important;height:142%!important;flex:0 0 auto!important;background:transparent!important}
+.model-box .mv-hint{z-index:5}
+@media(max-width:780px){.model-box{height:400px!important}.model-box model-viewer{width:150%!important;max-width:150%!important;height:150%!important}}
+</style><style id="model-fix2">#bike3d{padding-bottom:0!important}#bike3d .model-extra{margin-bottom:0!important}#bike3d .model-box{margin-bottom:0!important}.top,#toTop{display:none!important}</style><style id="hero-shift">@media(min-width:781px){.hero{background-position:88% center!important}.hero-photo{background-position:right center!important}}</style><style id="cf-redesign">.cert-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.cf{position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:26px 22px;transition:transform .28s cubic-bezier(.2,.8,.3,1),border-color .28s,box-shadow .28s}.cf::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));opacity:0;transition:opacity .28s}.cf:hover{transform:translateY(-6px);border-color:rgba(255,170,60,.5);box-shadow:0 18px 42px rgba(0,0,0,.42),0 0 0 1px rgba(255,140,40,.15)}.cf:hover::before{opacity:1}.cf-i{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:16px;margin-bottom:16px;background:radial-gradient(120% 120% at 30% 20%,rgba(255,150,60,.30),rgba(255,90,30,.12));border:1px solid rgba(255,160,70,.38);box-shadow:0 6px 18px rgba(255,90,30,.20),inset 0 1px 0 rgba(255,255,255,.14);transition:transform .3s}.cf-i svg{width:30px;height:30px;stroke:#ffb15a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.cf:hover .cf-i{transform:scale(1.07) rotate(-3deg)}.cf b{display:block;color:#fff;font-family:'Oswald',sans-serif;font-size:18px;margin-bottom:6px;letter-spacing:.3px}.cf span{color:#a39a90;font-size:13.5px;line-height:1.5}@media(max-width:680px){.cert-feats{grid-template-columns:1fr}}</style><style id="cat-tilt-fix">#catalog .cat{perspective:900px}#catalog .cat .c{transition:transform .1s ease-out,box-shadow .3s ease,border-color .3s ease;will-change:transform;transform-origin:center}#catalog .cat .c.tilt3d{box-shadow:0 22px 48px rgba(0,0,0,.5)}</style><style id="about-cool">#about .sec-head h2{font-family:'Unbounded','Russo One',sans-serif!important;font-weight:900;letter-spacing:.5px;line-height:1.08}#about .about-grid p{font-family:'Unbounded','Manrope',sans-serif!important;font-weight:400;font-size:14.5px;line-height:1.85;letter-spacing:.2px}#about .about-grid p.about-legend{font-weight:800;font-size:16px;color:var(--acc);text-transform:uppercase;letter-spacing:.6px;margin-top:10px;line-height:1.3}@media(max-width:860px){#about .about-grid p{font-size:13.5px;line-height:1.8}}.ph-about{background-image:var(--ph-about,url(images/about_main.webp))}#about .about-grid{grid-template-columns:1fr 1fr}#about .about-grid .ph-box{min-height:560px;background-position:center 40%}@media(max-width:860px){#about .about-grid .ph-box{min-height:380px}}</style><script>(function(){
+var f=document.getElementById('leadForm');if(!f)return;
+var TG='https://t.me/MstrV1ctory';
+var ph=document.getElementById('lPhone');
+ph.addEventListener('focus',function(){if(!this.value){this.value='+7 ';}});
+function fmtDate(v){if(!v)return '—';var p=v.split('-');return p.length===3?p[2]+'.'+p[1]+'.'+p[0]:v;}
+var ag=document.getElementById('lAgree');
+ag.addEventListener('change',function(){if(this.checked){this.closest('.lead-check').classList.remove('err');}});
+f.addEventListener('submit',function(e){e.preventDefault();
+if(!ag.checked){ag.closest('.lead-check').classList.add('err');ag.closest('.lead-check').scrollIntoView({behavior:'smooth',block:'center'});return;}
+var route=(document.getElementById('lRoute').value||'').trim()||'—';
+var ppl=(document.getElementById('lPeople').value||'').trim()||'—';
+var date=fmtDate(document.getElementById('lDate').value);
+var phone=(ph.value||'').trim()||'—';
+var L=['🏍 МотоГОСТ — заявка на прокат эндуро','','Здравствуйте! Хочу записаться на заезд.','','🗺 Маршрут: '+route,'👥 Кол-во человек: '+ppl,'📅 Желаемая дата: '+date,'📞 Телефон: '+phone];
+if(document.getElementById('lPromo').checked){L.push('✅ Согласен на информационные сообщения');}
+L.push('','Подскажите, пожалуйста, свободные даты и стоимость. Спасибо! 🤝');
+var url=TG+'?text='+encodeURIComponent(L.join(String.fromCharCode(10)));
+var w=window.open(url,'_blank');if(!w){location.href=url;}
+});
+var card=document.getElementById('leadCard');
+if(card&&window.matchMedia('(pointer:fine)').matches){card.addEventListener('pointermove',function(e){var rc=this.getBoundingClientRect();this.style.setProperty('--mx',(e.clientX-rc.left)+'px');this.style.setProperty('--my',(e.clientY-rc.top)+'px');});}
+})();</script><script>(function(){var frame=document.querySelector("#lead .lp-frame");if(!frame)return;var glow=frame.querySelector(".lp-glow");var badge=document.querySelector("#lead .lp-badge");if(!window.matchMedia||!window.matchMedia("(pointer:fine)").matches)return;frame.addEventListener("pointerenter",function(){frame.style.setProperty("--sc","1.08");});frame.addEventListener("pointermove",function(e){var r=frame.getBoundingClientRect();var nx=(e.clientX-r.left)/r.width-0.5,ny=(e.clientY-r.top)/r.height-0.5;frame.style.setProperty("--px",(-nx*16).toFixed(1)+"px");frame.style.setProperty("--py",(-ny*16).toFixed(1)+"px");if(glow){glow.style.setProperty("--gx",((e.clientX-r.left)/r.width*100).toFixed(1)+"%");glow.style.setProperty("--gy",((e.clientY-r.top)/r.height*100).toFixed(1)+"%");}if(badge){badge.style.transform="translate("+(nx*14).toFixed(1)+"px,"+(ny*14).toFixed(1)+"px)";}});frame.addEventListener("pointerleave",function(){frame.style.setProperty("--sc","1");frame.style.setProperty("--px","0px");frame.style.setProperty("--py","0px");if(badge){badge.style.transform="";}});})();</script><style id="svc-modal-css">
+.t-more{margin-top:4px}
+.t-more>.t-more-btn{display:inline-flex;align-items:center;gap:8px;cursor:pointer;background:rgba(255,255,255,.05);color:var(--acc2);font-family:inherit;font-weight:700;padding:10px 18px;border-radius:40px;font-size:14px;letter-spacing:.4px;border:1px solid rgba(255,138,61,.45);width:max-content;transition:transform .12s ease,background .25s ease,border-color .25s ease,color .2s ease}
+.t-more>.t-more-btn:hover{background:rgba(255,138,61,.12);border-color:var(--acc2);color:#fff}
+.t-more>.t-more-btn:active{transform:scale(.93)}
+.t-more .t-detail{display:none}
+.svc-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:24px}
+.svc-modal.open{display:flex}
+.svc-modal-backdrop{position:absolute;inset:0;background:rgba(8,7,6,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:svcfade .25s ease}
+.svc-modal-card{position:relative;z-index:1;width:min(560px,100%);max-height:88vh;display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(165deg,rgba(28,24,20,.99),rgba(15,13,11,.99));border:1px solid rgba(255,138,61,.35);border-radius:24px;box-shadow:0 40px 90px -20px rgba(0,0,0,.85);animation:svcpop .42s cubic-bezier(.2,.9,.3,1.25)}
+.svc-modal-card::before{content:"";position:absolute;inset:0;border-radius:24px;padding:1px;background:linear-gradient(135deg,var(--acc),transparent 38%,transparent 62%,var(--acc2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.65;z-index:4}
+.svc-modal-x{position:absolute;top:14px;right:14px;z-index:5;width:38px;height:38px;border-radius:50%;border:none;cursor:pointer;background:rgba(0,0,0,.5);color:#fff;font-size:22px;line-height:1;display:grid;place-items:center;transition:transform .18s,background .2s}
+.svc-modal-x:hover{background:var(--acc);transform:rotate(90deg)}
+.svc-modal-banner{position:relative;height:190px;flex:none;overflow:hidden}
+.svc-modal-photo{width:100%;height:100%;background-size:cover;background-position:center;animation:svcken 16s ease-in-out infinite alternate}
+@keyframes svcken{0%{transform:scale(1)}100%{transform:scale(1.12)}}
+.svc-modal-banner-fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,11,0) 38%,rgba(15,13,11,.96))}
+.svc-modal-scroll{overflow-y:auto;-webkit-overflow-scrolling:touch}
+.svc-modal-head{position:relative;padding:18px 30px 4px;margin-top:-46px;z-index:2}
+.svc-modal-kick{display:inline-block;color:#ffb488;background:rgba(255,90,31,.16);border:1px solid rgba(255,90,31,.45);padding:5px 12px;border-radius:999px;letter-spacing:2px;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:10px}
+.svc-modal-title{font-family:'Oswald',sans-serif;font-size:26px;color:#fff;margin:0;text-transform:uppercase;letter-spacing:.5px;line-height:1.1}
+.svc-modal-price{color:var(--acc2);font-weight:800;font-family:'Oswald',sans-serif;font-size:19px;margin-top:6px}
+.svc-modal-body{padding:14px 30px 0}
+.svc-modal-body ul{margin:0;padding-left:20px}
+.svc-modal-body li{margin-bottom:9px;color:#cfc8bf;line-height:1.55;font-size:14.5px}
+.svc-modal-body li b{color:#fff}
+.svc-modal-body p{color:#d8d2c9;line-height:1.55;margin:0 0 10px}
+.svc-modal-actions{padding:18px 30px 26px}
+.svc-modal-actions .btn{width:100%;justify-content:center}
+body.svc-modal-open{overflow:hidden}
+@keyframes svcfade{from{opacity:0}to{opacity:1}}
+@keyframes svcpop{from{opacity:0;transform:translateY(26px) scale(.93)}to{opacity:1;transform:none}}
+@media(max-width:860px){.svc-modal{padding:0}.svc-modal-card{width:100%;height:100%;max-height:100vh;border-radius:0;border:none}.svc-modal-banner{height:210px}}
+@media(prefers-reduced-motion:reduce){.svc-modal-card,.svc-modal-backdrop,.svc-modal-photo{animation:none}}
+</style><div class="svc-modal" id="svcModal" aria-hidden="true"><div class="svc-modal-backdrop" data-close></div><div class="svc-modal-card" role="dialog" aria-modal="true"><button type="button" class="svc-modal-x" data-close aria-label="Закрыть">&times;</button><div class="svc-modal-banner"><div class="svc-modal-photo" id="svcPhoto"></div><div class="svc-modal-banner-fade"></div></div><div class="svc-modal-scroll"><div class="svc-modal-head"><div class="svc-modal-kick">Услуга · МотоГОСТ</div><h3 class="svc-modal-title" id="svcTitle"></h3><div class="svc-modal-price" id="svcPrice"></div></div><div class="svc-modal-body" id="svcBody"></div><div class="svc-modal-actions" id="svcActions"></div></div></div></div><script>(function(){
+var modal=document.getElementById('svcModal');if(!modal)return;
+var photo=document.getElementById('svcPhoto'),title=document.getElementById('svcTitle'),price=document.getElementById('svcPrice'),body=document.getElementById('svcBody'),actions=document.getElementById('svcActions');
+var lastFocus=null;
+function openCard(card){
+var h=card.querySelector('h3');title.textContent=h?h.textContent:'';
+var pr=card.querySelector('.t-price');if(pr){price.textContent=pr.textContent;price.style.display='';}else{price.style.display='none';}
+var ph=card.querySelector('.t-detail-photo');var cls='';if(ph){Array.prototype.forEach.call(ph.classList,function(c){if(c!=='t-detail-photo'){cls+=' '+c;}});}
+photo.className='svc-modal-photo'+cls;
+var bd=card.querySelector('.t-detail-body');body.innerHTML=bd?bd.innerHTML:'';
+actions.innerHTML='';var book=card.querySelector('.t-book');if(book){actions.appendChild(book.cloneNode(true));}
+modal.classList.add('open');document.body.classList.add('svc-modal-open');modal.setAttribute('aria-hidden','false');
+var x=modal.querySelector('.svc-modal-x');if(x){x.focus();}
+var sc=modal.querySelector('.svc-modal-scroll');if(sc){sc.scrollTop=0;}
+}
+function closeModal(){modal.classList.remove('open');document.body.classList.remove('svc-modal-open');modal.setAttribute('aria-hidden','true');if(lastFocus){try{lastFocus.focus();}catch(e){}}}
+Array.prototype.forEach.call(document.querySelectorAll('.t-more-btn'),function(b){b.addEventListener('click',function(e){e.preventDefault();var card=b.closest('.tour');if(card){lastFocus=b;openCard(card);}});});
+Array.prototype.forEach.call(modal.querySelectorAll('[data-close]'),function(el){el.addEventListener('click',function(){closeModal();});});
+actions.addEventListener('click',function(e){if(e.target.closest('a')){closeModal();}});
+document.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&modal.classList.contains('open')){closeModal();}});
+})();</script><style id="svc-photos">.svc-pit{background-image:var(--svc-pit,url(images/svc_pit.webp))}.svc-instr{background-image:var(--svc-instr,url(images/svc_instr.webp))}.svc-end{background-image:var(--svc-end,url(images/svc_end.webp));background-position:center top}.svc-gid{background-image:var(--svc-gid,url(images/svc_gid.webp))}</style><style id="ride-css">.ride-bg{position:fixed;inset:0;z-index:-1;background:#0e0d0c;background-image:var(--hero);background-size:cover;background-position:center;overflow:hidden;opacity:1}.ride-bg.on{opacity:1}.ride-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.ride-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,13,12,.42),rgba(14,13,12,.28) 45%,rgba(14,13,12,.50));pointer-events:none}.ride-img{position:absolute;inset:0;background-image:var(--hero);background-size:cover;background-position:center;transform-origin:center;will-change:transform;animation:kenburns 32s ease-in-out infinite alternate}@keyframes kenburns{0%{transform:scale(1.08) translate(0,0)}100%{transform:scale(1.2) translate(-1.5%,-1%)}}@media (prefers-reduced-motion:reduce){.ride-img{animation:none;transform:scale(1.08)}}#how,#vkl,#tours,#catalog{background:transparent!important}</style><style id="bg-seq-css">html{background:#0c0b0a}body{background:transparent!important}.ride-bg{z-index:-1}.ride-bg .bg-seq{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}.ride-bg .bg-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}.ride-bg .ride-img{z-index:0}.ride-bg .ride-shade{z-index:1}</style>
+<script id="hero-seq-js">
+(function(){return;
+  var hero=document.getElementById('top');
+  var cv=document.getElementById('bgSeq');
+  if(!hero||!cv||!cv.getContext){return;}
+  var ctx=cv.getContext('2d',{alpha:true});
+  var isMobile=Math.max(window.innerWidth,window.screen?window.screen.width:0)<=860;
+  var DIR=isMobile?'images/seqm/m_':'images/seq/d_';
+  var COUNT=isMobile?120:200;
+  function nm(i){var s=''+(i+1);while(s.length<3)s='0'+s;return DIR+s+'.webp';}
+  var imgs=new Array(COUNT),loaded=new Array(COUNT);
+  var dpr=Math.min(window.devicePixelRatio||1,2),lastDrawn=-1,curIdx=0;
+  function size(){var w=window.innerWidth,h=window.innerHeight;if(!w||!h)return;cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);cv.style.width=w+'px';cv.style.height=h+'px';lastDrawn=-1;draw(curIdx);}
+  function paint(img){var cw=cv.width,ch=cv.height,iw=img.naturalWidth,ih=img.naturalHeight;if(!iw||!ih)return;var s=Math.max(cw/iw,ch/ih),w=iw*s,h=ih*s,x=(cw-w)/2,y=(ch-h)/2;ctx.drawImage(img,x,y,w,h);}
+  function draw(idx){var k=-1;if(loaded[idx]){k=idx;}else{for(var d=1;d<COUNT;d++){if(idx-d>=0&&loaded[idx-d]){k=idx-d;break;}if(idx+d<COUNT&&loaded[idx+d]){k=idx+d;break;}}}if(k<0||k===lastDrawn)return;lastDrawn=k;paint(imgs[k]);}
+  function load(i){if(i<0||i>=COUNT||imgs[i])return;var im=new Image();im.decoding='async';im.onload=function(){loaded[i]=true;if(Math.abs(i-curIdx)<=2||lastDrawn<0)draw(curIdx);};im.src=nm(i);imgs[i]=im;}
+  function preload(){var order=[],seen={};for(var step=Math.ceil(COUNT/10);step>=1;step=Math.floor(step/2)){for(var i=0;i<COUNT;i+=step){if(!seen[i]){seen[i]=1;order.push(i);}}if(step===1)break;}var qi=0,idle=window.requestIdleCallback||function(f){return setTimeout(f,1);};function next(){var n=0;while(qi<order.length&&n<6){load(order[qi++]);n++;}if(qi<order.length)idle(next);}load(0);next();}
+  var ticking=false;
+  function prog(){var de=document.documentElement;var max=(de.scrollHeight-window.innerHeight)||1;var p=(window.pageYOffset||de.scrollTop||0)/max;return p<0?0:(p>1?1:p);}
+  function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(function(){ticking=false;var idx=Math.round(prog()*(COUNT-1));if(idx!==curIdx){curIdx=idx;draw(idx);load(idx);load(idx+1);load(idx-1);}});}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){dpr=Math.min(window.devicePixelRatio||1,2);size();onScroll();});
+  size();preload();onScroll();
+})();
+</script>
+<script src="assets/site-cms.js" defer></script></body></html>
