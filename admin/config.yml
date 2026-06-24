@@ -1,7 +1,10 @@
 # Настройка админ-панели Decap CMS для сайта МотоГОСТ
 backend:
-  name: git-gateway
+  name: github
+  repo: kaARAss/motogost
   branch: main
+  base_url: https://motogost.pages.dev
+  auth_endpoint: oauth/auth
 
 locale: ru
 
