@@ -43,6 +43,8 @@
   }
 
   function applyImages() {
+    if (data.hero && data.hero.image) setImg("--hero", data.hero.image);
+    if (data.hero && data.hero.imageMobile) setImg("--hero-m", data.hero.imageMobile);
     var g = data.gallery && data.gallery.images;
     if (Array.isArray(g)) {
       g.forEach(function (url, i) { setImg("--gp" + (i + 1), url); });
