@@ -32,6 +32,10 @@ collections:
           - { label: "Подзаголовок", name: subtitle, widget: string, hint: "Строка под заголовком «ЭНДУРО» на первом экране" }
           - { label: "Кнопка 1", name: btnPrimary, widget: string, hint: "Текст на главной оранжевой кнопке (напр. «Записаться на заезд»)" }
           - { label: "Кнопка 2", name: btnGhost, widget: string, hint: "Текст на второй прозрачной кнопке (напр. «Смотреть туры»)" }
+          - { label: "Куда ведёт Кнопка 1", name: btnPrimaryHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #lead (раздел заявки). Можно вставить ссылку на соцсеть/мессенджер." }
+          - { label: "Куда ведёт Кнопка 2", name: btnGhostHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #tours (раздел услуг)." }
+          - { label: "Фото главного экрана (десктоп)", name: image, widget: image, required: false, hint: "Большое фото на первом экране (для компьютеров)." }
+          - { label: "Фото главного экрана (телефоны)", name: imageMobile, widget: image, required: false, hint: "Фото первого экрана на телефонах (необязательно)." }
       - file: content/about.json
         name: about
         label: "О нас"
@@ -43,6 +47,7 @@ collections:
           - { label: "Абзац 3", name: p3, widget: text, hint: "Третий абзац (можно оставить пустым)" }
           - { label: "Слоган", name: legend, widget: string, hint: "Яркая фраза-слоган в конце блока" }
           - { label: "Кнопка", name: cta, widget: string, hint: "Текст кнопки под разделом (напр. «Получить консультацию»)" }
+          - { label: "Куда ведёт кнопка", name: ctaHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #contacts (раздел контактов). Можно вставить ссылку на соцсеть/мессенджер." }
           - { label: "Фото секции", name: image, widget: image, required: false, hint: "Фото справа от текста «О нас»" }
       - file: content/services.json
         name: services
@@ -81,6 +86,8 @@ collections:
           - { label: "Telegram личные — текст", name: tgDmText, widget: string, hint: "Подпись ссылки (напр. «Личные сообщения»)" }
           - { label: "ВКонтакте — ссылка", name: vk, widget: string, hint: "Полная ссылка, напр. https://vk.com/motogost96" }
           - { label: "ВКонтакте — текст", name: vkText, widget: string, hint: "Подпись ссылки (напр. «Мы ВКонтакте»)" }
+          - { label: "MAX — ссылка (в блоке заявки)", name: max, widget: string, required: false, hint: "Ссылка на мессенджер MAX (кнопка MAX в блоке заявки)." }
+          - { label: "Телефон плавающей кнопки (tel:)", name: fabPhone, widget: string, required: false, hint: "Номер на круглой кнопке связи внизу справа. Без пробелов, напр. tel:+79995656430" }
       - file: content/gallery.json
         name: gallery
         label: "Галерея"
