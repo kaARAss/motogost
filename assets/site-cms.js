@@ -26,6 +26,11 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
+  // Безопасное выделение жирным: **текст** -> <b>текст</b> (после экранирования)
+  function inlineFmt(s) {
+    return esc(s).replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  }
+
   function applyText() {
     document.querySelectorAll("[data-cms]").forEach(function (el) {
       var v = get(el.getAttribute("data-cms"));
@@ -51,6 +56,32 @@
     }
   }
 
+  // Подробное описание услуг (вводный абзац + пункты) в окне «Подробнее».
+  function applyServiceDetails() {
+    var items = data.services && data.services.items;
+    if (!Array.isArray(items)) return;
+    var cards = document.querySelectorAll("#tours .svc-cards .tour");
+    items.forEach(function (it, i) {
+      var card = cards[i];
+      if (!card || !it) return;
+      var body = card.querySelector(".t-detail-body");
+      if (!body) return;
+      var hasIntro = it.intro != null && String(it.intro).trim() !== "";
+      var list = Array.isArray(it.details) ? it.details.filter(function (x) {
+        return x != null && String(x).trim() !== "";
+      }) : [];
+      if (!hasIntro && !list.length) return; // нет данных — оставляем исходный текст
+      var html = "";
+      if (hasIntro) html += "<p>" + inlineFmt(it.intro) + "</p>";
+      if (list.length) {
+        html += "<ul>";
+        list.forEach(function (li) { html += "<li>" + inlineFmt(li) + "</li>"; });
+        html += "</ul>";
+      }
+      body.innerHTML = html;
+    });
+  }
+
   function applySeason() {
     var el = document.getElementById("seasonBanner");
     var s = data.season;
@@ -69,6 +100,7 @@
   function render() {
     try { applyText(); } catch (e) {}
     try { applyImages(); } catch (e) {}
+    try { applyServiceDetails(); } catch (e) {}
     try { applySeason(); } catch (e) {}
   }
 
