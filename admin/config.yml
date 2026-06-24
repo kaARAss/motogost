@@ -1,0 +1,78 @@
+# Настройка админ-панели Decap CMS для сайта МотоГОСТ
+backend:
+  name: git-gateway
+  branch: main
+
+locale: ru
+
+# Куда админка загружает фото
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: content
+    label: Контент сайта
+    files:
+      - file: content/season.json
+        name: season
+        label: "Сезонный блок (зима/лето)"
+        fields:
+          - { label: "Показывать блок на сайте", name: enabled, widget: boolean, default: false }
+          - { label: "Иконка (эмодзи)", name: icon, widget: string, required: false, default: "❄️" }
+          - { label: "Заголовок", name: title, widget: string }
+          - { label: "Текст", name: text, widget: text }
+      - file: content/hero.json
+        name: hero
+        label: "Главный экран"
+        fields:
+          - { label: "Надпись сверху", name: eyebrow, widget: string }
+          - { label: "Подзаголовок", name: subtitle, widget: string }
+          - { label: "Кнопка 1", name: btnPrimary, widget: string }
+          - { label: "Кнопка 2", name: btnGhost, widget: string }
+      - file: content/about.json
+        name: about
+        label: "О нас"
+        fields:
+          - { label: "Надпись", name: kicker, widget: string }
+          - { label: "Заголовок", name: title, widget: string }
+          - { label: "Абзац 1", name: p1, widget: text }
+          - { label: "Абзац 2", name: p2, widget: text }
+          - { label: "Абзац 3", name: p3, widget: text }
+          - { label: "Слоган", name: legend, widget: string }
+          - { label: "Кнопка", name: cta, widget: string }
+          - { label: "Фото секции", name: image, widget: image, required: false }
+      - file: content/services.json
+        name: services
+        label: "Услуги и цены"
+        fields:
+          - label: "Карточки услуг"
+            name: items
+            widget: list
+            fields:
+              - { label: "Название", name: title, widget: string }
+              - { label: "Характеристики", name: specs, widget: string }
+              - { label: "Краткое описание", name: teaser, widget: text }
+              - { label: "Цена", name: price, widget: string }
+              - { label: "Фото", name: image, widget: image, required: false }
+      - file: content/contacts.json
+        name: contacts
+        label: "Контакты"
+        fields:
+          - { label: "Адрес", name: address, widget: string }
+          - { label: "Примечание к адресу", name: addressNote, widget: string }
+          - { label: "Телефон (текст)", name: phoneText, widget: string }
+          - { label: "Телефон (ссылка tel:)", name: phoneHref, widget: string }
+          - { label: "Telegram группа — ссылка", name: tgGroup, widget: string }
+          - { label: "Telegram группа — текст", name: tgGroupText, widget: string }
+          - { label: "Telegram личные — ссылка", name: tgDm, widget: string }
+          - { label: "Telegram личные — текст", name: tgDmText, widget: string }
+          - { label: "ВКонтакте — ссылка", name: vk, widget: string }
+          - { label: "ВКонтакте — текст", name: vkText, widget: string }
+      - file: content/gallery.json
+        name: gallery
+        label: "Галерея"
+        fields:
+          - label: "Фотографии (по порядку)"
+            name: images
+            widget: list
+            field: { label: "Фото", name: image, widget: image }
