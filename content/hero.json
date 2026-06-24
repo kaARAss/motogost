@@ -2,5 +2,9 @@
   "eyebrow": "Экстрим-клуб в горах Урала",
   "subtitle": "Прокат эндуро и туры по горам Урала · 30 минут от Екатеринбурга",
   "btnPrimary": "Записаться на заезд",
-  "btnGhost": "Смотреть туры"
+  "btnGhost": "Смотреть туры",
+  "btnPrimaryHref": "#lead",
+  "btnGhostHref": "#tours",
+  "image": "images/hero.webp",
+  "imageMobile": "images/hero_m.jpg"
 }
