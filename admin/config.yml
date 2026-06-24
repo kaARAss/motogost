@@ -56,9 +56,17 @@ collections:
             fields:
               - { label: "Название", name: title, widget: string, hint: "Название услуги" }
               - { label: "Характеристики", name: specs, widget: string, hint: "Короткая строка под названием (напр. «Kayo Evo · 140/125 куб»)" }
-              - { label: "Краткое описание", name: teaser, widget: text, hint: "1–2 предложения описания на карточке" }
+              - { label: "Краткое описание", name: teaser, widget: text, hint: "1–2 предложения на карточке" }
               - { label: "Цена", name: price, widget: string, hint: "Например «от 1 250 ₽/час»" }
-              - { label: "Фото", name: image, widget: image, required: false, hint: "Картинка на карточке услуги" }
+              - { label: "Фото", name: image, widget: image, required: false, hint: "Картинка на карточке и в подробном окне" }
+              - { label: "Вводный абзац (в окне «Подробнее»)", name: intro, widget: text, required: false, hint: "Необязательно. Короткий абзац над списком пунктов." }
+              - label: "Подробные пункты (в окне «Подробнее»)"
+                name: details
+                widget: list
+                required: false
+                label_singular: "Пункт"
+                hint: "Каждый пункт — отдельная строка списка. Жирный текст: оберни во **две звёздочки**."
+                field: { label: "Пункт", name: item, widget: string }
       - file: content/contacts.json
         name: contacts
         label: "Контакты"
