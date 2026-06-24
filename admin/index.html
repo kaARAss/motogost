@@ -16,10 +16,8 @@
     var createClass = window.createClass;
     if(!CMS || !h || !createClass){ console.warn('Decap CMS API not ready'); return; }
 
-    // Шрифты сайта
     CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Oswald:wght@500;600;700&family=Russo+One&display=swap');
 
-    // Стили превью под дизайн сайта
     var css = "\
 :root{--acc:#ff5a1f;--acc2:#ff8a3d;--card:#171513;--muted:#a7a097;--line:rgba(255,255,255,.08)}\
 html,body{margin:0}\
@@ -38,6 +36,10 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
 .pv-svc h3{font-family:'Oswald',sans-serif;color:#fff;font-size:20px;margin:0 0 4px;text-transform:uppercase}\
 .pv-price{color:var(--acc);font-weight:800;font-family:'Oswald',sans-serif;font-size:18px;margin-top:8px}\
 .pv-specs{color:var(--muted);font-size:13px;margin:0 0 8px}\
+.pv-svc-intro{color:#d8d2c9;font-size:13.5px;margin:10px 0 6px}\
+.pv-svc-ul{margin:6px 0 0;padding-left:18px}\
+.pv-svc-ul li{color:#cfc8bf;font-size:12.8px;margin:4px 0;line-height:1.45}\
+.pv-svc-ul li b{color:#fff}\
 .pv img{max-width:100%;border-radius:12px;display:block}\
 .pv-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}\
 .pv-thumbs img{width:100%;height:92px;object-fit:cover}\
@@ -56,8 +58,13 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
       catch(e){ return path; }
     }
     function val(e, k){ var v = e.get(k); return (v===undefined||v===null) ? '' : v; }
+    // **текст** -> жирный; возвращает массив React-узлов
+    function fmt(s){
+      s = String(s==null?'':s);
+      var parts = s.split(/\*\*([^*]+)\*\*/);
+      return parts.map(function(p,i){ return (i%2===1) ? h('b',{key:i}, p) : p; });
+    }
 
-    // Главный экран
     CMS.registerPreviewTemplate('hero', createClass({ render:function(){
       var e = this.props.entry.getIn(['data']);
       return h('div',{className:'pv'},
@@ -71,7 +78,6 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
       );
     }}));
 
-    // Сезонный блок
     CMS.registerPreviewTemplate('season', createClass({ render:function(){
       var e = this.props.entry.getIn(['data']);
       var on = !!e.get('enabled');
@@ -85,11 +91,9 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
       );
     }}));
 
-    // О нас
     CMS.registerPreviewTemplate('about', createClass({ render:function(){
       var e = this.props.entry.getIn(['data']);
-      var img = e.get('image');
-      var src = asset(this.props, img);
+      var src = asset(this.props, e.get('image'));
       return h('div',{className:'pv'},
         h('div',{className:'pv-eyebrow'}, val(e,'kicker')),
         h('h2',{className:'pv-h2'}, val(e,'title')),
@@ -102,19 +106,27 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
       );
     }}));
 
-    // Услуги и цены
     CMS.registerPreviewTemplate('services', createClass({ render:function(){
       var self = this;
       var items = this.props.entry.getIn(['data','items']);
       var arr = (items && items.toArray) ? items.toArray() : [];
       var cards = arr.map(function(it,i){
         var src = asset(self.props, it.get('image'));
+        var dets = it.get('details');
+        var darr = (dets && dets.toArray) ? dets.toArray() : [];
+        var lis = [];
+        darr.forEach(function(li,j){
+          if(li!=null && String(li).trim()!=='') lis.push(h('li',{key:j}, fmt(li)));
+        });
+        var intro = it.get('intro');
         return h('div',{className:'pv-card pv-svc',key:i},
           src ? h('img',{src:src,style:{marginBottom:'10px',height:'130px',width:'100%',objectFit:'cover'}}) : null,
           h('h3',{}, it.get('title') || ''),
           h('div',{className:'pv-specs'}, it.get('specs') || ''),
           h('p',{}, it.get('teaser') || ''),
-          h('div',{className:'pv-price'}, it.get('price') || '')
+          h('div',{className:'pv-price'}, it.get('price') || ''),
+          (intro && String(intro).trim()!=='') ? h('p',{className:'pv-svc-intro'}, fmt(intro)) : null,
+          lis.length ? h('ul',{className:'pv-svc-ul'}, lis) : null
         );
       });
       return h('div',{className:'pv'},
@@ -123,7 +135,6 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
       );
     }}));
 
-    // Контакты
     CMS.registerPreviewTemplate('contacts', createClass({ render:function(){
       var e = this.props.entry.getIn(['data']);
       function row(label,v){ return v ? h('div',{className:'pv-row'}, h('span',{className:'pv-label'},label), h('span',{},v)) : null; }
@@ -140,7 +151,6 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
       );
     }}));
 
-    // Галерея
     CMS.registerPreviewTemplate('gallery', createClass({ render:function(){
       var self = this;
       var imgs = this.props.entry.getIn(['data','images']);
