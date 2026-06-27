@@ -3,8 +3,8 @@ backend:
   name: github
   repo: kaARAss/motogost
   branch: main
-  base_url: https://motogost.pages.dev
-  auth_endpoint: oauth/auth
+  base_url: https://functions.yandexcloud.net
+  auth_endpoint: d4ehp7io5egiqroikpb4
 
 locale: ru
 
