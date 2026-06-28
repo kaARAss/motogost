@@ -553,7 +553,7 @@ document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'
         for(var i=0;i<cards.length;i++){
           var o=cards[i];
           var center=o.docY+o.h/2-sy;
-          var p=(vh-center)/(vh*0.4);if(p<0)p=0;else if(p>1)p=1;var inv=1-p;
+          var nd=Math.abs(2*center/vh-1);var inv=2*nd-1;if(inv<0)inv=0;else if(inv>1)inv=1;var p=1-inv;
           if(inv<0.004){o.w.style.transform="none";o.w.style.opacity="1";o.w.style.zIndex="1";continue;}
           var fx=Math.sin(t*o.sx+o.px)*o.ax*inv;var fy=Math.cos(t*o.sy+o.py)*o.ay*inv;
           var tx=o.dx*inv+fx;var ty=o.dy*inv+fy;
