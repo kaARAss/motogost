@@ -935,6 +935,13 @@ html.winter-on header{overflow:visible}
 .snowball-box{z-index:80!important}
 .snow-plow-img,.snowball-box .snow-plow-img{display:none!important}
 .snowball-box,.snowball-box *{box-shadow:none!important;filter:none!important}
+.snowball-box a svg,.snowball-box a img{visibility:hidden!important}
+.snowball-box a.active{animation:wmMelt 1.8s ease-in forwards!important}
+@keyframes wmMelt{0%{opacity:1}100%{opacity:0}}
+.wm-card .wm-img{position:relative;z-index:1;margin:0 0 20px;border-radius:16px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 14px 32px rgba(4,18,42,.5);border:1px solid rgba(160,210,255,.18)}
+.wm-card .wm-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.wm-card:hover .wm-img img{transform:scale(1.07)}
+.wm-card .wm-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,29,0) 52%,rgba(6,16,29,.55));pointer-events:none}
 .wm-hat{position:absolute;top:-18px;left:-8px;width:52px;height:42px;transform:rotate(-14deg);pointer-events:none;z-index:6;filter:drop-shadow(0 3px 5px rgba(0,0,0,.42))}
 html.winter-on .brand{position:relative;overflow:visible}
 .wm-hero-tint{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(20,70,130,.32),rgba(8,20,40,.05) 42%,rgba(6,14,28,.42));mix-blend-mode:multiply}
@@ -1041,7 +1048,8 @@ var cards=(Array.isArray(s.cards)&&s.cards.length)?s.cards:[
 var ctaText=s.ctaText||"Записаться на зимний заезд";
 var ctaHref=s.ctaHref||"#lead";
 var html='<div class="wm-aurora"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div><span class="wm-moon"></span>'+MTN+'<div class="wm-drift"></div><div class="wmw"><span class="wm-chip"><span class="dot"></span>'+ic("snow")+esc(kicker)+'</span><h2>'+esc(title)+'</h2><p class="wm-lead">'+esc(lead)+'</p><div class="wm-grid">';
-cards.forEach(function(c,idx){var k=c.icon||"snow";var n=(idx+1<10?"0":"")+(idx+1);html+='<div class="wm-card"><span class="wm-spot"></span><span class="wm-wm">'+ic(k)+'</span><span class="wm-num">'+n+'</span><span class="wm-badge">'+ic(k)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.text)+'</p></div>';});
+var wmDefImg=["images/photo_3.webp","images/photo_15.webp","images/photo_28.webp"];
+cards.forEach(function(c,idx){var k=c.icon||"snow";var n=(idx+1<10?"0":"")+(idx+1);var src=c.img||wmDefImg[idx%wmDefImg.length];var img=src?'<div class="wm-img"><img src="'+esc(src)+'" alt="'+esc(c.title||"")+'" loading="lazy"></div>':"";html+='<div class="wm-card'+(src?" has-img":"")+'"><span class="wm-spot"></span>'+img+'<span class="wm-num">'+n+'</span><span class="wm-badge">'+ic(k)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.text)+'</p></div>';});
 html+='</div><a class="wm-cta" href="'+esc(ctaHref)+'">'+esc(ctaText)+ARROW+'</a></div>';
 var sec=document.createElement("section");sec.className="wm-sec";sec.id="winter";sec.innerHTML=html;
 var a=document.getElementById("contacts");
@@ -1053,7 +1061,7 @@ var CSS="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css";
 var JS="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js";
 if(!document.getElementById("alaevSnowCss")){var l=document.createElement("link");l.id="alaevSnowCss";l.rel="stylesheet";l.href=CSS;document.head.appendChild(l);}
 var sc=document.createElement("script");sc.src=JS;sc.async=true;
-sc.onload=function(){try{new Snow({showSnowflakes:true,showSnowBalls:true,showSnowBallsIsMobile:true,countSnowflake:100,snowBallsLength:10,snowBallIterations:40,snowBallupNum:3,snowBallIterationsInterval:250,clearSnowBalls:999999999});}catch(e){startSnow();}};
+sc.onload=function(){try{new Snow({showSnowflakes:true,showSnowBalls:true,showSnowBallsIsMobile:true,countSnowflake:100,snowBallsLength:10,snowBallIterations:40,snowBallupNum:3,snowBallIterationsInterval:1000,clearSnowBalls:20000});}catch(e){startSnow();}};
 sc.onerror=function(){startSnow();};
 document.body.appendChild(sc);
 }
