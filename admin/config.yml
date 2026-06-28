@@ -41,6 +41,7 @@ collections:
               - { label: "Иконка", name: icon, widget: select, default: "snow", options: [ { label: "Шина/шипы", value: "tire" }, { label: "Горы", value: "mountain" }, { label: "Огонь/драйв", value: "fire" }, { label: "Снежинка", value: "snow" }, { label: "Щит/защита", value: "shield" }, { label: "Маршрут", value: "route" }, { label: "Термометр", value: "thermo" }, { label: "Молния", value: "bolt" } ] }
               - { label: "Заголовок", name: title, widget: string }
               - { label: "Текст", name: text, widget: text }
+              - { label: "Картинка карточки", name: img, widget: image, required: false, hint: "Фото вверху карточки зимнего блока (необязательно)." }
           - { label: "Текст кнопки в разделе", name: ctaText, widget: string, required: false, default: "Записаться на зимний заезд" }
           - { label: "Куда ведёт кнопка", name: ctaHref, widget: string, required: false, default: "#lead", hint: "Якорь или ссылка. По умолчанию #lead (блок заявки)." }
       - file: content/hero.json
