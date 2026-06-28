@@ -922,7 +922,7 @@ html.winter-on header{overflow:visible}
 .wm-bar b{color:#fff;font-weight:800;letter-spacing:.2px}
 .wm-bar .wm-txt{opacity:.92;font-weight:500;color:#cfe6ff}
 @media(max-width:640px){.wm-bar{font-size:12px;padding:8px 12px;gap:8px}.wm-bar .wm-txt{display:none}}
-.wm-garland{position:absolute;left:0;right:0;bottom:0;transform:translateY(100%);height:50px;pointer-events:none;z-index:4}
+.wm-garland{position:fixed;left:0;right:0;top:42px;height:44px;pointer-events:none;z-index:125}
 .wm-garland .wire{position:absolute;top:4px;left:0;right:0;height:0;border-top:2px solid rgba(175,205,240,.4)}
 .wm-garland .bulbs{position:absolute;top:6px;left:0;right:0;display:flex;justify-content:space-around;padding:0 12px}
 .wm-garland i{position:relative;width:12px;height:16px;border-radius:50% 50% 50% 50%/42% 42% 58% 58%;background:radial-gradient(circle at 36% 28%,#fff,var(--c) 55%,rgba(0,0,0,.3));box-shadow:0 0 10px 2px var(--c),0 0 22px 6px var(--c);opacity:.92;transform-origin:top center;animation:wmTwk 2.4s ease-in-out infinite,wmSwg 4.6s ease-in-out infinite;animation-delay:var(--d),var(--d)}
@@ -932,8 +932,10 @@ html.winter-on header{overflow:visible}
 @keyframes wmSwg{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
 #wmSnow{position:fixed;inset:0;z-index:70;pointer-events:none}
 .snowflakes-box{z-index:60!important}
-.snowball-box{z-index:62!important}
-.wm-hat{position:absolute;top:-2px;left:-8px;width:50px;height:40px;transform:rotate(-14deg);pointer-events:none;z-index:6;filter:drop-shadow(0 3px 5px rgba(0,0,0,.42))}
+.snowball-box{z-index:80!important}
+.snow-plow-img,.snowball-box .snow-plow-img{display:none!important}
+.snowball-box,.snowball-box *{box-shadow:none!important;filter:none!important}
+.wm-hat{position:absolute;top:-18px;left:-8px;width:52px;height:42px;transform:rotate(-14deg);pointer-events:none;z-index:6;filter:drop-shadow(0 3px 5px rgba(0,0,0,.42))}
 html.winter-on .brand{position:relative;overflow:visible}
 .wm-hero-tint{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(20,70,130,.32),rgba(8,20,40,.05) 42%,rgba(6,14,28,.42));mix-blend-mode:multiply}
 html.winter-on .tour,html.winter-on .cat .c,html.winter-on .feat .f{box-shadow:0 0 0 1px rgba(150,205,255,.16),0 18px 44px rgba(8,32,70,.26)}
@@ -1051,7 +1053,7 @@ var CSS="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css";
 var JS="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js";
 if(!document.getElementById("alaevSnowCss")){var l=document.createElement("link");l.id="alaevSnowCss";l.rel="stylesheet";l.href=CSS;document.head.appendChild(l);}
 var sc=document.createElement("script");sc.src=JS;sc.async=true;
-sc.onload=function(){try{new Snow({showSnowflakes:true,showSnowBalls:true,showSnowBallsIsMobile:true,countSnowflake:100,snowBallsLength:10});}catch(e){startSnow();}};
+sc.onload=function(){try{new Snow({showSnowflakes:true,showSnowBalls:true,showSnowBallsIsMobile:true,countSnowflake:100,snowBallsLength:10,snowBallIterations:40,snowBallupNum:3,snowBallIterationsInterval:250,clearSnowBalls:999999999});}catch(e){startSnow();}};
 sc.onerror=function(){startSnow();};
 document.body.appendChild(sc);
 }
@@ -1063,8 +1065,8 @@ var bar=document.createElement("div");bar.className="wm-bar";
 bar.innerHTML='<span class="wm-ico">'+esc(icon0)+'</span><b>'+esc(title)+'</b>'+(text?'<span class="wm-txt">'+esc(text)+'</span>':'');
 document.body.appendChild(bar);
 var header=document.querySelector("header");
-function place(){if(header)header.style.top=bar.offsetHeight+"px";}place();addEventListener("resize",place);
-if(on(s.garland)&&header)header.appendChild(buildGarland());
+var garland=null;if(on(s.garland)){garland=buildGarland();document.body.appendChild(garland);}
+function place(){var h=bar.offsetHeight;if(header)header.style.top=h+"px";if(garland)garland.style.top=h+"px";}place();addEventListener("resize",place);
 if(on(s.hat)){var brand=document.querySelector(".brand");if(brand)brand.insertAdjacentHTML("beforeend",HAT);}
 var hero=document.querySelector(".hero");if(hero){var t=document.createElement("div");t.className="wm-hero-tint";hero.appendChild(t);}
 if(on(s.secOn))buildSection(s);
