@@ -911,83 +911,146 @@ ready(function(){
   window.addEventListener('resize',onScroll);
   setTimeout(update,60);
 });
-})();</script><!-- ❄️ MOTOGOST WINTER MODE — управление: админка → Сезонный блок → Показывать блок на сайте -->
+})();</script><!-- MOTOGOST WINTER MODE v2 -->
 <style id="wmCSS">
 html.winter-on #seasonBanner{display:none!important}
-.wm-bar{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 16px;min-height:40px;text-align:center;color:#eaf4ff;font-family:'Manrope',system-ui,sans-serif;font-size:14px;font-weight:600;background:linear-gradient(90deg,#0b3a66,#155a99 50%,#0b3a66);box-shadow:0 2px 14px rgba(0,0,0,.35);border-bottom:2px solid rgba(255,255,255,.18)}
-.wm-bar .wm-ico{font-size:18px}.wm-bar b{color:#fff}.wm-bar .wm-txt{opacity:.92;font-weight:500}
-@media(max-width:600px){.wm-bar{font-size:12px;padding:7px 12px;gap:7px}.wm-bar .wm-txt{display:none}}
-.wm-garland{position:fixed;left:0;right:0;z-index:119;height:0;display:flex;justify-content:space-around;pointer-events:none}
-.wm-garland i{width:8px;height:8px;border-radius:50%;margin-top:-2px;display:block;box-shadow:0 0 8px 2px currentColor;animation:wmTw 1.6s infinite ease-in-out}
-@keyframes wmTw{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
-html.winter-on header{top:40px}@media(max-width:600px){html.winter-on header{top:36px}}
+html.winter-on header{overflow:visible}
+.wm-bar{position:fixed;top:0;left:0;right:0;z-index:130;display:flex;align-items:center;justify-content:center;gap:12px;padding:9px 18px;min-height:42px;text-align:center;color:#eaf5ff;font-family:'Manrope',system-ui,sans-serif;font-size:14px;background:linear-gradient(90deg,rgba(9,30,55,.9),rgba(18,58,99,.9) 50%,rgba(9,30,55,.9));-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid rgba(150,205,255,.28);box-shadow:0 6px 24px rgba(2,12,28,.45);overflow:hidden}
+.wm-bar::after{content:"";position:absolute;top:0;left:-60%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.16),transparent);transform:skewX(-18deg);animation:wmShine 6.5s ease-in-out infinite}
+@keyframes wmShine{0%{left:-60%}55%,100%{left:130%}}
+.wm-bar .wm-ico{font-size:18px;filter:drop-shadow(0 0 6px rgba(140,200,255,.6))}
+.wm-bar b{color:#fff;font-weight:800;letter-spacing:.2px}
+.wm-bar .wm-txt{opacity:.92;font-weight:500;color:#cfe6ff}
+@media(max-width:640px){.wm-bar{font-size:12px;padding:8px 12px;gap:8px}.wm-bar .wm-txt{display:none}}
+.wm-garland{position:absolute;left:0;right:0;bottom:0;transform:translateY(100%);height:48px;pointer-events:none;z-index:4}
+.wm-garland .wire{position:absolute;top:4px;left:0;right:0;height:0;border-top:2px solid rgba(175,205,240,.4)}
+.wm-garland .bulbs{position:absolute;top:6px;left:0;right:0;display:flex;justify-content:space-around;padding:0 12px}
+.wm-garland i{position:relative;width:11px;height:15px;border-radius:50% 50% 50% 50%/42% 42% 58% 58%;background:radial-gradient(circle at 36% 30%,#fff,var(--c) 58%,rgba(0,0,0,.25));box-shadow:0 0 9px 2px var(--c),0 0 20px 5px var(--c);opacity:.9;transform-origin:top center;animation:wmTwk 2.4s ease-in-out infinite,wmSwg 4.6s ease-in-out infinite;animation-delay:var(--d),var(--d)}
+.wm-garland i::before{content:"";position:absolute;top:-7px;left:50%;width:2px;height:7px;background:rgba(175,205,240,.55);transform:translateX(-50%)}
+.wm-garland i:nth-child(even){margin-top:8px}
+@keyframes wmTwk{0%,100%{filter:brightness(.7);opacity:.75}50%{filter:brightness(1.35);opacity:1}}
+@keyframes wmSwg{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
 #wmSnow{position:fixed;inset:0;z-index:70;pointer-events:none}
-html.winter-on .brand{position:relative}
-html.winter-on .brand::before{content:"";position:absolute;top:-11px;left:-7px;width:22px;height:12px;background:#e23b2e;border-radius:13px 13px 3px 3px;transform:rotate(-22deg)}
-html.winter-on .brand::after{content:"";position:absolute;top:-15px;left:7px;width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:-15px 11px 0 -1px #fff}
-.wm-hero-tint{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(20,60,110,.30),rgba(10,20,40,.08) 42%,rgba(8,16,30,.42));mix-blend-mode:multiply}
-html.winter-on .tour,html.winter-on .cat .c,html.winter-on .feat .f{border-top:2px solid rgba(180,220,255,.55)!important;box-shadow:0 0 0 1px rgba(180,220,255,.12),0 18px 40px rgba(10,40,80,.25)}
-html.winter-on header.scrolled{border-bottom:1px solid rgba(180,220,255,.35)}
-.wm-sec{background:linear-gradient(180deg,#0a1b30,#0e2240);color:#eaf4ff;padding:clamp(48px,7vw,90px) 0;position:relative;overflow:hidden}
-.wm-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0,rgba(120,180,255,.18),transparent 60%);pointer-events:none}
+.wm-hat{position:absolute;top:-8px;left:-13px;width:40px;height:32px;transform:rotate(-12deg);pointer-events:none;z-index:6;filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}
+html.winter-on .brand{position:relative;overflow:visible}
+.wm-hero-tint{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(20,70,130,.32),rgba(8,20,40,.05) 42%,rgba(6,14,28,.42));mix-blend-mode:multiply}
+html.winter-on .tour,html.winter-on .cat .c,html.winter-on .feat .f{box-shadow:0 0 0 1px rgba(150,205,255,.16),0 18px 44px rgba(8,32,70,.26)}
+html.winter-on header.scrolled{border-bottom:1px solid rgba(150,205,255,.3)}
+.wm-sec{position:relative;overflow:hidden;padding:clamp(56px,8vw,112px) 0;background:linear-gradient(180deg,#07121f,#0a1f3a 55%,#08182e);color:#eaf5ff;isolation:isolate}
+.wm-sec .wm-aurora{position:absolute;inset:-25% -12%;z-index:-2;filter:blur(72px);opacity:.55;pointer-events:none}
+.wm-sec .wm-aurora i{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:wmDrift 20s ease-in-out infinite}
+.wm-sec .wm-aurora .a1{width:46vw;height:46vw;left:-6%;top:-14%;background:radial-gradient(circle,#1e6bd6,transparent 60%)}
+.wm-sec .wm-aurora .a2{width:42vw;height:42vw;right:-8%;top:8%;background:radial-gradient(circle,#27c0e8,transparent 60%);animation-delay:-7s}
+.wm-sec .wm-aurora .a3{width:38vw;height:38vw;left:32%;bottom:-20%;background:radial-gradient(circle,#6b8cff,transparent 60%);animation-delay:-13s}
+@keyframes wmDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4%,-3%) scale(1.14)}}
+.wm-sec .wm-mtn{position:absolute;left:0;right:0;bottom:0;z-index:-1;width:100%;height:auto;opacity:.55;pointer-events:none}
 .wm-sec .wmw{width:min(1180px,92vw);margin:0 auto;position:relative;z-index:1}
-.wm-sec .wm-kick{color:#7fb6ff;font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:10px}
-.wm-sec h2{font-family:'Oswald',Impact,sans-serif;text-transform:uppercase;font-size:clamp(28px,5vw,52px);line-height:1.05;color:#fff;margin-bottom:14px}
-.wm-sec .wm-lead{max-width:680px;color:#bcd6f5;font-size:clamp(15px,1.7vw,18px);margin-bottom:34px}
-.wm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:34px}
-.wm-card{background:rgba(255,255,255,.05);border:1px solid rgba(180,220,255,.18);border-radius:18px;padding:26px 22px;transition:transform .25s,box-shadow .25s}
-.wm-card:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(10,40,90,.4)}
-.wm-card .wm-ic{font-size:34px;margin-bottom:12px}
-.wm-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;color:#fff;font-size:21px;margin-bottom:8px}
-.wm-card p{color:#bcd6f5;font-size:14.5px;line-height:1.55}
-.wm-sec .wm-cta{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#ff5a1f,#ff8a3d);color:#fff;font-weight:800;padding:14px 28px;border-radius:40px;box-shadow:0 12px 28px rgba(255,90,31,.4)}
-@media(prefers-reduced-motion:reduce){.wm-garland i{animation:none;opacity:.85}}
+.wm-sec .wm-chip{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:#bfe3ff;background:rgba(120,190,255,.1);border:1px solid rgba(150,205,255,.34);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);margin-bottom:18px}
+.wm-sec .wm-chip svg{width:15px;height:15px;stroke:currentColor;stroke-width:1.8;fill:none}
+.wm-sec h2{font-family:'Oswald',Impact,sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(30px,5.4vw,60px);line-height:1.02;margin:0 0 16px;background:linear-gradient(180deg,#fff,#a9d4ff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 30px rgba(80,160,255,.16)}
+.wm-sec .wm-lead{max-width:660px;color:#bcd6f5;font-size:clamp(15px,1.7vw,18.5px);line-height:1.6;margin:0 0 40px}
+.wm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-bottom:42px}
+.wm-card{position:relative;padding:30px 26px;border-radius:22px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.1);box-shadow:0 18px 50px rgba(4,18,42,.5),inset 0 1px 0 rgba(255,255,255,.14);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s}
+.wm-card::before{content:"";position:absolute;inset:0;border-radius:22px;padding:1px;pointer-events:none;background:linear-gradient(140deg,rgba(150,205,255,.55),transparent 42%,transparent 60%,rgba(120,160,255,.4));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.85;transition:opacity .3s}
+.wm-card::after{content:"";position:absolute;width:160px;height:160px;top:-60px;right:-50px;border-radius:50%;background:radial-gradient(circle,rgba(120,200,255,.22),transparent 65%);pointer-events:none;opacity:.7}
+.wm-card:hover{transform:translateY(-8px);border-color:rgba(180,220,255,.4);box-shadow:0 30px 66px rgba(6,26,60,.6),inset 0 1px 0 rgba(255,255,255,.2)}
+.wm-card:hover::before{opacity:1}
+.wm-badge{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:16px;margin-bottom:18px;background:linear-gradient(150deg,#bfe3ff,#5aa6ff);box-shadow:0 10px 24px rgba(60,150,255,.45),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .3s}
+.wm-badge svg{width:27px;height:27px;stroke:#08243f;stroke-width:1.8;fill:none}
+.wm-card:hover .wm-badge{transform:scale(1.08) rotate(-4deg)}
+.wm-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;color:#fff;font-size:21px;letter-spacing:.4px;margin:0 0 9px}
+.wm-card p{color:#bdd6f3;font-size:14.5px;line-height:1.58;margin:0}
+.wm-cta{display:inline-flex;align-items:center;gap:10px;position:relative;overflow:hidden;background:linear-gradient(135deg,#ff5a1f,#ff8a3d);color:#fff;font-weight:800;font-size:15.5px;padding:15px 30px;border-radius:999px;box-shadow:0 14px 32px rgba(255,90,31,.42);transition:transform .25s,box-shadow .25s;cursor:pointer}
+.wm-cta:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(255,90,31,.55)}
+.wm-cta svg{width:18px;height:18px;stroke:#fff;stroke-width:2.2;fill:none}
+.wm-cta::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);animation:wmShine 5.5s ease-in-out infinite}
+@media(max-width:640px){.wm-card{padding:26px 22px}}
+@media(prefers-reduced-motion:reduce){.wm-bar::after,.wm-cta::after,.wm-garland i,.wm-sec .wm-aurora i{animation:none}}
 </style>
 <script>
 (function(){"use strict";
 if(window.__wmInit)return;window.__wmInit=true;
 var REDUCE=window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches;
 function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function on(v){return v!==false;}
+var ICONS={
+tire:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21M5.6 5.6l2.5 2.5M15.9 15.9l2.5 2.5M18.4 5.6l-2.5 2.5M8.1 15.9l-2.5 2.5"/></svg>',
+mountain:'<svg viewBox="0 0 24 24"><path d="M3 20h18L14 6l-3 5.5L8.5 8z"/></svg>',
+fire:'<svg viewBox="0 0 24 24"><path d="M12 3c1 3-2 4.2-2 7a2.4 2.4 0 0 0 4.8.3c1 1.2 1.7 2.6 1.7 4.2a4.5 4.5 0 0 1-9 0C7.5 11 11 9.6 12 3z"/></svg>',
+snow:'<svg viewBox="0 0 24 24"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10M12 6l2.6-2M12 6l-2.6-2M12 18l2.6 2M12 18l-2.6 2"/></svg>',
+shield:'<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+route:'<svg viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.3"/><circle cx="18" cy="5" r="2.3"/><path d="M8.3 19H14a3.5 3.5 0 0 0 0-7h-4a3.5 3.5 0 0 1 0-7h5.7"/></svg>',
+thermo:'<svg viewBox="0 0 24 24"><path d="M10 13.5V5a2 2 0 1 1 4 0v8.5a4 4 0 1 1-4 0z"/></svg>',
+bolt:'<svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>'
+};
+function ic(k){return ICONS[k]||ICONS.snow;}
+var ARROW='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+var HAT='<svg class="wm-hat" viewBox="0 0 80 60"><path d="M8 50 Q 22 2 72 18 Q 56 30 18 52 Z" fill="#e23b2e"/><path d="M8 50 Q 22 2 72 18 Q 60 23 38 24 Q 18 30 8 50 Z" fill="#ff6a52" opacity=".55"/><rect x="2" y="45" width="36" height="15" rx="7.5" fill="#fff"/><circle cx="72" cy="17" r="8" fill="#fff"/></svg>';
+var MTN='<svg class="wm-mtn" viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 220V120l190 -70 150 92 200 -104 240 122 220 -92 200 80 90 -44V220Z" fill="rgba(18,46,88,.7)"/><path d="M340 142l60 -34 50 30 -30 12 -40 -10z" fill="rgba(200,225,255,.5)"/><path d="M780 70l54 28 -32 12 -30 -10z" fill="rgba(200,225,255,.5)"/></svg>';
+function buildGarland(){
+var w=document.createElement("div");w.className="wm-garland";
+var cols=["#ffd27f","#8fd8ff","#ffffff","#ff9b6b","#b7a8ff","#9dffc0"];
+var h='<span class="wire"></span><div class="bulbs">';
+for(var i=0;i<22;i++){h+='<i style="--c:'+cols[i%cols.length]+';--d:'+(i*0.17).toFixed(2)+'s"></i>';}
+h+='</div>';w.innerHTML=h;return w;
+}
 function startSnow(){
- var c=document.createElement("canvas");c.id="wmSnow";document.body.appendChild(c);
- var ctx=c.getContext("2d"),W,H,f=[],run=true;
- var N=(Math.max(window.innerWidth,screen.width||0)<=860)?26:60;
- function rs(){W=c.width=innerWidth;H=c.height=innerHeight;}rs();addEventListener("resize",rs);
- for(var i=0;i<N;i++)f.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*3,s:.5+Math.random()*1.2,d:Math.random()*6.28,sw:.3+Math.random()*.7});
- function loop(){if(!run)return;ctx.clearRect(0,0,W,H);ctx.fillStyle="rgba(255,255,255,.85)";ctx.beginPath();
-  for(var i=0;i<f.length;i++){var p=f[i];ctx.moveTo(p.x,p.y);ctx.arc(p.x,p.y,p.r,0,6.28);}ctx.fill();
-  for(var j=0;j<f.length;j++){var q=f[j];q.y+=q.s;q.x+=Math.sin(q.d)*q.sw;q.d+=.01;if(q.y>H+5){q.y=-5;q.x=Math.random()*W;}if(q.x>W+5)q.x=-5;if(q.x<-5)q.x=W+5;}
-  requestAnimationFrame(loop);}
- document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)loop();});loop();
+var c=document.createElement("canvas");c.id="wmSnow";document.body.appendChild(c);
+var ctx=c.getContext("2d");
+var dpr=Math.min(window.devicePixelRatio||1,2);
+var sp=document.createElement("canvas");sp.width=sp.height=32;var sx=sp.getContext("2d");
+var g=sx.createRadialGradient(16,16,0,16,16,16);g.addColorStop(0,"rgba(255,255,255,.95)");g.addColorStop(.4,"rgba(255,255,255,.55)");g.addColorStop(1,"rgba(255,255,255,0)");
+sx.fillStyle=g;sx.fillRect(0,0,32,32);
+var W,H,f=[],run=true,wt=0;
+var mob=Math.max(window.innerWidth,screen.width||0)<=860;
+var N=mob?34:78;
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+"px";c.style.height=H+"px";ctx.setTransform(dpr,0,0,dpr,0,0);}
+rs();addEventListener("resize",rs);
+for(var i=0;i<N;i++){var d=Math.random();f.push({x:Math.random()*W,y:Math.random()*H,z:d,r:3+d*9,v:.3+d*1.1,a:.3+d*.6,sw:.3+Math.random()*.8,ph:Math.random()*6.28});}
+function loop(){if(!run)return;wt+=.005;var wind=Math.sin(wt)*.5;
+ctx.clearRect(0,0,W,H);
+for(var i=0;i<f.length;i++){var p=f[i];p.y+=p.v;p.ph+=.012;p.x+=Math.sin(p.ph)*p.sw+wind*p.z;
+if(p.y>H+12){p.y=-12;p.x=Math.random()*W;}if(p.x>W+12)p.x=-12;else if(p.x<-12)p.x=W+12;
+ctx.globalAlpha=p.a;ctx.drawImage(sp,p.x-p.r/2,p.y-p.r/2,p.r,p.r);}
+ctx.globalAlpha=1;requestAnimationFrame(loop);}
+document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)loop();});loop();
+}
+function buildSection(s){
+var kicker=s.secKicker||"Зимний сезон";
+var title=s.secTitle||"Зимой у нас не менее жарко";
+var lead=s.secLead||"МотоГОСТ работает круглый год. Зимой эндуро — это другой уровень эмоций: заснеженные горы Урала, шипованная резина и чистый адреналин по белому.";
+var cards=(Array.isArray(s.cards)&&s.cards.length)?s.cards:[
+{icon:"tire",title:"Резина на шипах",text:"Ставим шипованную резину — уверенно держим лёд и укатанный снег. Контроль и сцепление даже на скользкой трассе."},
+{icon:"mountain",title:"Зимние пейзажи",text:"Заснеженный Урал — совсем другая картинка. Маршруты, которые летом не увидишь, и виды, от которых захватывает дух."},
+{icon:"fire",title:"Другие эмоции",text:"Драйв по снегу — новый уровень: управляемые заносы, мягкие приземления в сугробы и заряд на весь день."}];
+var ctaText=s.ctaText||"Записаться на зимний заезд";
+var ctaHref=s.ctaHref||"#lead";
+var html='<div class="wm-aurora"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>'+MTN+'<div class="wmw"><span class="wm-chip">'+ic("snow")+esc(kicker)+'</span><h2>'+esc(title)+'</h2><p class="wm-lead">'+esc(lead)+'</p><div class="wm-grid">';
+cards.forEach(function(c){html+='<div class="wm-card"><span class="wm-badge">'+ic(c.icon)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.text)+'</p></div>';});
+html+='</div><a class="wm-cta" href="'+esc(ctaHref)+'">'+esc(ctaText)+ARROW+'</a></div>';
+var sec=document.createElement("section");sec.className="wm-sec";sec.id="winter";sec.innerHTML=html;
+var a=document.getElementById("contacts");
+if(a&&a.parentNode){a.parentNode.insertBefore(sec,a);}else{var ft=document.querySelector("footer");if(ft&&ft.parentNode){ft.parentNode.insertBefore(sec,ft);}else{document.body.appendChild(sec);}}
 }
 function build(s){
- if(!s||!s.enabled)return;
- document.documentElement.classList.add("winter-on");
- var icon=s.icon||"❄️",title=s.title||"Зимний сезон открыт",text=s.text||"";
- var bar=document.createElement("div");bar.className="wm-bar";
- bar.innerHTML='<span class="wm-ico">'+esc(icon)+'</span><b>'+esc(title)+'</b>'+(text?'<span class="wm-txt">— '+esc(text)+'</span>':'');
- document.body.appendChild(bar);
- var g=document.createElement("div");g.className="wm-garland";g.style.top=bar.offsetHeight+"px";
- var col=["#ff5a1f","#7fe0ff","#fff27f","#7fff9e","#ff7fe0"];
- for(var i=0;i<24;i++){var d=document.createElement("i");d.style.color=col[i%col.length];d.style.animationDelay=(i*.12)+"s";g.appendChild(d);}
- document.body.appendChild(g);
- var hero=document.querySelector(".hero");if(hero){var t=document.createElement("div");t.className="wm-hero-tint";hero.appendChild(t);}
- var sec=document.createElement("section");sec.className="wm-sec";
- sec.innerHTML='<div class="wmw"><div class="wm-kick">❄️ Зимний сезон</div><h2>Зимой у нас не менее жарко</h2>'+
- '<p class="wm-lead">МотоГОСТ работает круглый год. Зимой эндуро — это другой уровень эмоций: заснеженные горы Урала, шипованная резина и чистый адреналин по белому.</p>'+
- '<div class="wm-grid">'+
- '<div class="wm-card"><div class="wm-ic">🛞</div><h3>Резина на шипах</h3><p>Ставим шипованную резину — уверенно держим лёд и укатанный снег. Контроль и сцепление даже на скользкой трассе.</p></div>'+
- '<div class="wm-card"><div class="wm-ic">🏔</div><h3>Зимние пейзажи</h3><p>Заснеженный Урал — совсем другая картинка. Маршруты, которые летом не увидишь, и виды, от которых захватывает дух.</p></div>'+
- '<div class="wm-card"><div class="wm-ic">🔥</div><h3>Другие эмоции</h3><p>Драйв по снегу — это новый уровень: управляемые заносы, мягкие приземления в сугробы и заряд на весь день.</p></div>'+
- '</div><a class="wm-cta" href="#lead">❄️ Записаться на зимний заезд</a></div>';
- var a=document.getElementById("contacts");
- if(a&&a.parentNode){a.parentNode.insertBefore(sec,a);}else{var ft=document.querySelector("footer");if(ft&&ft.parentNode){ft.parentNode.insertBefore(sec,ft);}else{document.body.appendChild(sec);}}
- if(!REDUCE)startSnow();
+if(!s||!s.enabled)return;
+document.documentElement.classList.add("winter-on");
+var icon0=s.icon||"❄️",title=s.title||"Зимний сезон открыт",text=s.text||"";
+var bar=document.createElement("div");bar.className="wm-bar";
+bar.innerHTML='<span class="wm-ico">'+esc(icon0)+'</span><b>'+esc(title)+'</b>'+(text?'<span class="wm-txt">'+esc(text)+'</span>':'');
+document.body.appendChild(bar);
+var header=document.querySelector("header");
+function place(){if(header)header.style.top=bar.offsetHeight+"px";}place();addEventListener("resize",place);
+if(on(s.garland)&&header)header.appendChild(buildGarland());
+if(on(s.hat)){var brand=document.querySelector(".brand");if(brand)brand.insertAdjacentHTML("beforeend",HAT);}
+var hero=document.querySelector(".hero");if(hero){var t=document.createElement("div");t.className="wm-hero-tint";hero.appendChild(t);}
+if(on(s.secOn))buildSection(s);
+if(on(s.snow)&&!REDUCE)startSnow();
 }
 fetch("content/season.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(j){
- if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){build(j);});}else{build(j);}
+if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){build(j);});}else{build(j);}
 }).catch(function(){});
 })();
 </script>
-<!-- /winter mode -->
+<!-- /winter mode v2 -->
 </body></html>
