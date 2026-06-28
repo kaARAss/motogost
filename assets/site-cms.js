@@ -3,7 +3,7 @@
    исходный текст/картинки (значения служат запасными). */
 (function () {
   "use strict";
-  var FILES = ["season", "hero", "about", "services", "contacts", "gallery"];
+  var FILES = ["season", "hero", "about", "services", "contacts", "gallery", "how"];
   var SVC_VARS = ["--svc-pit", "--svc-end", "--svc-instr", "--svc-gid"];
   var data = {};
 
@@ -56,6 +56,11 @@
         if (it && it.image && SVC_VARS[i]) setImg(SVC_VARS[i], it.image);
       });
     }
+    if (data.how && Array.isArray(data.how.cards)) {
+      var hc = data.how.cards;
+      if (hc[0] && hc[0].image) setImg("--how0", hc[0].image);
+      if (hc[1] && hc[1].image) setImg("--how1", hc[1].image);
+    }
   }
 
   // Подробное описание услуг (вводный абзац + пункты) в окне «Подробнее».
@@ -99,10 +104,32 @@
     }
   }
 
+  function applyHow() {
+    var hd = data.how;
+    if (!hd || !Array.isArray(hd.cards)) return;
+    var cards = document.querySelectorAll("#how .fmt-cards .fmt-card");
+    hd.cards.forEach(function (c, i) {
+      var card = cards[i];
+      if (!card || !c) return;
+      var steps = Array.isArray(c.steps) ? c.steps.filter(function (s) {
+        return s && ((s.label != null && String(s.label).trim() !== "") || (s.text != null && String(s.text).trim() !== ""));
+      }) : [];
+      if (!steps.length) return;
+      var ul = card.querySelector(".fmt-steps");
+      if (!ul) return;
+      var html = "";
+      steps.forEach(function (s) {
+        html += "<li><span>" + esc(s.label) + "</span><b>" + esc(s.text) + "</b></li>";
+      });
+      ul.innerHTML = html;
+    });
+  }
+
   function render() {
     try { applyText(); } catch (e) {}
     try { applyImages(); } catch (e) {}
     try { applyServiceDetails(); } catch (e) {}
+    try { applyHow(); } catch (e) {}
     try { applySeason(); } catch (e) {}
   }
 
