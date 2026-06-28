@@ -48,6 +48,9 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
 .pv-label{color:var(--acc);font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.1em;min-width:96px}\
 .pv-muted{color:var(--muted)}\
 .pv-badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:999px;background:rgba(255,90,31,.15);color:var(--acc);margin-bottom:12px}\
+.pv-flags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}\
+.pv-flag{font-size:12px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--line)}\
+.pv-flag.on{background:rgba(120,200,255,.14);color:#bfe6ff;border-color:rgba(120,200,255,.3)}\
 .pv-hidden{opacity:.45}\
 ";
     CMS.registerPreviewStyle(css, { raw: true });
@@ -79,15 +82,42 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
     }}));
 
     CMS.registerPreviewTemplate('season', createClass({ render:function(){
+      var self = this;
       var e = this.props.entry.getIn(['data']);
       var on = !!e.get('enabled');
+      var secOn = !!e.get('secOn');
+      function flag(label,v){ return h('span',{className:'pv-flag'+(v?' on':'')}, (v?'✓ ':'✕ ')+label); }
+      var cardsData = e.get('cards');
+      var carr = (cardsData && cardsData.toArray) ? cardsData.toArray() : [];
+      var cards = carr.map(function(c,i){
+        var src = asset(self.props, c.get('img'));
+        return h('div',{className:'pv-card pv-svc',key:i},
+          src ? h('img',{src:src,style:{marginBottom:'10px',height:'120px',width:'100%',objectFit:'cover'}}) : null,
+          h('h3',{}, c.get('title') || ''),
+          h('p',{}, fmt(c.get('text')))
+        );
+      });
       return h('div',{className:'pv'+(on?'':' pv-hidden')},
-        h('div',{className:'pv-badge'}, on ? 'Показывается на сайте' : 'Скрыт на сайте'),
+        h('div',{className:'pv-badge'}, on ? 'Зимний режим ВКЛЮЧЁН' : 'Зимний режим ВЫКЛЮЧЕН'),
+        h('div',{className:'pv-flags'},
+          flag('Снегопад', !!e.get('snow')),
+          flag('Гирлянда', !!e.get('garland')),
+          flag('Колпак на логотипе', !!e.get('hat'))
+        ),
+        h('div',{className:'pv-eyebrow'}, 'Плашка вверху сайта'),
         h('div',{className:'pv-card'},
-          h('div',{style:{fontSize:'34px',marginBottom:'6px'}}, val(e,'icon') || '❄️'),
+          h('div',{style:{fontSize:'30px',marginBottom:'6px'}}, val(e,'icon') || '❄️'),
           h('h2',{className:'pv-h2'}, val(e,'title')),
-          h('p',{}, val(e,'text'))
-        )
+          h('p',{}, fmt(e.get('text')))
+        ),
+        secOn ? h('div',{className:'pv-eyebrow',style:{marginTop:'18px'}}, 'Зимний раздел на странице') : h('div',{className:'pv-badge'}, 'Зимний раздел скрыт'),
+        secOn ? h('div',{className:'pv-card'},
+          e.get('secKicker') ? h('div',{className:'pv-eyebrow'}, val(e,'secKicker')) : null,
+          h('h2',{className:'pv-h2'}, val(e,'secTitle')),
+          e.get('secLead') ? h('p',{className:'pv-sub'}, val(e,'secLead')) : null,
+          cards.length ? h('div',{className:'pv-grid'}, cards) : null,
+          e.get('ctaText') ? h('div',{className:'pv-btns'}, h('span',{className:'pv-btn'}, val(e,'ctaText'))) : null
+        ) : null
       );
     }}));
 
