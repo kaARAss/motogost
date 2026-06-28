@@ -191,6 +191,37 @@ body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(120% 
         h('div',{className:'pv-thumbs'}, thumbs)
       );
     }}));
+    CMS.registerPreviewTemplate('how', createClass({ render:function(){
+      var self = this;
+      var e = this.props.entry.getIn(['data']);
+      var cardsData = e.get('cards');
+      var carr = (cardsData && cardsData.toArray) ? cardsData.toArray() : [];
+      var cards = carr.map(function(c,i){
+        var src = asset(self.props, c.get('image'));
+        var stepsData = c.get('steps');
+        var sarr = (stepsData && stepsData.toArray) ? stepsData.toArray() : [];
+        var steps = sarr.map(function(s,j){
+          return h('li',{key:j,style:{margin:'5px 0',lineHeight:'1.4'}},
+            h('b',{style:{color:'var(--acc)',marginRight:'8px',fontFamily:"'Oswald',sans-serif",textTransform:'uppercase',fontSize:'11.5px'}}, s.get('label') || ''),
+            h('span',{style:{color:'#fff',fontSize:'12.8px'}}, s.get('text') || '')
+          );
+        });
+        return h('div',{className:'pv-card pv-svc',key:i},
+          src ? h('img',{src:src,style:{marginBottom:'10px',height:'150px',width:'100%',objectFit:'cover'}}) : null,
+          c.get('tag') ? h('div',{className:'pv-badge'}, c.get('tag')) : null,
+          h('h3',{}, c.get('title') || ''),
+          c.get('intro') ? h('p',{className:'pv-svc-intro'}, c.get('intro')) : null,
+          steps.length ? h('ul',{className:'pv-svc-ul',style:{listStyle:'none',paddingLeft:0}}, steps) : null
+        );
+      });
+      return h('div',{className:'pv'},
+        h('div',{className:'pv-eyebrow'}, val(e,'kicker') || 'Надпись'),
+        h('h2',{className:'pv-h2'}, val(e,'title')),
+        e.get('lead') ? h('p',{className:'pv-sub'}, val(e,'lead')) : null,
+        cards.length ? h('div',{className:'pv-grid'}, cards) : null
+      );
+    }}));
+
   })();
   </script>
 </body>
