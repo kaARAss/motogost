@@ -3,8 +3,8 @@ backend:
   name: github
   repo: kaARAss/motogost
   branch: main
-  base_url: https://functions.yandexcloud.net
-  auth_endpoint: d4ehp7io5egiqroikpb4
+  base_url: https://motogost.pages.dev
+  auth_endpoint: oauth/auth
 
 locale: ru
 
@@ -18,44 +18,49 @@ collections:
     files:
       - file: content/season.json
         name: season
-        label: "Зимний режим (сезон)"
+        label: "Сезонный блок (зима/лето)"
         fields:
-          - { label: "ВКЛЮЧИТЬ зимний режим на сайте", name: enabled, widget: boolean, default: false, hint: "Главный выключатель. Вкл — на сайте появляется зимнее оформление; выкл — всё скрывается." }
-          - { label: "Снегопад", name: snow, widget: boolean, default: true, hint: "Падающий снег по всему сайту." }
-          - { label: "Гирлянда вверху", name: garland, widget: boolean, default: true, hint: "Светящаяся гирлянда под шапкой сайта." }
-          - { label: "Колпак Деда Мороза на логотипе", name: hat, widget: boolean, default: true, hint: "Новогодний колпак на логотипе." }
-          - { label: "Иконка в верхней плашке (эмодзи)", name: icon, widget: string, required: false, default: "❄️", hint: "Эмодзи в синей плашке вверху, напр. ❄️" }
-          - { label: "Заголовок верхней плашки", name: title, widget: string, hint: "Текст жирным в плашке вверху, напр. «Зимний сезон открыт»" }
-          - { label: "Текст верхней плашки", name: text, widget: text, hint: "Пояснение в плашке вверху (на телефоне скрывается)." }
-          - { label: "Показывать зимний раздел", name: secOn, widget: boolean, default: true, hint: "Отдельный красивый блок про зиму на странице." }
-          - { label: "Раздел: надпись над заголовком", name: secKicker, widget: string, required: false, default: "Зимний сезон" }
-          - { label: "Раздел: заголовок", name: secTitle, widget: string, required: false, default: "Зимой у нас не менее жарко" }
-          - { label: "Раздел: описание", name: secLead, widget: text, required: false }
-          - label: "Раздел: карточки"
-            name: cards
-            widget: list
-            required: false
-            label_singular: "Карточка"
-            hint: "Каждая карточка — иконка + заголовок + текст. Можно добавлять, удалять и перетаскивать."
-            fields:
-              - { label: "Иконка", name: icon, widget: select, default: "snow", options: [ { label: "Шина/шипы", value: "tire" }, { label: "Горы", value: "mountain" }, { label: "Огонь/драйв", value: "fire" }, { label: "Снежинка", value: "snow" }, { label: "Щит/защита", value: "shield" }, { label: "Маршрут", value: "route" }, { label: "Термометр", value: "thermo" }, { label: "Молния", value: "bolt" } ] }
-              - { label: "Заголовок", name: title, widget: string }
-              - { label: "Текст", name: text, widget: text }
-              - { label: "Картинка карточки", name: img, widget: image, required: false, hint: "Фото вверху карточки зимнего блока (необязательно)." }
-          - { label: "Текст кнопки в разделе", name: ctaText, widget: string, required: false, default: "Записаться на зимний заезд" }
-          - { label: "Куда ведёт кнопка", name: ctaHref, widget: string, required: false, default: "#lead", hint: "Якорь или ссылка. По умолчанию #lead (блок заявки)." }
+          - { label: "Показывать блок на сайте", name: enabled, widget: boolean, default: false, hint: "Включи — и блок появится на сайте. Выключи — спрячется." }
+          - { label: "Иконка (эмодзи)", name: icon, widget: string, required: false, default: "❄️", hint: "Эмодзи рядом с заголовком блока, например ❄️ или ☀️" }
+          - { label: "Заголовок", name: title, widget: string, hint: "Крупный заголовок сезонного блока" }
+          - { label: "Текст", name: text, widget: text, hint: "Описание под заголовком (например, про зимние заезды и шипы)" }
       - file: content/hero.json
         name: hero
         label: "Главный экран"
         fields:
-          - { label: "Надпись сверху", name: eyebrow, widget: string, hint: "Маленькая оранжевая надпись над большим заголовком" }
+          - { label: "Надпись сверху", name: eyebrow, widget: string, hint: "Маленькая оранжевая надпись над большим заголовком (напр. «Экстрим-клуб в горах Урала»)" }
           - { label: "Подзаголовок", name: subtitle, widget: string, hint: "Строка под заголовком «ЭНДУРО» на первом экране" }
-          - { label: "Кнопка 1", name: btnPrimary, widget: string, hint: "Текст на главной оранжевой кнопке" }
-          - { label: "Кнопка 2", name: btnGhost, widget: string, hint: "Текст на второй прозрачной кнопке" }
-          - { label: "Куда ведёт Кнопка 1", name: btnPrimaryHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #lead." }
-          - { label: "Куда ведёт Кнопка 2", name: btnGhostHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #tours." }
+          - { label: "Кнопка 1", name: btnPrimary, widget: string, hint: "Текст на главной оранжевой кнопке (напр. «Записаться на заезд»)" }
+          - { label: "Кнопка 2", name: btnGhost, widget: string, hint: "Текст на второй прозрачной кнопке (напр. «Смотреть туры»)" }
+          - { label: "Куда ведёт Кнопка 1", name: btnPrimaryHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #lead (раздел заявки). Можно вставить ссылку на соцсеть/мессенджер." }
+          - { label: "Куда ведёт Кнопка 2", name: btnGhostHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #tours (раздел услуг)." }
           - { label: "Фото главного экрана (десктоп)", name: image, widget: image, required: false, hint: "Большое фото на первом экране (для компьютеров)." }
           - { label: "Фото главного экрана (телефоны)", name: imageMobile, widget: image, required: false, hint: "Фото первого экрана на телефонах (необязательно)." }
+      - file: content/how.json
+        name: how
+        label: "Как проходит (форматы заездов)"
+        fields:
+          - { label: "Надпись", name: kicker, widget: string, hint: "Маленькая оранжевая надпись над заголовком раздела" }
+          - { label: "Заголовок", name: title, widget: string, hint: "Заголовок раздела (напр. «Как проходит заезд»)" }
+          - { label: "Описание под заголовком", name: lead, widget: text, hint: "Короткий текст под заголовком раздела" }
+          - label: "Карточки форматов"
+            name: cards
+            widget: list
+            label_singular: "Формат"
+            hint: "Каждая карточка — формат заезда. Можно добавлять, удалять и менять порядок."
+            fields:
+              - { label: "Метка (бейдж)", name: tag, widget: string, hint: "Короткая метка на фото (напр. «Для опытных» / «С гидом»)" }
+              - { label: "Название формата", name: title, widget: string, hint: "Заголовок карточки (напр. «Свободный заезд»)" }
+              - { label: "Краткое описание", name: intro, widget: text, hint: "1–2 предложения под названием" }
+              - { label: "Фото", name: image, widget: image, required: false, hint: "Фото формата заезда" }
+              - label: "Шаги"
+                name: steps
+                widget: list
+                label_singular: "Шаг"
+                hint: "Этапы заезда по порядку. Можно добавлять, удалять и перетаскивать."
+                fields:
+                  - { label: "Подпись", name: label, widget: string, hint: "Короткое слово слева (напр. «Старт»)" }
+                  - { label: "Описание", name: text, widget: string, hint: "Что происходит на этом шаге" }
       - file: content/about.json
         name: about
         label: "О нас"
@@ -66,8 +71,8 @@ collections:
           - { label: "Абзац 2", name: p2, widget: text, hint: "Второй абзац (можно оставить пустым)" }
           - { label: "Абзац 3", name: p3, widget: text, hint: "Третий абзац (можно оставить пустым)" }
           - { label: "Слоган", name: legend, widget: string, hint: "Яркая фраза-слоган в конце блока" }
-          - { label: "Кнопка", name: cta, widget: string, hint: "Текст кнопки под разделом" }
-          - { label: "Куда ведёт кнопка", name: ctaHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #contacts." }
+          - { label: "Кнопка", name: cta, widget: string, hint: "Текст кнопки под разделом (напр. «Получить консультацию»)" }
+          - { label: "Куда ведёт кнопка", name: ctaHref, widget: string, required: false, hint: "Ссылка или якорь. По умолчанию #contacts (раздел контактов). Можно вставить ссылку на соцсеть/мессенджер." }
           - { label: "Фото секции", name: image, widget: image, required: false, hint: "Фото справа от текста «О нас»" }
       - file: content/services.json
         name: services
@@ -80,7 +85,7 @@ collections:
             hint: "Каждая карточка — отдельная услуга. Можно добавлять, удалять и перетаскивать порядок."
             fields:
               - { label: "Название", name: title, widget: string, hint: "Название услуги" }
-              - { label: "Характеристики", name: specs, widget: string, hint: "Короткая строка под названием" }
+              - { label: "Характеристики", name: specs, widget: string, hint: "Короткая строка под названием (напр. «Kayo Evo · 140/125 куб»)" }
               - { label: "Краткое описание", name: teaser, widget: text, hint: "1–2 предложения на карточке" }
               - { label: "Цена", name: price, widget: string, hint: "Например «от 1 250 ₽/час»" }
               - { label: "Фото", name: image, widget: image, required: false, hint: "Картинка на карточке и в подробном окне" }
@@ -96,18 +101,18 @@ collections:
         name: contacts
         label: "Контакты"
         fields:
-          - { label: "Адрес", name: address, widget: string, hint: "Адрес базы" }
-          - { label: "Примечание к адресу", name: addressNote, widget: string, hint: "Пояснение под адресом" }
-          - { label: "Телефон (текст)", name: phoneText, widget: string, hint: "Как номер показывается" }
-          - { label: "Телефон (ссылка tel:)", name: phoneHref, widget: string, hint: "Для клика: без пробелов" }
-          - { label: "Telegram группа — ссылка", name: tgGroup, widget: string, hint: "Полная ссылка" }
-          - { label: "Telegram группа — текст", name: tgGroupText, widget: string, hint: "Подпись ссылки" }
+          - { label: "Адрес", name: address, widget: string, hint: "Адрес базы (напр. «Посёлок Северка, ул. Победы, 8»)" }
+          - { label: "Примечание к адресу", name: addressNote, widget: string, hint: "Пояснение под адресом (напр. про направление)" }
+          - { label: "Телефон (текст)", name: phoneText, widget: string, hint: "Как номер показывается: «+7 (958) 578-67-86»" }
+          - { label: "Телефон (ссылка tel:)", name: phoneHref, widget: string, hint: "Для клика: без пробелов, напр. «tel:+79585786786»" }
+          - { label: "Telegram группа — ссылка", name: tgGroup, widget: string, hint: "Полная ссылка, напр. https://t.me/MotoGost96" }
+          - { label: "Telegram группа — текст", name: tgGroupText, widget: string, hint: "Подпись ссылки (напр. «Группа Telegram»)" }
           - { label: "Telegram личные — ссылка", name: tgDm, widget: string, hint: "Ссылка на личный чат" }
-          - { label: "Telegram личные — текст", name: tgDmText, widget: string, hint: "Подпись ссылки" }
-          - { label: "ВКонтакте — ссылка", name: vk, widget: string, hint: "Полная ссылка" }
-          - { label: "ВКонтакте — текст", name: vkText, widget: string, hint: "Подпись ссылки" }
-          - { label: "MAX — ссылка (в блоке заявки)", name: max, widget: string, required: false, hint: "Ссылка на мессенджер MAX." }
-          - { label: "Телефон плавающей кнопки (tel:)", name: fabPhone, widget: string, required: false, hint: "Номер на круглой кнопке связи." }
+          - { label: "Telegram личные — текст", name: tgDmText, widget: string, hint: "Подпись ссылки (напр. «Личные сообщения»)" }
+          - { label: "ВКонтакте — ссылка", name: vk, widget: string, hint: "Полная ссылка, напр. https://vk.com/motogost96" }
+          - { label: "ВКонтакте — текст", name: vkText, widget: string, hint: "Подпись ссылки (напр. «Мы ВКонтакте»)" }
+          - { label: "MAX — ссылка (в блоке заявки)", name: max, widget: string, required: false, hint: "Ссылка на мессенджер MAX (кнопка MAX в блоке заявки)." }
+          - { label: "Телефон плавающей кнопки (tel:)", name: fabPhone, widget: string, required: false, hint: "Номер на круглой кнопке связи внизу справа. Без пробелов, напр. tel:+79995656430" }
       - file: content/gallery.json
         name: gallery
         label: "Галерея"
