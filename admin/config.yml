@@ -18,12 +18,32 @@ collections:
     files:
       - file: content/season.json
         name: season
-        label: "Сезонный блок (зима/лето)"
+        label: "Зимний режим (сезон)"
         fields:
-          - { label: "Показывать блок на сайте", name: enabled, widget: boolean, default: false, hint: "Включи — и блок появится на сайте. Выключи — спрячется." }
-          - { label: "Иконка (эмодзи)", name: icon, widget: string, required: false, default: "❄️", hint: "Эмодзи рядом с заголовком блока, например ❄️ или ☀️" }
-          - { label: "Заголовок", name: title, widget: string, hint: "Крупный заголовок сезонного блока" }
-          - { label: "Текст", name: text, widget: text, hint: "Описание под заголовком (например, про зимние заезды и шипы)" }
+          - { label: "ВКЛЮЧИТЬ зимний режим на сайте", name: enabled, widget: boolean, default: false, hint: "Главный выключатель. Вкл — на сайте появляется зимнее оформление; выкл — всё скрывается." }
+          - { label: "Снегопад", name: snow, widget: boolean, default: true, hint: "Падающий снег по всему сайту." }
+          - { label: "Гирлянда вверху", name: garland, widget: boolean, default: true, hint: "Светящаяся гирлянда под шапкой сайта." }
+          - { label: "Колпак Деда Мороза на логотипе", name: hat, widget: boolean, default: true, hint: "Новогодний колпак на логотипе." }
+          - { label: "Иконка в верхней плашке (эмодзи)", name: icon, widget: string, required: false, default: "❄️", hint: "Эмодзи в синей плашке вверху, напр. ❄️" }
+          - { label: "Заголовок верхней плашки", name: title, widget: string, hint: "Текст жирным в плашке вверху, напр. «Зимний сезон открыт»" }
+          - { label: "Текст верхней плашки", name: text, widget: text, hint: "Пояснение в плашке вверху (на телефоне скрывается)." }
+          - { label: "Показывать зимний раздел", name: secOn, widget: boolean, default: true, hint: "Отдельный красивый блок про зиму на странице." }
+          - { label: "Раздел: надпись над заголовком", name: secKicker, widget: string, required: false, default: "Зимний сезон" }
+          - { label: "Раздел: заголовок", name: secTitle, widget: string, required: false, default: "Зимой у нас не менее жарко" }
+          - { label: "Раздел: описание", name: secLead, widget: text, required: false }
+          - label: "Раздел: карточки"
+            name: cards
+            widget: list
+            required: false
+            label_singular: "Карточка"
+            hint: "Каждая карточка — иконка + заголовок + текст. Можно добавлять, удалять и перетаскивать."
+            fields:
+              - { label: "Иконка", name: icon, widget: select, default: "snow", options: [ { label: "Шина/шипы", value: "tire" }, { label: "Горы", value: "mountain" }, { label: "Огонь/драйв", value: "fire" }, { label: "Снежинка", value: "snow" }, { label: "Щит/защита", value: "shield" }, { label: "Маршрут", value: "route" }, { label: "Термометр", value: "thermo" }, { label: "Молния", value: "bolt" } ] }
+              - { label: "Заголовок", name: title, widget: string }
+              - { label: "Текст", name: text, widget: text }
+              - { label: "Картинка карточки", name: img, widget: image, required: false, hint: "Фото вверху карточки зимнего блока (необязательно)." }
+          - { label: "Текст кнопки в разделе", name: ctaText, widget: string, required: false, default: "Записаться на зимний заезд" }
+          - { label: "Куда ведёт кнопка", name: ctaHref, widget: string, required: false, default: "#lead", hint: "Якорь или ссылка. По умолчанию #lead (блок заявки)." }
       - file: content/hero.json
         name: hero
         label: "Главный экран"
@@ -113,6 +133,21 @@ collections:
           - { label: "ВКонтакте — текст", name: vkText, widget: string, hint: "Подпись ссылки (напр. «Мы ВКонтакте»)" }
           - { label: "MAX — ссылка (в блоке заявки)", name: max, widget: string, required: false, hint: "Ссылка на мессенджер MAX (кнопка MAX в блоке заявки)." }
           - { label: "Телефон плавающей кнопки (tel:)", name: fabPhone, widget: string, required: false, hint: "Номер на круглой кнопке связи внизу справа. Без пробелов, напр. tel:+79995656430" }
+      - file: content/vkl.json
+        name: vkl
+        label: "Что входит в прокат"
+        fields:
+          - { label: "Надпись над заголовком", name: kicker, widget: string, required: false }
+          - { label: "Заголовок", name: title, widget: string }
+          - { label: "Описание под заголовком", name: lead, widget: text, required: false }
+          - label: "Пункты (что входит в прокат)"
+            name: items
+            widget: list
+            label_singular: "Пункт"
+            hint: "Каждый пункт — заголовок + короткое описание. Можно добавлять, удалять и перетаскивать."
+            fields:
+              - { label: "Заголовок", name: title, widget: string }
+              - { label: "Описание", name: text, widget: text }
       - file: content/gallery.json
         name: gallery
         label: "Галерея"
