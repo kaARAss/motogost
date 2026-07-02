@@ -3,7 +3,7 @@
    исходный текст/картинки (значения служат запасными). */
 (function () {
   "use strict";
-  var FILES = ["season", "hero", "about", "services", "contacts", "gallery", "how"];
+  var FILES = ["season", "hero", "about", "services", "contacts", "gallery", "how", "vkl"];
   var SVC_VARS = ["--svc-pit", "--svc-end", "--svc-instr", "--svc-gid"];
   var data = {};
 
